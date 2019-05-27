@@ -46,7 +46,7 @@ public class SampleHelper implements View.OnClickListener {
                 .setLinksColumnsCount(4)
                 .setBrief("I'm warmed of mobile technologies. Ideas maker, curious and nature lover.")
                 .addGooglePlayStoreLink("play")
-                .addGitHubLink("user")
+                .addGitHubLink("knatnaela")
                 .addBitbucketLink("user")
                 .addFacebookLink("natnaeladane.58")
                 .addTwitterLink("user")
