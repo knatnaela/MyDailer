@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+
+    <group android:checkableBehavior="single">
+
+        <item
+
+            android:id="@+id/check_balance"
+            android:icon="@drawable/ic_monetization_on_black_24dp"
+            android:iconTint="@color/White"
+            android:title="@string/check_your_balance" />
+        <item
+            android:id="@+id/recharge_phone"
+            android:icon="@drawable/ic_add_circle_outline_black_24dp"
+            android:title="@string/recharge_your_phone" />
+
+
+
+    </group>
+
+
+    <item android:title="@string/packages">
+
+        <menu>
+
+            <group android:checkableBehavior="single">
+
+
+                <item
+                    android:id="@+id/nav_voice"
+                    android:icon="@drawable/ic_call_blacks_24dp"
+                    android:title="@string/self_voice_package" />
+                <item
+                    android:id="@+id/nav_internet"
+                    android:icon="@drawable/ic_explicit_black_24dp"
+                    android:title="@string/self_internet_package" />
+                <item
+                    android:id="@+id/nav_SMS"
+                    android:icon="@drawable/ic_message_white_24dp"
+                    android:title="@string/self_sms_package" />
+
+
+                <item
+                    android:id="@+id/nav_more"
+                    android:icon="@drawable/ic_more_horiz_black_24dp"
+                    android:iconTint="@android:color/white"
+                    android:title="@string/more_services"
+
+                    />
+
+                <item
+                    android:id="@+id/nav_Pre"
+                    android:icon="@drawable/ic_star_black_24dp"
+                    android:title="@string/premium_limited_internet_package"
+                    android:visible="false"
+                    />
+
+                <item
+                    android:id="@+id/_borrow_service"
+                    android:title="@string/borrow_service"
+                    android:visible="false"
+                    />
+
+
+            </group>
+
+
+        </menu>
+
+
+    </item>
+
+    <item android:title="@string/more"
+        >
+        <menu>
+            <group android:checkableBehavior="single">
+            <item
+                android:id="@+id/nav_settings"
+                android:title="@string/settings"
+                android:icon="@drawable/ic_settings_black_24dp"
+                />
+
+
+            <item
+                android:id="@+id/nav_share"
+                android:title="@string/share"
+                android:icon="@drawable/ic_menu_share"
+                android:iconTint="@color/white"
+                tools:targetApi="o" />
+
+            <item
+                android:id="@+id/about"
+                android:icon="@drawable/ic_info_outline_black_24dp"
+                android:iconTint="@color/White"
+                android:title="@string/about" />
+
+            </group>
+        </menu>
+    </item>
+
+</menu>

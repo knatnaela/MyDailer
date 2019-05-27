@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <LinearLayout
+        android:layout_marginTop="50dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/backgroundColor"
+        android:gravity="center_horizontal"
+        >
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/cardNumber"
+            android:hint="@string/enter_card_number"
+            android:inputType="phone"
+            android:textColor="?attr/textcolor"
+            android:textColorHint="?attr/textcolor"
+            android:textSize="24sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:met_singleLineEllipsis="true"
+            app:met_baseColor="?attr/textcolor"
+            app:met_floatingLabel="highlight"
+            app:met_maxCharacters="14"
+            app:met_primaryColor="?attr/textcolor"
+            android:layout_marginTop="18dp"
+            android:layout_marginBottom="12dp"
+            />
+
+        <Button
+            android:id="@+id/dialog_btn_send"
+            android:drawablePadding="20dp"
+            android:padding="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/buttonColor"
+            android:textColor="@android:color/white"
+            android:text="@string/send"
+            android:layout_marginTop="10dp"
+            android:textAllCaps="false"
+            android:textSize="18sp"
+            android:layout_gravity="start"
+            />
+
+
+    </LinearLayout>
+
+</RelativeLayout>

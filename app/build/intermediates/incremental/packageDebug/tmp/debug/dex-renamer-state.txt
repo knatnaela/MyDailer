@@ -1,0 +1,7 @@
+#Sun May 26 17:29:20 EAT 2019
+base.0=E\:\\MyApplication6\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\out
+path.1=classes2.dex
+renamed.1=classes2.dex
+path.0=classes.dex
+renamed.0=classes.dex
+base.1=E\:\\MyApplication6\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\out

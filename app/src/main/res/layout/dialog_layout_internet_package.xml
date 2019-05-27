@@ -1,0 +1,458 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="?attr/cardBackground"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:layout_margin="8dp"
+        android:background="@color/colorPrimary"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        >
+
+        <ImageView
+            android:id="@+id/img_contact"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            app:srcCompat="@mipmap/ic_launcher_round"
+            />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textColor="@android:color/white"
+                android:id="@+id/contact_name"
+                android:text="My Dailer"
+                android:textSize="20sp"
+                android:layout_marginStart="8dp"
+                android:textStyle="bold"
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp" />
+
+            <TextView
+                android:textColor="@android:color/white"
+                android:id="@+id/contact_number"
+                android:text="#####"
+                android:textSize="18sp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:textStyle="italic"
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_margin="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_marginTop="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Group 2 Daily -->
+
+            <RelativeLayout
+                android:layout_marginTop="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <TextView
+                    android:text="@string/daily_internet_package"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:textColor="@android:color/darker_gray"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_marginTop="8dp"
+                android:background="@color/colorPrimary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioGroup
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:ignore="UselessParent">
+
+                    <Button
+                        android:id="@+id/BirrDaily3"
+                        android:text="3 Birr for 25 MB"
+                        android:textColor="@android:color/white"
+                        android:background="@android:color/darker_gray"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    <Button
+                        android:id="@+id/BirrDaily5"
+                        android:text="5 Birr for 45 MB"
+                        android:layout_marginTop="8dp"
+                        android:textColor="@android:color/white"
+                        android:background="@android:color/darker_gray"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <Button
+                        android:id="@+id/BirrDaily10"
+                        android:text="10 Birr for 100 MB"
+                        android:layout_marginTop="8dp"
+                        android:textColor="@android:color/white"
+                        android:background="@android:color/darker_gray"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <Button
+                        android:id="@+id/BirrDaily15"
+                        android:layout_marginTop="8dp"
+                        android:text="15 Birr for 200 MB"
+                        android:background="@android:color/darker_gray"
+                        android:textColor="@android:color/white"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    <Button
+                        android:id="@+id/BirrDaily35"
+                        android:layout_marginTop="8dp"
+                        android:text="35 Birr for 500 MB"
+                        android:background="@android:color/darker_gray"
+                        android:textColor="@android:color/white"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </RadioGroup>
+
+            </RelativeLayout>
+
+            <!-- Group 2 Weekly-->
+
+            <RelativeLayout
+                android:layout_marginTop="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <TextView
+                    android:text="@string/weekly_internet_package"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:textColor="@android:color/darker_gray"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_marginTop="8dp"
+                android:background="@color/colorPrimary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioGroup
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        android:id="@+id/BirrWeekly50"
+                        android:background="@android:color/darker_gray"
+                        android:text="50 Birr for 500 MB"
+                        android:textColor="@android:color/white"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <Button
+                        android:id="@+id/BirrWeekly60"
+                        android:background="@android:color/darker_gray"
+                        android:layout_marginTop="8dp"
+                        android:text="60 Birr for 700 MB"
+                        android:textColor="@android:color/white"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <Button
+                        android:id="@+id/BirrWeekly80"
+                        android:background="@android:color/darker_gray"
+                        android:layout_marginTop="8dp"
+                        android:text="80 Birr for 1 GB"
+                        android:textColor="@android:color/white"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+
+                </RadioGroup>
+
+            </RelativeLayout>
+
+            <!-- Group Monthly -->
+
+            <RelativeLayout
+                android:layout_marginTop="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <TextView
+                    android:text="@string/monthly_internet_package"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:textColor="@android:color/darker_gray"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_marginTop="8dp"
+                android:background="@color/colorPrimary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioGroup
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        android:id="@+id/BirrMonthly55"
+                        android:background="@android:color/darker_gray"
+                        android:layout_marginTop="8dp"
+                        android:text="55 Birr for 500 MB"
+                        android:textColor="@android:color/white"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <Button
+                        android:id="@+id/BirrMonthly100"
+                        android:background="@android:color/darker_gray"
+                        android:layout_marginTop="8dp"
+                        android:text="100 Birr for 1 GB"
+                        android:textColor="@android:color/white"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    <Button
+                        android:id="@+id/BirrMonthly190"
+                        android:background="@android:color/darker_gray"
+                        android:layout_marginTop="8dp"
+                        android:text="190 Birr for 2 GB"
+                        android:textColor="@android:color/white"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    <Button
+                        android:id="@+id/BirrMonthly350"
+                        android:background="@android:color/darker_gray"
+                        android:layout_marginTop="8dp"
+                        android:text="350 Birr for 4 GB"
+                        android:textColor="@android:color/white"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    <Button
+                        android:id="@+id/BirrMonthly600"
+                        android:background="@android:color/darker_gray"
+                        android:layout_marginTop="8dp"
+                        android:text="600 Birr for 8 GB"
+                        android:textColor="@android:color/white"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    <Button
+                        android:id="@+id/BirrMonthly700"
+                        android:background="@android:color/darker_gray"
+                        android:layout_marginTop="8dp"
+                        android:text="700 Birr for 10 GB"
+                        android:textColor="@android:color/white"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    <Button
+                        android:id="@+id/BirrMonthly1300"
+                        android:background="@android:color/darker_gray"
+                        android:layout_marginTop="8dp"
+                        android:text="1,300 Birr for 20 GB"
+                        android:textColor="@android:color/white"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    <Button
+                        android:id="@+id/BirrMonthly1800"
+                        android:background="@android:color/darker_gray"
+                        android:layout_marginTop="8dp"
+                        android:text="1,800 Birr for 30 GB"
+                        android:textColor="@android:color/white"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <Button
+                        android:id="@+id/BirrMonthlyUnlimited"
+                        android:background="@android:color/darker_gray"
+                        android:layout_marginTop="8dp"
+                        android:text="4,900 Birr for Unlimited"
+                        android:textColor="@android:color/white"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </RadioGroup>
+
+            </RelativeLayout>
+
+            <!-- Group 1 Night -->
+
+            <RelativeLayout
+                android:layout_marginTop="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <TextView
+                    android:text="@string/night_internet_package"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:textColor="@android:color/darker_gray"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+
+
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_marginTop="8dp"
+                android:background="@color/colorPrimary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioGroup
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:ignore="UselessParent">
+
+                    <Button
+                        android:id="@+id/BirrNight3"
+                        android:text="3 Birr for 50 MB"
+                        android:textColor="@android:color/white"
+                        android:background="@android:color/darker_gray"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    <Button
+                        android:id="@+id/BirrNight5"
+                        android:text="5 Birr for 100 MB"
+                        android:layout_marginTop="8dp"
+                        android:textColor="@android:color/white"
+                        android:background="@android:color/darker_gray"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <Button
+                        android:id="@+id/BirrNight7"
+                        android:layout_marginTop="8dp"
+                        android:text="7 Birr for 160 MB"
+                        android:background="@android:color/darker_gray"
+                        android:textColor="@android:color/white"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </RadioGroup>
+
+            </RelativeLayout>
+
+
+            <!-- Group Weekend -->
+
+            <RelativeLayout
+                android:layout_marginTop="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <TextView
+                    android:text="@string/weekend_internet_package"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:textColor="@android:color/darker_gray"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_marginTop="8dp"
+                android:background="@color/colorPrimary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioGroup
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:ignore="UselessParent">
+
+                    <Button
+                        android:id="@+id/BirrWeekend35"
+                        android:text="35 Birr for 500 MB"
+                        android:textColor="@android:color/white"
+                        android:background="@android:color/darker_gray"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    <Button
+                        android:id="@+id/BirrWeekend60"
+                        android:text="60 Birr for 1 GB"
+                        android:layout_marginTop="8dp"
+                        android:textColor="@android:color/white"
+                        android:background="@android:color/darker_gray"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <Button
+                        android:id="@+id/BirrWeekend110"
+                        android:text="110 Birr for 2 GB"
+                        android:layout_marginTop="8dp"
+                        android:textColor="@android:color/white"
+                        android:background="@android:color/darker_gray"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </RadioGroup>
+
+            </RelativeLayout>
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

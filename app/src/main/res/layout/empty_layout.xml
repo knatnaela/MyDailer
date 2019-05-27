@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/backgroundColor"
+    android:id="@+id/rootLayout"
+    android:animateLayoutChanges="true"
+    tools:context="com.example.toshiba.myapplication.MainAc">
+
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true">
+
+        <ImageView
+            android:scaleType="centerInside"
+            app:srcCompat="@drawable/ic_call_24dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="350dp"
+        android:orientation="vertical"
+        android:weightSum="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:gravity="center"
+            android:id="@+id/txtSlogan"
+            android:textSize="15sp"
+            android:layout_weight="1"
+            android:textColor="@android:color/darker_gray"
+            android:text="Your call log is empty"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="18dp"
+            />
+
+
+        <TextView
+            android:gravity="center"
+            android:id="@+id/txtMakeCall"
+            android:textSize="15sp"
+            android:layout_weight="1"
+            android:textColor="?attr/buttonColor"
+            android:text="MAKE A CALL"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="18dp"
+            />
+
+
+
+
+    </LinearLayout>
+</RelativeLayout>

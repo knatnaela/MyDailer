@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/backgroundColor"
+    android:layout_gravity="center|center_horizontal"
+    >
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="102dp"
+        android:gravity="center"
+        android:text="@string/gift"
+        android:textColor="?attr/textcolor"
+        android:textSize="38sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="178dp"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:layout_alignParentLeft="true">
+
+
+        <br.com.bloder.magic.view.MagicButton
+            android:id="@+id/magic_button_voice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="50dp"
+            app:button_icon="@drawable/call"
+            app:button_icon_height="25dp"
+            app:button_icon_width="25dp"
+            app:expandable_area_color="?attr/magic"
+            app:hide_text="@string/voice"
+            app:hide_text_color="@color/colorAccent"
+            app:hide_text_size="7sp"
+            app:icon_button_color="@color/btnActive"
+            app:magic_button_size="50dp"
+            android:layout_marginLeft="15dp"
+            >
+        </br.com.bloder.magic.view.MagicButton>
+
+        <br.com.bloder.magic.view.MagicButton
+            android:id="@+id/magic_button_internet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="50dp"
+            app:button_icon="@drawable/internet"
+            app:button_icon_height="25dp"
+            app:button_icon_width="25dp"
+            app:expandable_area_color="?attr/magic"
+            app:hide_text="@string/internet"
+            app:hide_text_color="#ff0000"
+            app:hide_text_size="7sp"
+            app:icon_button_color="@color/colorAccent"
+            app:magic_button_size="50dp"
+            android:layout_marginLeft="15dp">
+        </br.com.bloder.magic.view.MagicButton>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_below="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        >
+
+        <br.com.bloder.magic.view.MagicButton
+            android:id="@+id/magic_button_SMS"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_weight="1"
+            android:layout_marginTop="50dp"
+            app:button_icon="@drawable/message"
+            app:button_icon_height="25dp"
+            app:button_icon_width="25dp"
+            app:expandable_area_color="?attr/magic"
+            app:hide_text="@string/sms"
+            app:hide_text_color="@android:color/white"
+            app:hide_text_size="7sp"
+            app:icon_button_color="#6d4c41"
+            app:magic_button_size="50dp"
+            android:layout_marginLeft="15dp">
+
+        </br.com.bloder.magic.view.MagicButton>
+
+
+        <br.com.bloder.magic.view.MagicButton
+            android:id="@+id/magic_button_common"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_weight="1"
+            android:layout_marginTop="50dp"
+            app:button_icon="@drawable/preminum"
+            app:button_icon_height="25dp"
+            app:button_icon_width="25dp"
+            app:expandable_area_color="?attr/magic"
+            app:hide_text="@string/premium"
+            app:hide_text_color="@android:color/white"
+            app:hide_text_size="7sp"
+            app:icon_button_color="#d29000"
+            app:magic_button_size="50dp"
+            android:layout_marginLeft="15dp">
+
+        </br.com.bloder.magic.view.MagicButton>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

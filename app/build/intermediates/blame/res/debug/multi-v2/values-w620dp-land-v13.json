@@ -1,0 +1,26 @@
+{
+    "logs": [
+        {
+            "outputFile": "E:\\MyApplication6\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-w620dp-land-v13\\values-w620dp-land-v13.xml",
+            "map": [
+                {
+                    "source": "E:\\MyApplication6\\app\\src\\main\\res\\values-w620dp-land\\integers.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "57",
+                        "endColumns": "45",
+                        "endOffsets": "98"
+                    },
+                    "to": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "45",
+                        "endOffsets": "96"
+                    }
+                }
+            ]
+        }
+    ]
+}

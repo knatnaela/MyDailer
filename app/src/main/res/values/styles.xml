@@ -1,0 +1,134 @@
+<resources>
+
+   <style parent="Theme.AppCompat.NoActionBar" name="AppThemeDark">
+    <item name="windowActionBar">false</item>
+
+    <item name="windowNoTitle">true</item>
+   </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style parent="Theme.AppCompat.Light.NoActionBar" name="AppThemeLight">
+
+    <item name="windowActionBar">false</item>
+
+    <item name="windowNoTitle">true</item>
+
+
+
+</style>
+
+
+    <!-- Light/Day application theme. -->
+    <style name="Light" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#2196F3</item>
+        <item name="colorPrimaryDark">#1976D2</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="backgroundColor">#fcfcfc</item>
+        <item name="tabColor">#2196F3</item>
+        <item name="cardBackground">#ffffff</item>
+        <item name="textcolor">#808008</item>
+        <item name="tintColor">#000000</item>
+        <item name="buttonColor">#2196F3</item>
+        <item name="overlayBackgroundColor">#fcfcfc</item>
+        <item name="magic">#424242</item>
+        <item name="android:windowAnimationStyle">@style/WindowAnimationTransition</item>
+    </style>
+
+
+    <!-- Night application theme. -->
+    <style name="darkTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#212121</item>
+        <item name="colorPrimaryDark">#000000</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="backgroundColor">#303030</item>
+        <item name="tabColor">#303030</item>
+        <item name="cardBackground">#424242</item>
+        <item name="textcolor">#ffffff</item>
+        <item name="tintColor">#ffffff</item>
+        <item name="buttonColor">#2196F3</item>
+        <item name="overlayBackgroundColor">#333639</item>
+        <item name="magic">#424242</item>
+        <item name="android:windowAnimationStyle">@style/WindowAnimationTransition</item>
+
+
+    </style>
+
+    <style name="WindowAnimationTransition">
+        <item name="android:windowEnterAnimation">@android:anim/fade_in</item>
+        <item name="android:windowExitAnimation">@android:anim/fade_out</item>
+
+    </style>
+
+    <style name="AppTheme.NavigationView">
+        <item name="android:textColorSecondary">#969696</item>
+
+    </style>
+
+    <!-- Dark application theme. -->
+    <style name="darkerTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#000000</item>
+        <item name="colorPrimaryDark">#000000</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="backgroundColor">#000000</item>
+        <item name="tabColor">#000000</item>
+        <item name="cardBackground">#ffffff</item>
+        <item name="textcolor">#000000</item>
+        <item name="tintColor">#000000</item>
+        <item name="buttonColor">#2196F3</item>
+        <item name="overlayBackgroundColor">#7f333639</item>
+        <item name="magic">#424242</item>
+        <item name="android:windowAnimationStyle">@style/WindowAnimationTransition</item>
+    </style>
+
+    <style name="WindowAnimationTransitions">
+        <item name="android:windowEnterAnimation">@android:anim/fade_in</item>
+        <item name="android:windowExitAnimation">@android:anim/fade_out</item>
+
+    </style>
+
+
+    <!-- Dark application theme. -->
+    <style name="royalTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#25013b</item>
+        <item name="colorPrimaryDark">#000000</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="backgroundColor">#353554</item>
+        <item name="tabColor">#25013b</item>
+        <item name="cardBackground">#353554</item>
+        <item name="textcolor">#f59870</item>
+        <item name="tintColor">#f59870</item>
+        <item name="buttonColor">#2196F3</item>
+        <item name="overlayBackgroundColor">#333639</item>
+        <item name="magic">#424242</item>
+        <item name="android:windowAnimationStyle">@style/WindowAnimationTransition</item>
+    </style>
+
+    <style name="WindowAnimationTransitiona">
+        <item name="android:windowEnterAnimation">@android:anim/fade_in</item>
+        <item name="android:windowExitAnimation">@android:anim/fade_out</item>
+
+    </style>
+
+    <style name="AppThemeCustom" parent="Theme.AppCompat.Light.NoActionBar" >
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryDark">@color/primary_dark</item>
+        <item name="colorAccent">@color/accent</item>
+        <item name="android:textColorPrimary">@color/primary_text</item>
+        <item name="android:textColorSecondary">@color/secondary_text</item>
+        <item name="android:windowBackground">@color/divider</item>
+        <item name="android:colorBackground">@color/background</item>
+        <item name="colorButtonNormal">@color/divider</item>
+        <item name="colorControlHighlight">@color/divider</item>
+    </style>
+
+</resources>

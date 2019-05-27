@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#393939</color>
+    <color name="colorPrimaryDark">#2f2f2f</color>
+    <color name="colorAccent">#52b7f8</color>
+    <color name="backgroundFragment">#2b2b2b</color>
+    <color name="btnActive">#A9d440</color>
+    <color name="btnDailer">#95ca12</color>
+    <color name="White">#ffffff</color>
+    <color name="overlayBackground">#333639</color>
+    <color name="overlayActionbar">#0e0d0e</color>
+</resources>
