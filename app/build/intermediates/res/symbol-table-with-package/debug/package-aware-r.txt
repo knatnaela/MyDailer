@@ -3530,6 +3530,7 @@ style Material_Widget_YearPicker
 style Material_Widget_YearPicker_Light
 style MaterialSearchBarDark
 style MaterialSearchBarLight
+style MyDailer_Widget_Text_Body
 style Name
 style Platform_AppCompat
 style Platform_AppCompat_Light

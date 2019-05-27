@@ -131,4 +131,11 @@
         <item name="colorControlHighlight">@color/divider</item>
     </style>
 
+    <style name="MyDailer.Widget.Text.Body" parent="TextAppearance.AppCompat">
+
+        <item name="android:textSize">25dp</item>
+        <item name="android:textColor">@android:color/darker_gray</item>
+
+    </style>
+
 </resources>

@@ -74,10 +74,6 @@ public class DeleteContactsActivity extends AppCompatActivity {
         }
         else
             setTheme(R.style.Light);
-        CalligraphyConfig.initDefault(new CalligraphyConfig.Builder()
-                .setDefaultFontPath("fonts/CALIBRI.TTF")
-                .setFontAttrId(R.attr.fontPath)
-                .build());
         setContentView(R.layout.activity_delete_contacts);
 
         final Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);

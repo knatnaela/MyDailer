@@ -71,13 +71,13 @@ public class FragmentCalls extends Fragment {
         makeCall = v.findViewById(R.id.txtMakeCall);
         fab = relativeLayout.findViewById(R.id.fab);
 
-       /* makeCall.setOnClickListener(new View.OnClickListener() {
+        makeCall.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
                 dialerPad();
             }
-        });*/
+        });
 
         fab.setOnClickListener(new View.OnClickListener() {
             @Override

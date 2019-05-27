@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -36,9 +35,8 @@
         <TextView
             android:gravity="center"
             android:id="@+id/txtSlogan"
-            android:textSize="25sp"
+            style="@style/MyDailer.Widget.Text.Body"
             android:layout_weight="1"
-            android:textColor="@android:color/darker_gray"
             android:text="My Dialer"
             android:layout_width="0dp"
             android:layout_gravity="bottom"

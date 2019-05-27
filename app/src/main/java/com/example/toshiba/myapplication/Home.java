@@ -120,10 +120,6 @@ public class Home extends AppCompatActivity
         }
         else
             setTheme(R.style.Light);
-        CalligraphyConfig.initDefault(new CalligraphyConfig.Builder()
-                .setDefaultFontPath("fonts/CALIBRI.TTF")
-                .setFontAttrId(R.attr.fontPath)
-                .build());
         setContentView(R.layout.activity_home);
         final Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle(R.string.menu);

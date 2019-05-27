@@ -48,10 +48,6 @@ public class DialerPad extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         loadLocale();
-        CalligraphyConfig.initDefault(new CalligraphyConfig.Builder()
-                .setDefaultFontPath("fonts/CALIBRI.TTF")
-                .setFontAttrId(R.attr.fontPath)
-                .build());
         sharedPref = new SharedPref(this);
         if (sharedPref.loadNightModelState())
         {

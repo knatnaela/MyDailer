@@ -45,10 +45,6 @@ public class Settings extends AppCompatActivity {
     }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        CalligraphyConfig.initDefault(new CalligraphyConfig.Builder()
-                .setDefaultFontPath("fonts/CALIBRI.TTF")
-                .setFontAttrId(R.attr.fontPath)
-                .build());
         loadLocale();
         sharedPref = new SharedPref(this);
         if (sharedPref.loadNightModelState())
