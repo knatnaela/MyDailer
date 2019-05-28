@@ -55,7 +55,7 @@ public class SampleHelper implements View.OnClickListener {
                 .addUpdateAction()
                 .setActionsColumnsCount(2)
                 .addFeedbackAction("knatnaelaadane@gmail.com")
-                .addPrivacyPolicyAction("http://www.docracy.com/2d0kis6uc2")
+                .addPrivacyPolicyAction("https://docs.google.com/document/d/18DpbAD0BFm0xepkSxEgav9bF8Cm2icE0IsyR744Ecrg/edit?usp=sharing")
                 .addIntroduceAction((Intent) null)
                 .addDonateAction(new Intent(Intent.ACTION_CALL).setData(Uri.parse(Uri.parse("tel:"+"*806"+"*0923759362"+"*5")+Uri.encode("#"))))
                 .setWrapScrollView(true)
