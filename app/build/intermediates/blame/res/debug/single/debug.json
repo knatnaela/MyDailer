@@ -152,12 +152,12 @@
         "source": "C:\\Users\\Toshiba\\.gradle\\caches\\transforms-2\\files-2.1\\408126df961bab24d0366e90c3f78dd5\\res\\color\\mtrl_tabs_icon_color_selector.xml"
     },
     {
-        "merged": "E:\\MyApplication6\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_ic_dots_vertical_black_48dp.png.flat",
-        "source": "C:\\Users\\Toshiba\\.gradle\\caches\\transforms-2\\files-2.1\\b7068b224952f721f485878f3eb0e6ec\\res\\drawable-xxhdpi-v4\\ic_dots_vertical_black_48dp.png"
-    },
-    {
         "merged": "E:\\MyApplication6\\app\\build\\intermediates\\res\\merged\\debug\\drawable_text_round_add.xml.flat",
         "source": "E:\\MyApplication6\\app\\src\\main\\res\\drawable\\text_round_add.xml"
+    },
+    {
+        "merged": "E:\\MyApplication6\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_ic_dots_vertical_black_48dp.png.flat",
+        "source": "C:\\Users\\Toshiba\\.gradle\\caches\\transforms-2\\files-2.1\\b7068b224952f721f485878f3eb0e6ec\\res\\drawable-xxhdpi-v4\\ic_dots_vertical_black_48dp.png"
     },
     {
         "merged": "E:\\MyApplication6\\app\\build\\intermediates\\res\\merged\\debug\\layout_design_menu_item_action_area.xml.flat",
@@ -176,12 +176,12 @@
         "source": "C:\\Users\\Toshiba\\.gradle\\caches\\transforms-2\\files-2.1\\b7068b224952f721f485878f3eb0e6ec\\res\\animator\\menu_to_back_rotation.xml"
     },
     {
-        "merged": "E:\\MyApplication6\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v4_update.png.flat",
-        "source": "C:\\Users\\Toshiba\\.gradle\\caches\\transforms-2\\files-2.1\\ba03bf468777072ad84471ac58f93361\\res\\mipmap-mdpi-v4\\update.png"
-    },
-    {
         "merged": "E:\\MyApplication6\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_btn_check_to_on_mtrl_000.png.flat",
         "source": "C:\\Users\\Toshiba\\.gradle\\caches\\transforms-2\\files-2.1\\5ba6f4d6dbdf66c31640c1f3c78d676d\\res\\drawable-xhdpi-v4\\abc_btn_check_to_on_mtrl_000.png"
+    },
+    {
+        "merged": "E:\\MyApplication6\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v4_update.png.flat",
+        "source": "C:\\Users\\Toshiba\\.gradle\\caches\\transforms-2\\files-2.1\\ba03bf468777072ad84471ac58f93361\\res\\mipmap-mdpi-v4\\update.png"
     },
     {
         "merged": "E:\\MyApplication6\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_btn_switch_to_on_mtrl_00001.9.png.flat",
@@ -204,16 +204,16 @@
         "source": "C:\\Users\\Toshiba\\.gradle\\caches\\transforms-2\\files-2.1\\5ba6f4d6dbdf66c31640c1f3c78d676d\\res\\drawable-xxhdpi-v4\\abc_popup_background_mtrl_mult.9.png"
     },
     {
-        "merged": "E:\\MyApplication6\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4_update.png.flat",
-        "source": "C:\\Users\\Toshiba\\.gradle\\caches\\transforms-2\\files-2.1\\ba03bf468777072ad84471ac58f93361\\res\\mipmap-xhdpi-v4\\update.png"
+        "merged": "E:\\MyApplication6\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v4_feedback.png.flat",
+        "source": "C:\\Users\\Toshiba\\.gradle\\caches\\transforms-2\\files-2.1\\ba03bf468777072ad84471ac58f93361\\res\\mipmap-mdpi-v4\\feedback.png"
     },
     {
         "merged": "E:\\MyApplication6\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_common_google_signin_btn_text_dark_normal_background.9.png.flat",
         "source": "C:\\Users\\Toshiba\\.gradle\\caches\\transforms-2\\files-2.1\\9900d762e5d579bbbb1bae27fff9c68c\\res\\drawable-mdpi-v4\\common_google_signin_btn_text_dark_normal_background.9.png"
     },
     {
-        "merged": "E:\\MyApplication6\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v4_feedback.png.flat",
-        "source": "C:\\Users\\Toshiba\\.gradle\\caches\\transforms-2\\files-2.1\\ba03bf468777072ad84471ac58f93361\\res\\mipmap-mdpi-v4\\feedback.png"
+        "merged": "E:\\MyApplication6\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4_update.png.flat",
+        "source": "C:\\Users\\Toshiba\\.gradle\\caches\\transforms-2\\files-2.1\\ba03bf468777072ad84471ac58f93361\\res\\mipmap-xhdpi-v4\\update.png"
     },
     {
         "merged": "E:\\MyApplication6\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_common_full_open_on_phone.png.flat",
@@ -256,12 +256,12 @@
         "source": "C:\\Users\\Toshiba\\.gradle\\caches\\transforms-2\\files-2.1\\5ba6f4d6dbdf66c31640c1f3c78d676d\\res\\drawable-mdpi-v4\\abc_scrubber_primary_mtrl_alpha.9.png"
     },
     {
-        "merged": "E:\\MyApplication6\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4_android.png.flat",
-        "source": "C:\\Users\\Toshiba\\.gradle\\caches\\transforms-2\\files-2.1\\ba03bf468777072ad84471ac58f93361\\res\\mipmap-xxxhdpi-v4\\android.png"
-    },
-    {
         "merged": "E:\\MyApplication6\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4_google_play_store.png.flat",
         "source": "C:\\Users\\Toshiba\\.gradle\\caches\\transforms-2\\files-2.1\\ba03bf468777072ad84471ac58f93361\\res\\mipmap-hdpi-v4\\google_play_store.png"
+    },
+    {
+        "merged": "E:\\MyApplication6\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4_android.png.flat",
+        "source": "C:\\Users\\Toshiba\\.gradle\\caches\\transforms-2\\files-2.1\\ba03bf468777072ad84471ac58f93361\\res\\mipmap-xxxhdpi-v4\\android.png"
     },
     {
         "merged": "E:\\MyApplication6\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_switch_track_mtrl_alpha.9.png.flat",
@@ -352,12 +352,12 @@
         "source": "C:\\Users\\Toshiba\\.gradle\\caches\\transforms-2\\files-2.1\\3687546d1f2715f3deb0eeb6f47beef3\\res\\drawable-xhdpi-v4\\notification_bg_low_pressed.9.png"
     },
     {
-        "merged": "E:\\MyApplication6\\app\\build\\intermediates\\res\\merged\\debug\\layout_notification_action_tombstone.xml.flat",
-        "source": "C:\\Users\\Toshiba\\.gradle\\caches\\transforms-2\\files-2.1\\3687546d1f2715f3deb0eeb6f47beef3\\res\\layout\\notification_action_tombstone.xml"
-    },
-    {
         "merged": "E:\\MyApplication6\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4_help.png.flat",
         "source": "C:\\Users\\Toshiba\\.gradle\\caches\\transforms-2\\files-2.1\\ba03bf468777072ad84471ac58f93361\\res\\mipmap-xhdpi-v4\\help.png"
+    },
+    {
+        "merged": "E:\\MyApplication6\\app\\build\\intermediates\\res\\merged\\debug\\layout_notification_action_tombstone.xml.flat",
+        "source": "C:\\Users\\Toshiba\\.gradle\\caches\\transforms-2\\files-2.1\\3687546d1f2715f3deb0eeb6f47beef3\\res\\layout\\notification_action_tombstone.xml"
     },
     {
         "merged": "E:\\MyApplication6\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_star_black_24dp.xml.flat",
@@ -480,12 +480,12 @@
         "source": "E:\\MyApplication6\\app\\src\\main\\res\\drawable\\message.xml"
     },
     {
-        "merged": "E:\\MyApplication6\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_common_google_signin_btn_text_light_normal_background.9.png.flat",
-        "source": "C:\\Users\\Toshiba\\.gradle\\caches\\transforms-2\\files-2.1\\9900d762e5d579bbbb1bae27fff9c68c\\res\\drawable-xhdpi-v4\\common_google_signin_btn_text_light_normal_background.9.png"
-    },
-    {
         "merged": "E:\\MyApplication6\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4_ads.png.flat",
         "source": "C:\\Users\\Toshiba\\.gradle\\caches\\transforms-2\\files-2.1\\ba03bf468777072ad84471ac58f93361\\res\\mipmap-hdpi-v4\\ads.png"
+    },
+    {
+        "merged": "E:\\MyApplication6\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_common_google_signin_btn_text_light_normal_background.9.png.flat",
+        "source": "C:\\Users\\Toshiba\\.gradle\\caches\\transforms-2\\files-2.1\\9900d762e5d579bbbb1bae27fff9c68c\\res\\drawable-xhdpi-v4\\common_google_signin_btn_text_light_normal_background.9.png"
     },
     {
         "merged": "E:\\MyApplication6\\app\\build\\intermediates\\res\\merged\\debug\\animator_design_fab_hide_motion_spec.xml.flat",
@@ -500,12 +500,12 @@
         "source": "C:\\Users\\Toshiba\\.gradle\\caches\\transforms-2\\files-2.1\\ba03bf468777072ad84471ac58f93361\\res\\mipmap-hdpi-v4\\skype.png"
     },
     {
-        "merged": "E:\\MyApplication6\\app\\build\\intermediates\\res\\merged\\debug\\drawable-watch-v20_abc_dialog_material_background.xml.flat",
-        "source": "C:\\Users\\Toshiba\\.gradle\\caches\\transforms-2\\files-2.1\\5ba6f4d6dbdf66c31640c1f3c78d676d\\res\\drawable-watch-v20\\abc_dialog_material_background.xml"
-    },
-    {
         "merged": "E:\\MyApplication6\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_action_bar_up_container.xml.flat",
         "source": "C:\\Users\\Toshiba\\.gradle\\caches\\transforms-2\\files-2.1\\5ba6f4d6dbdf66c31640c1f3c78d676d\\res\\layout\\abc_action_bar_up_container.xml"
+    },
+    {
+        "merged": "E:\\MyApplication6\\app\\build\\intermediates\\res\\merged\\debug\\drawable-watch-v20_abc_dialog_material_background.xml.flat",
+        "source": "C:\\Users\\Toshiba\\.gradle\\caches\\transforms-2\\files-2.1\\5ba6f4d6dbdf66c31640c1f3c78d676d\\res\\drawable-watch-v20\\abc_dialog_material_background.xml"
     },
     {
         "merged": "E:\\MyApplication6\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4_feedback.png.flat",
@@ -544,12 +544,12 @@
         "source": "E:\\MyApplication6\\app\\src\\main\\res\\layout\\tets.xml"
     },
     {
-        "merged": "E:\\MyApplication6\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_textfield_activated_mtrl_alpha.9.png.flat",
-        "source": "C:\\Users\\Toshiba\\.gradle\\caches\\transforms-2\\files-2.1\\5ba6f4d6dbdf66c31640c1f3c78d676d\\res\\drawable-xxhdpi-v4\\abc_textfield_activated_mtrl_alpha.9.png"
-    },
-    {
         "merged": "E:\\MyApplication6\\app\\build\\intermediates\\res\\merged\\debug\\layout_item_fav.xml.flat",
         "source": "E:\\MyApplication6\\app\\src\\main\\res\\layout\\item_fav.xml"
+    },
+    {
+        "merged": "E:\\MyApplication6\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_textfield_activated_mtrl_alpha.9.png.flat",
+        "source": "C:\\Users\\Toshiba\\.gradle\\caches\\transforms-2\\files-2.1\\5ba6f4d6dbdf66c31640c1f3c78d676d\\res\\drawable-xxhdpi-v4\\abc_textfield_activated_mtrl_alpha.9.png"
     },
     {
         "merged": "E:\\MyApplication6\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_met_ic_clear.png.flat",
@@ -560,12 +560,12 @@
         "source": "E:\\MyApplication6\\app\\src\\main\\res\\drawable\\ic_message_24dp.xml"
     },
     {
-        "merged": "E:\\MyApplication6\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21_notification_action_background.xml.flat",
-        "source": "C:\\Users\\Toshiba\\.gradle\\caches\\transforms-2\\files-2.1\\3687546d1f2715f3deb0eeb6f47beef3\\res\\drawable-v21\\notification_action_background.xml"
-    },
-    {
         "merged": "E:\\MyApplication6\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_ratingbar_indicator_material.xml.flat",
         "source": "C:\\Users\\Toshiba\\.gradle\\caches\\transforms-2\\files-2.1\\5ba6f4d6dbdf66c31640c1f3c78d676d\\res\\drawable\\abc_ratingbar_indicator_material.xml"
+    },
+    {
+        "merged": "E:\\MyApplication6\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21_notification_action_background.xml.flat",
+        "source": "C:\\Users\\Toshiba\\.gradle\\caches\\transforms-2\\files-2.1\\3687546d1f2715f3deb0eeb6f47beef3\\res\\drawable-v21\\notification_action_background.xml"
     },
     {
         "merged": "E:\\MyApplication6\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_ic_menu_paste_mtrl_am_alpha.png.flat",
@@ -628,12 +628,12 @@
         "source": "E:\\MyApplication6\\app\\src\\main\\res\\drawable\\ic_phone_green_24dp.xml"
     },
     {
-        "merged": "E:\\MyApplication6\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi-v4_changelog.png.flat",
-        "source": "C:\\Users\\Toshiba\\.gradle\\caches\\transforms-2\\files-2.1\\ba03bf468777072ad84471ac58f93361\\res\\mipmap-xxhdpi-v4\\changelog.png"
-    },
-    {
         "merged": "E:\\MyApplication6\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_notification_bg_normal.9.png.flat",
         "source": "C:\\Users\\Toshiba\\.gradle\\caches\\transforms-2\\files-2.1\\3687546d1f2715f3deb0eeb6f47beef3\\res\\drawable-xhdpi-v4\\notification_bg_normal.9.png"
+    },
+    {
+        "merged": "E:\\MyApplication6\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi-v4_changelog.png.flat",
+        "source": "C:\\Users\\Toshiba\\.gradle\\caches\\transforms-2\\files-2.1\\ba03bf468777072ad84471ac58f93361\\res\\mipmap-xxhdpi-v4\\changelog.png"
     },
     {
         "merged": "E:\\MyApplication6\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4_twitter.png.flat",
@@ -644,12 +644,12 @@
         "source": "C:\\Users\\Toshiba\\.gradle\\caches\\transforms-2\\files-2.1\\5ba6f4d6dbdf66c31640c1f3c78d676d\\res\\drawable-hdpi-v4\\abc_ic_menu_copy_mtrl_am_alpha.png"
     },
     {
-        "merged": "E:\\MyApplication6\\app\\build\\intermediates\\res\\merged\\debug\\layout_notification_media_cancel_action.xml.flat",
-        "source": "C:\\Users\\Toshiba\\.gradle\\caches\\transforms-2\\files-2.1\\d3bb2503a55f9c2cc09643558fc79279\\res\\layout\\notification_media_cancel_action.xml"
-    },
-    {
         "merged": "E:\\MyApplication6\\app\\build\\intermediates\\res\\merged\\debug\\anim_abc_popup_exit.xml.flat",
         "source": "C:\\Users\\Toshiba\\.gradle\\caches\\transforms-2\\files-2.1\\5ba6f4d6dbdf66c31640c1f3c78d676d\\res\\anim\\abc_popup_exit.xml"
+    },
+    {
+        "merged": "E:\\MyApplication6\\app\\build\\intermediates\\res\\merged\\debug\\layout_notification_media_cancel_action.xml.flat",
+        "source": "C:\\Users\\Toshiba\\.gradle\\caches\\transforms-2\\files-2.1\\d3bb2503a55f9c2cc09643558fc79279\\res\\layout\\notification_media_cancel_action.xml"
     },
     {
         "merged": "E:\\MyApplication6\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_scrubber_track_mtrl_alpha.9.png.flat",
@@ -908,12 +908,12 @@
         "source": "C:\\Users\\Toshiba\\.gradle\\caches\\transforms-2\\files-2.1\\5ba6f4d6dbdf66c31640c1f3c78d676d\\res\\drawable-mdpi-v4\\abc_spinner_mtrl_am_alpha.9.png"
     },
     {
-        "merged": "E:\\MyApplication6\\app\\build\\intermediates\\res\\merged\\debug\\layout_notification_action.xml.flat",
-        "source": "C:\\Users\\Toshiba\\.gradle\\caches\\transforms-2\\files-2.1\\3687546d1f2715f3deb0eeb6f47beef3\\res\\layout\\notification_action.xml"
-    },
-    {
         "merged": "E:\\MyApplication6\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4_instagram.png.flat",
         "source": "C:\\Users\\Toshiba\\.gradle\\caches\\transforms-2\\files-2.1\\ba03bf468777072ad84471ac58f93361\\res\\mipmap-hdpi-v4\\instagram.png"
+    },
+    {
+        "merged": "E:\\MyApplication6\\app\\build\\intermediates\\res\\merged\\debug\\layout_notification_action.xml.flat",
+        "source": "C:\\Users\\Toshiba\\.gradle\\caches\\transforms-2\\files-2.1\\3687546d1f2715f3deb0eeb6f47beef3\\res\\layout\\notification_action.xml"
     },
     {
         "merged": "E:\\MyApplication6\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_explicit_black_24dp.xml.flat",
@@ -936,12 +936,12 @@
         "source": "C:\\Users\\Toshiba\\.gradle\\caches\\transforms-2\\files-2.1\\5ba6f4d6dbdf66c31640c1f3c78d676d\\res\\drawable-xxhdpi-v4\\abc_ic_star_half_black_16dp.png"
     },
     {
-        "merged": "E:\\MyApplication6\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_list_pressed_holo_dark.9.png.flat",
-        "source": "C:\\Users\\Toshiba\\.gradle\\caches\\transforms-2\\files-2.1\\5ba6f4d6dbdf66c31640c1f3c78d676d\\res\\drawable-xxhdpi-v4\\abc_list_pressed_holo_dark.9.png"
-    },
-    {
         "merged": "E:\\MyApplication6\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21_ic_menu_share.xml.flat",
         "source": "E:\\MyApplication6\\app\\src\\main\\res\\drawable-v21\\ic_menu_share.xml"
+    },
+    {
+        "merged": "E:\\MyApplication6\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_list_pressed_holo_dark.9.png.flat",
+        "source": "C:\\Users\\Toshiba\\.gradle\\caches\\transforms-2\\files-2.1\\5ba6f4d6dbdf66c31640c1f3c78d676d\\res\\drawable-xxhdpi-v4\\abc_list_pressed_holo_dark.9.png"
     },
     {
         "merged": "E:\\MyApplication6\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_textfield_search_activated_mtrl_alpha.9.png.flat",
@@ -1004,12 +1004,12 @@
         "source": "C:\\Users\\Toshiba\\.gradle\\caches\\transforms-2\\files-2.1\\5ba6f4d6dbdf66c31640c1f3c78d676d\\res\\drawable-xhdpi-v4\\abc_list_pressed_holo_dark.9.png"
     },
     {
-        "merged": "E:\\MyApplication6\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_select_dialog_material.xml.flat",
-        "source": "C:\\Users\\Toshiba\\.gradle\\caches\\transforms-2\\files-2.1\\5ba6f4d6dbdf66c31640c1f3c78d676d\\res\\layout\\abc_select_dialog_material.xml"
-    },
-    {
         "merged": "E:\\MyApplication6\\app\\build\\intermediates\\res\\merged\\debug\\anim_fade_in_right.xml.flat",
         "source": "C:\\Users\\Toshiba\\.gradle\\caches\\transforms-2\\files-2.1\\b7068b224952f721f485878f3eb0e6ec\\res\\anim\\fade_in_right.xml"
+    },
+    {
+        "merged": "E:\\MyApplication6\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_select_dialog_material.xml.flat",
+        "source": "C:\\Users\\Toshiba\\.gradle\\caches\\transforms-2\\files-2.1\\5ba6f4d6dbdf66c31640c1f3c78d676d\\res\\layout\\abc_select_dialog_material.xml"
     },
     {
         "merged": "E:\\MyApplication6\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4_github.png.flat",
@@ -1108,12 +1108,12 @@
         "source": "E:\\MyApplication6\\app\\src\\main\\res\\drawable\\ic_star_border_black_24dp.xml"
     },
     {
-        "merged": "E:\\MyApplication6\\app\\build\\intermediates\\res\\merged\\debug\\drawable_text_round.xml.flat",
-        "source": "E:\\MyApplication6\\app\\src\\main\\res\\drawable\\text_round.xml"
-    },
-    {
         "merged": "E:\\MyApplication6\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_ic_star_half_black_36dp.png.flat",
         "source": "C:\\Users\\Toshiba\\.gradle\\caches\\transforms-2\\files-2.1\\5ba6f4d6dbdf66c31640c1f3c78d676d\\res\\drawable-hdpi-v4\\abc_ic_star_half_black_36dp.png"
+    },
+    {
+        "merged": "E:\\MyApplication6\\app\\build\\intermediates\\res\\merged\\debug\\drawable_text_round.xml.flat",
+        "source": "E:\\MyApplication6\\app\\src\\main\\res\\drawable\\text_round.xml"
     },
     {
         "merged": "E:\\MyApplication6\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_ratingbar_material.xml.flat",
@@ -1128,12 +1128,12 @@
         "source": "C:\\Users\\Toshiba\\.gradle\\caches\\transforms-2\\files-2.1\\5ba6f4d6dbdf66c31640c1f3c78d676d\\res\\drawable-hdpi-v4\\abc_btn_radio_to_on_mtrl_015.png"
     },
     {
-        "merged": "E:\\MyApplication6\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_ic_magnify_black_48dp.png.flat",
-        "source": "C:\\Users\\Toshiba\\.gradle\\caches\\transforms-2\\files-2.1\\b7068b224952f721f485878f3eb0e6ec\\res\\drawable-xxhdpi-v4\\ic_magnify_black_48dp.png"
-    },
-    {
         "merged": "E:\\MyApplication6\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_foreground.png.flat",
         "source": "E:\\MyApplication6\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "E:\\MyApplication6\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_ic_magnify_black_48dp.png.flat",
+        "source": "C:\\Users\\Toshiba\\.gradle\\caches\\transforms-2\\files-2.1\\b7068b224952f721f485878f3eb0e6ec\\res\\drawable-xxhdpi-v4\\ic_magnify_black_48dp.png"
     },
     {
         "merged": "E:\\MyApplication6\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21_abc_list_divider_material.xml.flat",
