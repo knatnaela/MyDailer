@@ -14,6 +14,7 @@
     <string name="internet">Internet</string>
     <string name="sms" translatable="false">SMS</string>
     <string name="voice">Voice</string>
+    <string name="light" translatable="false">Light</string>
     <string name="send_call_me_back">Send Call Me Back</string>
     <string name="transfer_money">Transfer Money</string>
     <string name="send_gift">Send Gift</string>
@@ -34,9 +35,9 @@
     <string name="enter_a_name_or_number">Enter a name or number</string>
     <string name="menu">Menu</string>
 
-    <string name="dark_theme">Dark Theme</string>
-    <string name="light_theme">Light Theme</string>
-    <string name="custom_theme">Custom Theme</string>
+    <string name="dark_theme" translatable="false">Dark Theme</string>
+    <string name="light_theme" translatable="false">Light Theme</string>
+    <string name="custom_theme" translatable="false">Custom Theme</string>
     <string name="check_your_balance">Check your balance</string>
     <string name="recharge_your_phone">Recharge your phone</string>
     <string name="self_voice_package">Self Voice Package</string>
