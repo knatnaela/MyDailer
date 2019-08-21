@@ -13,26 +13,26 @@ public class SharedPref {
         mPreferences = context.getSharedPreferences("filename",Context.MODE_PRIVATE );
     }
 
-    private void setNightModeState(Boolean state){
+    public void setNightModeState(Boolean state){
         SharedPreferences.Editor editor = mPreferences.edit();
         editor.putBoolean("NightMode",state );
         editor.apply();
     }
 
-    private void setRoyalModeState(Boolean state){
+    public void setRoyalModeState(Boolean state){
         SharedPreferences.Editor editor = mPreferences.edit();
         editor.putBoolean("RoyalMode",state );
         editor.apply();
     }
 
-    private void setDarkModeState(Boolean state){
+    public void setDarkModeState(Boolean state){
         SharedPreferences.Editor editor = mPreferences.edit();
         editor.putBoolean("DarkMode",state );
         editor.apply();
     }
 
 
-    private void setLightModeState(Boolean state){
+    public void setLightModeState(Boolean state){
         SharedPreferences.Editor editor = mPreferences.edit();
         editor.putBoolean("LightMode",state );
         editor.apply();

@@ -3,7 +3,7 @@ package com.example.toshiba.myapplication.Model;
 
 public class ModelContacts  {
 
-    private String name,number,Id;
+    public String name,number,Id;
     private String  Photo;
 
     public ModelContacts(String name, String number, String id, String photo) {

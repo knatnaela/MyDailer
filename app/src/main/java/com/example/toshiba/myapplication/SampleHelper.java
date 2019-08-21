@@ -20,17 +20,17 @@ public class SampleHelper implements View.OnClickListener {
         this.activity = activity;
     }
 
-    private static SampleHelper with(Activity activity) {
+    public static SampleHelper with(Activity activity) {
         return new SampleHelper(activity);
     }
 
-    private SampleHelper init() {
+    public SampleHelper init() {
         int theme = R.style.Theme_AppCompat;
         activity.setTheme(theme);
         return this;
     }
 
-    private void loadAbout() {
+    public void loadAbout() {
         final FrameLayout flHolder = activity.findViewById(R.id.about);
 
         AboutBuilder builder = AboutBuilder.with(activity)
