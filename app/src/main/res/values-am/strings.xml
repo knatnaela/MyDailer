@@ -70,4 +70,9 @@
     <string name="more_services">ተጨማሪ አገልግሎቶች</string>
     <string name="_10_service_fee_on_borrowed_amount_chargeable_on_next_topup">10% የአገልግሎት ክፍያ በተበዳሪው መጠን ይከፍላል</string>
     <string name="do_u_want_buy_package">ጥቅል መግዛት ይፈልጋሉ</string>
+    <string name="light">Light</string>
+    <string name="light_mode">Light mode</string>
+    <string name="royal_mode">Royal mode</string>
+    <string name="you_must_accept_this_permission_to_use_our_app">You must accept this permission to use our app</string>
+    <string name="knatnaelaadane_gmail_com">knatnaelaadane@gmail.com</string>
 </resources>

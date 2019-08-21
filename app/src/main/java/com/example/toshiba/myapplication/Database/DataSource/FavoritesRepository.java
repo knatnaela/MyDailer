@@ -10,9 +10,9 @@ import io.reactivex.Flowable;
 
 public class FavoritesRepository implements IFavoritesDataSource {
 
-    private IFavoritesDataSource favoritesDataSource;
+    private final IFavoritesDataSource favoritesDataSource;
 
-    public FavoritesRepository(IFavoritesDataSource favoritesDataSource) {
+    private FavoritesRepository(IFavoritesDataSource favoritesDataSource) {
         this.favoritesDataSource = favoritesDataSource;
     }
 
@@ -38,7 +38,6 @@ public class FavoritesRepository implements IFavoritesDataSource {
 
     @Override
     public void insertFav(Favorites... favorites) {
-
         favoritesDataSource.insertFav(favorites);
     }
 

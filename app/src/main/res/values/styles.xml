@@ -22,7 +22,7 @@
 
 
     <!-- Light/Day application theme. -->
-    <style name="Light" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="lightTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">#2196F3</item>
         <item name="colorPrimaryDark">#1976D2</item>
@@ -78,10 +78,10 @@
         <item name="backgroundColor">#000000</item>
         <item name="tabColor">#000000</item>
         <item name="cardBackground">#ffffff</item>
-        <item name="textcolor">#000000</item>
+        <item name="textcolor">#805B5B</item>
         <item name="tintColor">#000000</item>
         <item name="buttonColor">#2196F3</item>
-        <item name="overlayBackgroundColor">#7f333639</item>
+        <item name="overlayBackgroundColor">#333639</item>
         <item name="magic">#424242</item>
         <item name="android:windowAnimationStyle">@style/WindowAnimationTransition</item>
     </style>
@@ -134,8 +134,29 @@
     <style name="MyDailer.Widget.Text.Body" parent="TextAppearance.AppCompat">
 
         <item name="android:textSize">25dp</item>
+        <item name="android:textAllCaps">false</item>
         <item name="android:textColor">@android:color/darker_gray</item>
 
     </style>
+
+    <!--Card background-->
+    <style name="cardBackground" parent="Widget.MaterialComponents.CardView">
+        <item name="cardBackgroundColor">?attr/cardBackground</item>
+    </style>
+
+    <style name="textColor" parent="TextAppearance.AppCompat">
+
+        <item name="android:textColor">?attr/textcolor</item>
+
+    </style>
+
+    <style name="buttonColor" parent="Widget.AppCompat.Button">
+        <item name="android:background">?attr/buttonColor</item>
+    </style>
+
+    <style name="SplashTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@layout/activity_main</item>
+    </style>
+
 
 </resources>

@@ -37,5 +37,20 @@
 
     </style>
 
+    <!--Card background-->
+    <style name="cardBackground" parent="Widget.MaterialComponents.CardView">
+        <item name="cardBackgroundColor">?attr/cardBackground</item>
+    </style>
+
+    <style name="textColor" parent="TextAppearance.AppCompat">
+
+        <item name="android:textColor">?attr/textcolor</item>
+
+    </style>
+
+    <style name="buttonColor" parent="Widget.AppCompat.Button">
+        <item name="android:background">?attr/buttonColor</item>
+    </style>
+
 
 </resources>

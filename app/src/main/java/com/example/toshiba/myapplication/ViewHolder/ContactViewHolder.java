@@ -1,26 +1,28 @@
 package com.example.toshiba.myapplication.ViewHolder;
 
-import android.support.v7.widget.RecyclerView;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.toshiba.myapplication.Interface.ItemClickListener;
 import com.example.toshiba.myapplication.R;
 
 public class ContactViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener,View.OnLongClickListener{
 
-        public TextView contact_name,contact_number;
-       public ImageView btn_call_contact,img_contact,btn_fav;
+        public final TextView contact_name;
+    public final TextView contact_number;
+       public final ImageView btn_call_contact;
+    public final ImageView img_contact;
+    private final ImageView btn_fav;
+    private final LinearLayout btn_call_me_back;
+    private final LinearLayout btn_transfer;
+    private final LinearLayout btn_gift;
+    private final LinearLayout btnSend;
 
-       public LinearLayout btn_call_me_back,btn_transfer,btn_gift,btnSend;
 
-
-    public LinearLayout item_contact;
+    private final LinearLayout item_contact;
 
 
     ItemClickListener itemClickListener;
@@ -51,13 +53,13 @@ public class ContactViewHolder extends RecyclerView.ViewHolder implements View.O
 
     @Override
     public void onClick(View view) {
-        itemClickListener.onClick(view, getAdapterPosition(), false);
+        itemClickListener.onClick(false);
         }
 
     @Override
     public boolean onLongClick(View view)
     {
-        itemClickListener.onClick(view, getAdapterPosition(), true );
+        itemClickListener.onClick(true );
         return false;
     }
 }

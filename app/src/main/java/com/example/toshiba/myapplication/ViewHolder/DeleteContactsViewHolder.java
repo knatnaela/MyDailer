@@ -1,6 +1,6 @@
 package com.example.toshiba.myapplication.ViewHolder;
 
-import android.support.v7.widget.RecyclerView;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -13,17 +13,15 @@ import java.util.List;
 
 public class DeleteContactsViewHolder extends RecyclerView.ViewHolder implements  View.OnClickListener
     {
-      public   TextView name;
-        public TextView number;
-        public TextView date;
+      public final TextView name;
+        public final TextView number;
         public TextView r;
-        public ImageView img_contact;
-
+        public final ImageView img_contact;
         public List<String> item_call;
 
-      public   CheckBox checkBox;
+      public final CheckBox checkBox;
 
-        ItemClickListener itemClickListener;
+        private ItemClickListener itemClickListener;
 
         public void setItemClickListener(ItemClickListener itemClickListener) {
             this.itemClickListener = itemClickListener;
@@ -36,14 +34,14 @@ public class DeleteContactsViewHolder extends RecyclerView.ViewHolder implements
             checkBox = itemView.findViewById(R.id.ckBox);
             number = itemView.findViewById(R.id.phone_number);
             img_contact = itemView.findViewById(R.id.img_calls);
-            date = itemView.findViewById(R.id.Date);
+            TextView date = itemView.findViewById(R.id.Date);
 
             itemView.setOnClickListener(this);
         }
 
         @Override
         public void onClick(View view) {
-            itemClickListener.onClick(view, getAdapterPosition(), false);
+            itemClickListener.onClick(false);
         }
 
 

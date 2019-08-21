@@ -1,96 +1,74 @@
 -- Merging decision tree log ---
 manifest
-ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:2:1-118:12
-INJECTED from E:\MyApplication6\app\src\main\AndroidManifest.xml:2:1-118:12
-INJECTED from E:\MyApplication6\app\src\main\AndroidManifest.xml:2:1-118:12
-INJECTED from E:\MyApplication6\app\src\main\AndroidManifest.xml:2:1-118:12
-MERGED from [com.android.support:multidex:1.0.2] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\7122755b8d162ab397b63c023968b74a\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:design:28.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\408126df961bab24d0366e90c3f78dd5\AndroidManifest.xml:17:1-24:12
-MERGED from [com.github.jrvansuita:MaterialAbout:0.2.3] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\ba03bf468777072ad84471ac58f93361\AndroidManifest.xml:2:1-12:12
-MERGED from [com.github.mancj:MaterialSearchBar:0.8.2] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\b7068b224952f721f485878f3eb0e6ec\AndroidManifest.xml:2:1-17:12
-MERGED from [com.github.rey5137:material:1.2.4] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\850de1a4cff6ac72a4f897b5bdb80a01\AndroidManifest.xml:2:1-11:12
-MERGED from [com.android.support:cardview-v7:28.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\ba4bd4033b361f8eb4dd6253d7ad19f1\AndroidManifest.xml:17:1-22:12
-MERGED from [com.rengwuxian.materialedittext:library:2.1.4] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\0a49b50bca5d94c2c0487f3bccd6e0f9\AndroidManifest.xml:2:1-10:12
-MERGED from [com.github.medyo:android-about-page:1.1.1] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\23b3a2d9b4eac0fb4c2250f4487bc25c\AndroidManifest.xml:2:1-12:12
-MERGED from [uk.co.chrisjenx:calligraphy:2.3.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\9d4cfe8e398b4004d10829344fcfd03a\AndroidManifest.xml:2:1-13:12
-MERGED from [com.github.bloder:magic:1.1] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\8a19cd96dcc59a870949b2e836dfc01e\AndroidManifest.xml:2:1-17:12
-MERGED from [com.github.jrvansuita:IconHandler:v2.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\1c977b2e17b2b74dade3ff2d320c22f7\AndroidManifest.xml:2:1-17:12
-MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\5ba6f4d6dbdf66c31640c1f3c78d676d\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\a26a36bd35227fa507f7e02ecb1ed602\AndroidManifest.xml:17:1-22:12
-MERGED from [com.google.firebase:firebase-messaging:17.3.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\9fe96d2da7fd87cc1d035719ac32dee5\AndroidManifest.xml:17:1-37:12
-MERGED from [com.google.firebase:firebase-core:16.0.3] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\529e4c14353bbccd76a94dfbdcd79395\AndroidManifest.xml:2:1-9:12
-MERGED from [com.google.firebase:firebase-measurement-connector-impl:17.0.1] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\bdad0bc9a3acfb4e0f1502724b8855cf\AndroidManifest.xml:17:1-34:12
-MERGED from [com.google.firebase:firebase-analytics:16.0.3] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\6a11b7956359e44a313848fae5fe7759\AndroidManifest.xml:17:1-55:12
-MERGED from [com.google.android.gms:play-services-measurement-api:16.0.1] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\d5e88b7f55dd493d880b03d734ab40cd\AndroidManifest.xml:17:1-25:12
-MERGED from [com.google.firebase:firebase-analytics-impl:16.2.1] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\c5a5197fb4a9dad6682415ad13ccef43\AndroidManifest.xml:17:1-40:12
-MERGED from [com.google.firebase:firebase-iid:17.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\4019d9badfe501eebd9e8e16379d1292\AndroidManifest.xml:17:1-59:12
-MERGED from [com.google.firebase:firebase-common:16.0.1] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\8451e7b17a496c93c77e13cfa43e3dc0\AndroidManifest.xml:2:1-17:12
-MERGED from [com.google.firebase:firebase-iid-interop:16.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\0bb07e8007f33c0d74e9bfe749aae537\AndroidManifest.xml:2:1-10:12
-MERGED from [com.google.android.gms:play-services-base:15.0.1] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\9900d762e5d579bbbb1bae27fff9c68c\AndroidManifest.xml:17:1-29:12
-MERGED from [com.google.android.gms:play-services-tasks:15.0.1] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\cce1707b26180d902b32cbf35d42bf35\AndroidManifest.xml:2:1-9:12
-MERGED from [com.google.android.gms:play-services-stats:15.0.1] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\1d1f64366cc55afa43ea947cfa6cf592\AndroidManifest.xml:2:1-9:12
-MERGED from [com.google.firebase:firebase-measurement-connector:17.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\bbe5165c114323acd07032c9d526d2e0\AndroidManifest.xml:17:1-25:12
-MERGED from [com.google.android.gms:play-services-ads-identifier:15.0.1] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\936d63c4712ebb7a24bf9252242ac564\AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.android.gms:play-services-basement:15.0.1] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\c5ee82b129643186619a5d602e3631f8\AndroidManifest.xml:17:1-28:12
-MERGED from [com.android.support:support-v4:28.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\bd1d2fcfbbb640254306cc468faf1c52\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-media-compat:28.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\d3bb2503a55f9c2cc09643558fc79279\AndroidManifest.xml:17:1-22:12
-MERGED from [com.bignerdranch.android:expandablerecyclerview:1.0.3] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\11ac64bf7a22f769f02c330462ae04ca\AndroidManifest.xml:2:1-16:12
-MERGED from [com.android.support:recyclerview-v7:28.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\eb1c793c1893e1176637ef1068f66626\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\ac2b1c9d242da63da48e9a065ef67aaa\AndroidManifest.xml:2:1-11:12
-MERGED from [de.hdodenhof:circleimageview:2.2.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\bc19c02a8b4855b5abcffd3ab8169fb4\AndroidManifest.xml:2:1-11:12
-MERGED from [com.github.jd-alexander:android-flat-button:v1.1] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\0c6bc043d0ccdb13c3fbff7eb77e84dd\AndroidManifest.xml:2:1-11:12
-MERGED from [io.paperdb:paperdb:2.1] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\efe8990df1400d4fcd9df2c6f96ef6a7\AndroidManifest.xml:2:1-14:12
-MERGED from [com.gdacciaro:iosdialog:1.0.3] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\1d77dc32c9c35969c947a2619a753b6d\AndroidManifest.xml:2:1-17:12
-MERGED from [com.github.abdularis:CircularImageView:v1.2] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\bf07b58db747accfb7782a04668bb242\AndroidManifest.xml:2:1-11:12
-MERGED from [com.amulyakhare:com.amulyakhare.textdrawable:1.0.1] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\950cd9ba1cbc7ed61743ce03a528df6c\AndroidManifest.xml:2:1-14:12
-MERGED from [com.intuit.sdp:sdp-android:1.0.5] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\3a4885ce41e737f458d13795286e6527\AndroidManifest.xml:2:1-11:12
-MERGED from [android.arch.persistence.room:rxjava2:1.1.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\177d46386910c5a3021c8b241bb79416\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.persistence.room:runtime:1.1.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\e4c7e0426ecb2e9a79bfc93e41fc1488\AndroidManifest.xml:17:1-22:12
-MERGED from [io.reactivex.rxjava2:rxandroid:2.0.1] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\f512757348aa07fe6dd089bcdcd448f0\AndroidManifest.xml:15:1-21:12
-MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\962f39bba32e102672950ea5ab1f17f4\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\1ae3d607355e8bb6ed0ac57254206d1c\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\93a918e8db3473b9992dbdda8b7e850f\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\bc7c14ae9f7fabdd2e556ca121575112\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:transition:28.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\f7740efb005b8fae645051f87e320e36\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:viewpager:28.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\34891814b6cc6ce4d1b2f5e658b221f0\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\9d0200ed67d651525ad160b8eb7715ed\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\2587232f6992907ad7097f6892ca2507\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\936206cf6e43f04f5d53c0d0879ee369\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:customview:28.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\1bbe8d53164dbf48d064e58b24bd492d\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\794f70fba8ea608ba334ad7d4169751c\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\91d3cd7d1f0b68c445653868cda45385\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:loader:28.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\84707580e2447091bb049be1666a1299\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-compat:28.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\3687546d1f2715f3deb0eeb6f47beef3\AndroidManifest.xml:17:1-24:12
-MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\8366f35d21f112ae8726942f928152d6\AndroidManifest.xml:17:1-25:12
-MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\c25db4b69f31f413d8da83d85512f559\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.persistence:db-framework:1.1.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\a875a78c5d1411b09ab137b2243fe46d\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.persistence:db:1.1.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\dd8b4ac354e89e5e41bb174b169960e3\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\2663d7d1b78d351c04b5f6044b385576\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\caf1e7abb56e9840809660b04013cb1c\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.core:runtime:1.1.1] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\e34e4fa945df8e5ed756bf759214e967\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:interpolator:28.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\2225e922d9ceae887846cac670340bf8\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\b9980b144475b40d66ea5b7a9d54198b\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:documentfile:28.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\26b4d4bc0ae7dc6f5b5a6a3a913ec48e\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\86fd0b7509eb478982a7d6446e1c6c64\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:print:28.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\3699b7fed6ce498cd8c546c27b1b35f1\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\bc1be71fe8379d2dcedfd321f36037f4\AndroidManifest.xml:17:1-22:12
-MERGED from [com.google.android.gms:play-services-measurement-base:16.0.2] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\0272b20e6f3e6409e173693bc28cd8f9\AndroidManifest.xml:2:1-9:12
-INJECTED from E:\MyApplication6\app\src\main\AndroidManifest.xml:2:1-118:12
-INJECTED from E:\MyApplication6\app\src\main\AndroidManifest.xml:2:1-118:12
-INJECTED from E:\MyApplication6\app\src\main\AndroidManifest.xml:2:1-118:12
+ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:2:1-72:12
+INJECTED from E:\MyApplication6\app\src\main\AndroidManifest.xml:2:1-72:12
+INJECTED from E:\MyApplication6\app\src\main\AndroidManifest.xml:2:1-72:12
+INJECTED from E:\MyApplication6\app\src\main\AndroidManifest.xml:2:1-72:12
+MERGED from [androidx.multidex:multidex:2.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\927645a2f883161382b0294efe4d09ee\AndroidManifest.xml:17:1-22:12
+MERGED from [com.karumi:dexter:5.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\29de0e1214f961d196ed1b3dd079fc86\AndroidManifest.xml:17:1-32:12
+MERGED from [com.google.android.material:material:1.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\5143c2c375d48345ab3ca325a1b3b386\AndroidManifest.xml:17:1-24:12
+MERGED from [com.github.jrvansuita:MaterialAbout:0.2.3] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\86bce13fdb35ce410d2d896c7b815de9\AndroidManifest.xml:2:1-12:12
+MERGED from [com.github.mancj:MaterialSearchBar:0.8.2] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\9c693de99d7d837e487ace81591523ba\AndroidManifest.xml:2:1-17:12
+MERGED from [com.github.rey5137:material:1.2.4] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\0fd76831e72748875fc16d29fc55818f\AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\eaccf07e50202c5ad78319ae03386fea\AndroidManifest.xml:17:1-22:12
+MERGED from [com.rengwuxian.materialedittext:library:2.1.4] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\5fb4a0210cabeb87c768fa74f28e47fe\AndroidManifest.xml:2:1-10:12
+MERGED from [com.github.jrvansuita:IconHandler:v2.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\cc9e71135b5352b7c766bbaab741c4b9\AndroidManifest.xml:2:1-17:12
+MERGED from [androidx.appcompat:appcompat:1.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\7cbd3c43a8fe323be023407274fb3b12\AndroidManifest.xml:17:1-22:12
+MERGED from [com.github.bumptech.glide:glide:4.9.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\9027dc823fc405b329079bfc85c1cd9a\AndroidManifest.xml:2:1-12:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\0ba5d22d477b2fb3910db19014f79d95\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\a7822d2bc01917c7f010ee1750d8973b\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.media:media:1.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\3f75897c04506b485b53eff9484ca91a\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.recyclerview:recyclerview:1.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\608f9e1ac01704f2c3512a37a9bb2d74\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\644975d01369a39b514165a4589b5195\AndroidManifest.xml:2:1-11:12
+MERGED from [com.amulyakhare:com.amulyakhare.textdrawable:1.0.1] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\1c6f38217d54d98ce27a7dda5d7d48e3\AndroidManifest.xml:2:1-14:12
+MERGED from [com.intuit.sdp:sdp-android:1.0.6] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\1174fba2e7785b57b9b9449b2eab3775\AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.room:room-rxjava2:2.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\ad07a84880c09e769024a26c01ec1365\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.room:room-runtime:2.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\213415ec859cf0f85847db3e672c5375\AndroidManifest.xml:17:1-22:12
+MERGED from [io.reactivex.rxjava2:rxandroid:2.1.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\693c8420f3feb470bda160103103d4e0\AndroidManifest.xml:15:1-20:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\71926a4751c506376c402774bb4c939a\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.fragment:fragment:1.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\fcc34be3be18449e7ad984653ab1f0e3\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\9b7bf1d1dbe0f468879d82783ed1f076\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\a73792be69b24278dcd49943ea3040c0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.transition:transition:1.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\b4e6a84a48a065a20c6c931fe03c7080\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\91cfbd481c619548380c6edd94ad97c0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\cfa994123bf732cbb881f177d8f257d3\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\aec5c40af9054d31ee28d7fa132ecd39\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\3261e0085f18888d6b826db16ce3c0ee\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\06ab05511dcfd7d5a6d02649b039860c\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\137cabdca3267d1447eb2f314e221060\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\618df76cd880ff6b9702e0c140b5e527\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\4eae3001cdcf288b75583d88c419c7a9\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core:1.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\458adcf02c4ea05541920cdc2efaee20\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\b3f6a328b289fd23869d488c0c5c60a7\AndroidManifest.xml:17:1-25:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\0d719bdde7f2567faf37184452e794cf\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.sqlite:sqlite-framework:2.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\8fea726c5c7354228f6845974ed5519d\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.sqlite:sqlite:2.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\4da059a770b00408cf6090df3b39a0ce\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\8b6fae0a5539108c5c300fa1d01939ce\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\ca66b1a8674f6b854b99390fc592a8ff\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\71096615ea26adfe0db351c6837ff63b\AndroidManifest.xml:17:1-22:12
+MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\ffd9b78843e845ddde21da53c5a193e9\AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\4f4bbff984fdf2fcf5fe9f99e0e76031\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\3218fd3e5921b2f4348be559a87a0cd7\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\8345d488b7f14aa3c2507cd821778906\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\1eec98616532f69557f45e2c3f0ae2f5\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.print:print:1.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\32bd8b70d07ee1a4b30f8792fe77566b\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\3a0c8424306d7d493a20b67c6a85641d\AndroidManifest.xml:17:1-22:12
+INJECTED from E:\MyApplication6\app\src\main\AndroidManifest.xml:2:1-72:12
+INJECTED from E:\MyApplication6\app\src\main\AndroidManifest.xml:2:1-72:12
+INJECTED from E:\MyApplication6\app\src\main\AndroidManifest.xml:2:1-72:12
 	package
 		ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:4:5-48
 		INJECTED from E:\MyApplication6\app\src\main\AndroidManifest.xml
 		INJECTED from E:\MyApplication6\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from E:\MyApplication6\app\src\main\AndroidManifest.xml
-		ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:2:1-118:12
+		ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:2:1-72:12
 		INJECTED from E:\MyApplication6\app\src\main\AndroidManifest.xml
 	xmlns:tools
 		ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:3:5-51
 	android:versionCode
 		INJECTED from E:\MyApplication6\app\src\main\AndroidManifest.xml
-		ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:2:1-118:12
+		ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:2:1-72:12
 		INJECTED from E:\MyApplication6\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:2:11-69
@@ -98,148 +76,104 @@ uses-sdk
 ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:6:5-62
 INJECTED from E:\MyApplication6\app\src\main\AndroidManifest.xml:6:5-62
 INJECTED from E:\MyApplication6\app\src\main\AndroidManifest.xml:6:5-62
-MERGED from [com.android.support:multidex:1.0.2] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\7122755b8d162ab397b63c023968b74a\AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:multidex:1.0.2] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\7122755b8d162ab397b63c023968b74a\AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:design:28.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\408126df961bab24d0366e90c3f78dd5\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:design:28.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\408126df961bab24d0366e90c3f78dd5\AndroidManifest.xml:20:5-44
-MERGED from [com.github.jrvansuita:MaterialAbout:0.2.3] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\ba03bf468777072ad84471ac58f93361\AndroidManifest.xml:8:5-10:41
-MERGED from [com.github.jrvansuita:MaterialAbout:0.2.3] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\ba03bf468777072ad84471ac58f93361\AndroidManifest.xml:8:5-10:41
-MERGED from [com.github.mancj:MaterialSearchBar:0.8.2] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\b7068b224952f721f485878f3eb0e6ec\AndroidManifest.xml:7:5-9:41
-MERGED from [com.github.mancj:MaterialSearchBar:0.8.2] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\b7068b224952f721f485878f3eb0e6ec\AndroidManifest.xml:7:5-9:41
-MERGED from [com.github.rey5137:material:1.2.4] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\850de1a4cff6ac72a4f897b5bdb80a01\AndroidManifest.xml:7:5-9:41
-MERGED from [com.github.rey5137:material:1.2.4] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\850de1a4cff6ac72a4f897b5bdb80a01\AndroidManifest.xml:7:5-9:41
-MERGED from [com.android.support:cardview-v7:28.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\ba4bd4033b361f8eb4dd6253d7ad19f1\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:cardview-v7:28.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\ba4bd4033b361f8eb4dd6253d7ad19f1\AndroidManifest.xml:20:5-44
-MERGED from [com.rengwuxian.materialedittext:library:2.1.4] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\0a49b50bca5d94c2c0487f3bccd6e0f9\AndroidManifest.xml:6:5-8:41
-MERGED from [com.rengwuxian.materialedittext:library:2.1.4] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\0a49b50bca5d94c2c0487f3bccd6e0f9\AndroidManifest.xml:6:5-8:41
-MERGED from [com.github.medyo:android-about-page:1.1.1] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\23b3a2d9b4eac0fb4c2250f4487bc25c\AndroidManifest.xml:8:5-10:41
-MERGED from [com.github.medyo:android-about-page:1.1.1] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\23b3a2d9b4eac0fb4c2250f4487bc25c\AndroidManifest.xml:8:5-10:41
-MERGED from [uk.co.chrisjenx:calligraphy:2.3.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\9d4cfe8e398b4004d10829344fcfd03a\AndroidManifest.xml:7:5-9:41
-MERGED from [uk.co.chrisjenx:calligraphy:2.3.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\9d4cfe8e398b4004d10829344fcfd03a\AndroidManifest.xml:7:5-9:41
-MERGED from [com.github.bloder:magic:1.1] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\8a19cd96dcc59a870949b2e836dfc01e\AndroidManifest.xml:7:5-9:41
-MERGED from [com.github.bloder:magic:1.1] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\8a19cd96dcc59a870949b2e836dfc01e\AndroidManifest.xml:7:5-9:41
-MERGED from [com.github.jrvansuita:IconHandler:v2.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\1c977b2e17b2b74dade3ff2d320c22f7\AndroidManifest.xml:7:5-9:41
-MERGED from [com.github.jrvansuita:IconHandler:v2.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\1c977b2e17b2b74dade3ff2d320c22f7\AndroidManifest.xml:7:5-9:41
-MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\5ba6f4d6dbdf66c31640c1f3c78d676d\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\5ba6f4d6dbdf66c31640c1f3c78d676d\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\a26a36bd35227fa507f7e02ecb1ed602\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\a26a36bd35227fa507f7e02ecb1ed602\AndroidManifest.xml:20:5-44
-MERGED from [com.google.firebase:firebase-messaging:17.3.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\9fe96d2da7fd87cc1d035719ac32dee5\AndroidManifest.xml:20:5-44
-MERGED from [com.google.firebase:firebase-messaging:17.3.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\9fe96d2da7fd87cc1d035719ac32dee5\AndroidManifest.xml:20:5-44
-MERGED from [com.google.firebase:firebase-core:16.0.3] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\529e4c14353bbccd76a94dfbdcd79395\AndroidManifest.xml:5:5-44
-MERGED from [com.google.firebase:firebase-core:16.0.3] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\529e4c14353bbccd76a94dfbdcd79395\AndroidManifest.xml:5:5-44
-MERGED from [com.google.firebase:firebase-measurement-connector-impl:17.0.1] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\bdad0bc9a3acfb4e0f1502724b8855cf\AndroidManifest.xml:20:5-44
-MERGED from [com.google.firebase:firebase-measurement-connector-impl:17.0.1] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\bdad0bc9a3acfb4e0f1502724b8855cf\AndroidManifest.xml:20:5-44
-MERGED from [com.google.firebase:firebase-analytics:16.0.3] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\6a11b7956359e44a313848fae5fe7759\AndroidManifest.xml:20:5-44
-MERGED from [com.google.firebase:firebase-analytics:16.0.3] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\6a11b7956359e44a313848fae5fe7759\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-measurement-api:16.0.1] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\d5e88b7f55dd493d880b03d734ab40cd\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-measurement-api:16.0.1] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\d5e88b7f55dd493d880b03d734ab40cd\AndroidManifest.xml:20:5-44
-MERGED from [com.google.firebase:firebase-analytics-impl:16.2.1] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\c5a5197fb4a9dad6682415ad13ccef43\AndroidManifest.xml:20:5-44
-MERGED from [com.google.firebase:firebase-analytics-impl:16.2.1] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\c5a5197fb4a9dad6682415ad13ccef43\AndroidManifest.xml:20:5-44
-MERGED from [com.google.firebase:firebase-iid:17.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\4019d9badfe501eebd9e8e16379d1292\AndroidManifest.xml:20:5-44
-MERGED from [com.google.firebase:firebase-iid:17.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\4019d9badfe501eebd9e8e16379d1292\AndroidManifest.xml:20:5-44
-MERGED from [com.google.firebase:firebase-common:16.0.1] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\8451e7b17a496c93c77e13cfa43e3dc0\AndroidManifest.xml:5:5-7:41
-MERGED from [com.google.firebase:firebase-common:16.0.1] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\8451e7b17a496c93c77e13cfa43e3dc0\AndroidManifest.xml:5:5-7:41
-MERGED from [com.google.firebase:firebase-iid-interop:16.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\0bb07e8007f33c0d74e9bfe749aae537\AndroidManifest.xml:5:5-44
-MERGED from [com.google.firebase:firebase-iid-interop:16.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\0bb07e8007f33c0d74e9bfe749aae537\AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-base:15.0.1] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\9900d762e5d579bbbb1bae27fff9c68c\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-base:15.0.1] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\9900d762e5d579bbbb1bae27fff9c68c\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-tasks:15.0.1] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\cce1707b26180d902b32cbf35d42bf35\AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-tasks:15.0.1] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\cce1707b26180d902b32cbf35d42bf35\AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-stats:15.0.1] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\1d1f64366cc55afa43ea947cfa6cf592\AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-stats:15.0.1] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\1d1f64366cc55afa43ea947cfa6cf592\AndroidManifest.xml:5:5-44
-MERGED from [com.google.firebase:firebase-measurement-connector:17.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\bbe5165c114323acd07032c9d526d2e0\AndroidManifest.xml:20:5-44
-MERGED from [com.google.firebase:firebase-measurement-connector:17.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\bbe5165c114323acd07032c9d526d2e0\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-ads-identifier:15.0.1] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\936d63c4712ebb7a24bf9252242ac564\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-ads-identifier:15.0.1] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\936d63c4712ebb7a24bf9252242ac564\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-basement:15.0.1] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\c5ee82b129643186619a5d602e3631f8\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-basement:15.0.1] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\c5ee82b129643186619a5d602e3631f8\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-v4:28.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\bd1d2fcfbbb640254306cc468faf1c52\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-v4:28.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\bd1d2fcfbbb640254306cc468faf1c52\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-media-compat:28.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\d3bb2503a55f9c2cc09643558fc79279\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-media-compat:28.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\d3bb2503a55f9c2cc09643558fc79279\AndroidManifest.xml:20:5-44
-MERGED from [com.bignerdranch.android:expandablerecyclerview:1.0.3] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\11ac64bf7a22f769f02c330462ae04ca\AndroidManifest.xml:7:5-9:41
-MERGED from [com.bignerdranch.android:expandablerecyclerview:1.0.3] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\11ac64bf7a22f769f02c330462ae04ca\AndroidManifest.xml:7:5-9:41
-MERGED from [com.android.support:recyclerview-v7:28.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\eb1c793c1893e1176637ef1068f66626\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:recyclerview-v7:28.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\eb1c793c1893e1176637ef1068f66626\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\ac2b1c9d242da63da48e9a065ef67aaa\AndroidManifest.xml:5:5-7:41
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\ac2b1c9d242da63da48e9a065ef67aaa\AndroidManifest.xml:5:5-7:41
-MERGED from [de.hdodenhof:circleimageview:2.2.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\bc19c02a8b4855b5abcffd3ab8169fb4\AndroidManifest.xml:5:5-7:41
-MERGED from [de.hdodenhof:circleimageview:2.2.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\bc19c02a8b4855b5abcffd3ab8169fb4\AndroidManifest.xml:5:5-7:41
-MERGED from [com.github.jd-alexander:android-flat-button:v1.1] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\0c6bc043d0ccdb13c3fbff7eb77e84dd\AndroidManifest.xml:7:5-9:41
-MERGED from [com.github.jd-alexander:android-flat-button:v1.1] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\0c6bc043d0ccdb13c3fbff7eb77e84dd\AndroidManifest.xml:7:5-9:41
-MERGED from [io.paperdb:paperdb:2.1] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\efe8990df1400d4fcd9df2c6f96ef6a7\AndroidManifest.xml:8:5-10:41
-MERGED from [io.paperdb:paperdb:2.1] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\efe8990df1400d4fcd9df2c6f96ef6a7\AndroidManifest.xml:8:5-10:41
-MERGED from [com.gdacciaro:iosdialog:1.0.3] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\1d77dc32c9c35969c947a2619a753b6d\AndroidManifest.xml:7:5-9:41
-MERGED from [com.gdacciaro:iosdialog:1.0.3] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\1d77dc32c9c35969c947a2619a753b6d\AndroidManifest.xml:7:5-9:41
-MERGED from [com.github.abdularis:CircularImageView:v1.2] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\bf07b58db747accfb7782a04668bb242\AndroidManifest.xml:7:5-9:41
-MERGED from [com.github.abdularis:CircularImageView:v1.2] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\bf07b58db747accfb7782a04668bb242\AndroidManifest.xml:7:5-9:41
-MERGED from [com.amulyakhare:com.amulyakhare.textdrawable:1.0.1] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\950cd9ba1cbc7ed61743ce03a528df6c\AndroidManifest.xml:8:5-10:41
-MERGED from [com.amulyakhare:com.amulyakhare.textdrawable:1.0.1] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\950cd9ba1cbc7ed61743ce03a528df6c\AndroidManifest.xml:8:5-10:41
-MERGED from [com.intuit.sdp:sdp-android:1.0.5] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\3a4885ce41e737f458d13795286e6527\AndroidManifest.xml:7:5-9:41
-MERGED from [com.intuit.sdp:sdp-android:1.0.5] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\3a4885ce41e737f458d13795286e6527\AndroidManifest.xml:7:5-9:41
-MERGED from [android.arch.persistence.room:rxjava2:1.1.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\177d46386910c5a3021c8b241bb79416\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.persistence.room:rxjava2:1.1.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\177d46386910c5a3021c8b241bb79416\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.persistence.room:runtime:1.1.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\e4c7e0426ecb2e9a79bfc93e41fc1488\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.persistence.room:runtime:1.1.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\e4c7e0426ecb2e9a79bfc93e41fc1488\AndroidManifest.xml:20:5-44
-MERGED from [io.reactivex.rxjava2:rxandroid:2.0.1] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\f512757348aa07fe6dd089bcdcd448f0\AndroidManifest.xml:19:5-43
-MERGED from [io.reactivex.rxjava2:rxandroid:2.0.1] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\f512757348aa07fe6dd089bcdcd448f0\AndroidManifest.xml:19:5-43
-MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\962f39bba32e102672950ea5ab1f17f4\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\962f39bba32e102672950ea5ab1f17f4\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\1ae3d607355e8bb6ed0ac57254206d1c\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\1ae3d607355e8bb6ed0ac57254206d1c\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\93a918e8db3473b9992dbdda8b7e850f\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\93a918e8db3473b9992dbdda8b7e850f\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\bc7c14ae9f7fabdd2e556ca121575112\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\bc7c14ae9f7fabdd2e556ca121575112\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:transition:28.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\f7740efb005b8fae645051f87e320e36\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:transition:28.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\f7740efb005b8fae645051f87e320e36\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:viewpager:28.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\34891814b6cc6ce4d1b2f5e658b221f0\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:viewpager:28.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\34891814b6cc6ce4d1b2f5e658b221f0\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\9d0200ed67d651525ad160b8eb7715ed\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\9d0200ed67d651525ad160b8eb7715ed\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\2587232f6992907ad7097f6892ca2507\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\2587232f6992907ad7097f6892ca2507\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\936206cf6e43f04f5d53c0d0879ee369\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\936206cf6e43f04f5d53c0d0879ee369\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:customview:28.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\1bbe8d53164dbf48d064e58b24bd492d\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:customview:28.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\1bbe8d53164dbf48d064e58b24bd492d\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\794f70fba8ea608ba334ad7d4169751c\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\794f70fba8ea608ba334ad7d4169751c\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\91d3cd7d1f0b68c445653868cda45385\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\91d3cd7d1f0b68c445653868cda45385\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:loader:28.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\84707580e2447091bb049be1666a1299\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:loader:28.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\84707580e2447091bb049be1666a1299\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-compat:28.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\3687546d1f2715f3deb0eeb6f47beef3\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-compat:28.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\3687546d1f2715f3deb0eeb6f47beef3\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\8366f35d21f112ae8726942f928152d6\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\8366f35d21f112ae8726942f928152d6\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\c25db4b69f31f413d8da83d85512f559\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\c25db4b69f31f413d8da83d85512f559\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.persistence:db-framework:1.1.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\a875a78c5d1411b09ab137b2243fe46d\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.persistence:db-framework:1.1.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\a875a78c5d1411b09ab137b2243fe46d\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.persistence:db:1.1.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\dd8b4ac354e89e5e41bb174b169960e3\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.persistence:db:1.1.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\dd8b4ac354e89e5e41bb174b169960e3\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\2663d7d1b78d351c04b5f6044b385576\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\2663d7d1b78d351c04b5f6044b385576\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\caf1e7abb56e9840809660b04013cb1c\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\caf1e7abb56e9840809660b04013cb1c\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.core:runtime:1.1.1] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\e34e4fa945df8e5ed756bf759214e967\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.core:runtime:1.1.1] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\e34e4fa945df8e5ed756bf759214e967\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:interpolator:28.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\2225e922d9ceae887846cac670340bf8\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:interpolator:28.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\2225e922d9ceae887846cac670340bf8\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\b9980b144475b40d66ea5b7a9d54198b\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\b9980b144475b40d66ea5b7a9d54198b\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:documentfile:28.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\26b4d4bc0ae7dc6f5b5a6a3a913ec48e\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:documentfile:28.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\26b4d4bc0ae7dc6f5b5a6a3a913ec48e\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\86fd0b7509eb478982a7d6446e1c6c64\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\86fd0b7509eb478982a7d6446e1c6c64\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:print:28.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\3699b7fed6ce498cd8c546c27b1b35f1\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:print:28.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\3699b7fed6ce498cd8c546c27b1b35f1\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\bc1be71fe8379d2dcedfd321f36037f4\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\bc1be71fe8379d2dcedfd321f36037f4\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-measurement-base:16.0.2] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\0272b20e6f3e6409e173693bc28cd8f9\AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-measurement-base:16.0.2] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\0272b20e6f3e6409e173693bc28cd8f9\AndroidManifest.xml:5:5-44
+MERGED from [androidx.multidex:multidex:2.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\927645a2f883161382b0294efe4d09ee\AndroidManifest.xml:20:5-43
+MERGED from [androidx.multidex:multidex:2.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\927645a2f883161382b0294efe4d09ee\AndroidManifest.xml:20:5-43
+MERGED from [com.karumi:dexter:5.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\29de0e1214f961d196ed1b3dd079fc86\AndroidManifest.xml:22:5-24:41
+MERGED from [com.karumi:dexter:5.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\29de0e1214f961d196ed1b3dd079fc86\AndroidManifest.xml:22:5-24:41
+MERGED from [com.google.android.material:material:1.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\5143c2c375d48345ab3ca325a1b3b386\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.material:material:1.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\5143c2c375d48345ab3ca325a1b3b386\AndroidManifest.xml:20:5-44
+MERGED from [com.github.jrvansuita:MaterialAbout:0.2.3] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\86bce13fdb35ce410d2d896c7b815de9\AndroidManifest.xml:8:5-10:41
+MERGED from [com.github.jrvansuita:MaterialAbout:0.2.3] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\86bce13fdb35ce410d2d896c7b815de9\AndroidManifest.xml:8:5-10:41
+MERGED from [com.github.mancj:MaterialSearchBar:0.8.2] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\9c693de99d7d837e487ace81591523ba\AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.mancj:MaterialSearchBar:0.8.2] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\9c693de99d7d837e487ace81591523ba\AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.rey5137:material:1.2.4] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\0fd76831e72748875fc16d29fc55818f\AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.rey5137:material:1.2.4] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\0fd76831e72748875fc16d29fc55818f\AndroidManifest.xml:7:5-9:41
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\eaccf07e50202c5ad78319ae03386fea\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\eaccf07e50202c5ad78319ae03386fea\AndroidManifest.xml:20:5-44
+MERGED from [com.rengwuxian.materialedittext:library:2.1.4] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\5fb4a0210cabeb87c768fa74f28e47fe\AndroidManifest.xml:6:5-8:41
+MERGED from [com.rengwuxian.materialedittext:library:2.1.4] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\5fb4a0210cabeb87c768fa74f28e47fe\AndroidManifest.xml:6:5-8:41
+MERGED from [com.github.jrvansuita:IconHandler:v2.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\cc9e71135b5352b7c766bbaab741c4b9\AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.jrvansuita:IconHandler:v2.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\cc9e71135b5352b7c766bbaab741c4b9\AndroidManifest.xml:7:5-9:41
+MERGED from [androidx.appcompat:appcompat:1.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\7cbd3c43a8fe323be023407274fb3b12\AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\7cbd3c43a8fe323be023407274fb3b12\AndroidManifest.xml:20:5-44
+MERGED from [com.github.bumptech.glide:glide:4.9.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\9027dc823fc405b329079bfc85c1cd9a\AndroidManifest.xml:6:5-8:41
+MERGED from [com.github.bumptech.glide:glide:4.9.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\9027dc823fc405b329079bfc85c1cd9a\AndroidManifest.xml:6:5-8:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\0ba5d22d477b2fb3910db19014f79d95\AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\0ba5d22d477b2fb3910db19014f79d95\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\a7822d2bc01917c7f010ee1750d8973b\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\a7822d2bc01917c7f010ee1750d8973b\AndroidManifest.xml:20:5-44
+MERGED from [androidx.media:media:1.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\3f75897c04506b485b53eff9484ca91a\AndroidManifest.xml:20:5-44
+MERGED from [androidx.media:media:1.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\3f75897c04506b485b53eff9484ca91a\AndroidManifest.xml:20:5-44
+MERGED from [androidx.recyclerview:recyclerview:1.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\608f9e1ac01704f2c3512a37a9bb2d74\AndroidManifest.xml:20:5-44
+MERGED from [androidx.recyclerview:recyclerview:1.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\608f9e1ac01704f2c3512a37a9bb2d74\AndroidManifest.xml:20:5-44
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\644975d01369a39b514165a4589b5195\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\644975d01369a39b514165a4589b5195\AndroidManifest.xml:5:5-7:41
+MERGED from [com.amulyakhare:com.amulyakhare.textdrawable:1.0.1] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\1c6f38217d54d98ce27a7dda5d7d48e3\AndroidManifest.xml:8:5-10:41
+MERGED from [com.amulyakhare:com.amulyakhare.textdrawable:1.0.1] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\1c6f38217d54d98ce27a7dda5d7d48e3\AndroidManifest.xml:8:5-10:41
+MERGED from [com.intuit.sdp:sdp-android:1.0.6] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\1174fba2e7785b57b9b9449b2eab3775\AndroidManifest.xml:7:5-9:41
+MERGED from [com.intuit.sdp:sdp-android:1.0.6] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\1174fba2e7785b57b9b9449b2eab3775\AndroidManifest.xml:7:5-9:41
+MERGED from [androidx.room:room-rxjava2:2.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\ad07a84880c09e769024a26c01ec1365\AndroidManifest.xml:20:5-44
+MERGED from [androidx.room:room-rxjava2:2.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\ad07a84880c09e769024a26c01ec1365\AndroidManifest.xml:20:5-44
+MERGED from [androidx.room:room-runtime:2.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\213415ec859cf0f85847db3e672c5375\AndroidManifest.xml:20:5-44
+MERGED from [androidx.room:room-runtime:2.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\213415ec859cf0f85847db3e672c5375\AndroidManifest.xml:20:5-44
+MERGED from [io.reactivex.rxjava2:rxandroid:2.1.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\693c8420f3feb470bda160103103d4e0\AndroidManifest.xml:18:5-43
+MERGED from [io.reactivex.rxjava2:rxandroid:2.1.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\693c8420f3feb470bda160103103d4e0\AndroidManifest.xml:18:5-43
+MERGED from [androidx.vectordrawable:vectordrawable:1.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\71926a4751c506376c402774bb4c939a\AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable:1.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\71926a4751c506376c402774bb4c939a\AndroidManifest.xml:20:5-44
+MERGED from [androidx.fragment:fragment:1.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\fcc34be3be18449e7ad984653ab1f0e3\AndroidManifest.xml:20:5-44
+MERGED from [androidx.fragment:fragment:1.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\fcc34be3be18449e7ad984653ab1f0e3\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\9b7bf1d1dbe0f468879d82783ed1f076\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\9b7bf1d1dbe0f468879d82783ed1f076\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\a73792be69b24278dcd49943ea3040c0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\a73792be69b24278dcd49943ea3040c0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.transition:transition:1.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\b4e6a84a48a065a20c6c931fe03c7080\AndroidManifest.xml:20:5-44
+MERGED from [androidx.transition:transition:1.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\b4e6a84a48a065a20c6c931fe03c7080\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\91cfbd481c619548380c6edd94ad97c0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\91cfbd481c619548380c6edd94ad97c0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\cfa994123bf732cbb881f177d8f257d3\AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\cfa994123bf732cbb881f177d8f257d3\AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\aec5c40af9054d31ee28d7fa132ecd39\AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\aec5c40af9054d31ee28d7fa132ecd39\AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\3261e0085f18888d6b826db16ce3c0ee\AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\3261e0085f18888d6b826db16ce3c0ee\AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\06ab05511dcfd7d5a6d02649b039860c\AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\06ab05511dcfd7d5a6d02649b039860c\AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\137cabdca3267d1447eb2f314e221060\AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\137cabdca3267d1447eb2f314e221060\AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\618df76cd880ff6b9702e0c140b5e527\AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\618df76cd880ff6b9702e0c140b5e527\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\4eae3001cdcf288b75583d88c419c7a9\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\4eae3001cdcf288b75583d88c419c7a9\AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\458adcf02c4ea05541920cdc2efaee20\AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\458adcf02c4ea05541920cdc2efaee20\AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\b3f6a328b289fd23869d488c0c5c60a7\AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\b3f6a328b289fd23869d488c0c5c60a7\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\0d719bdde7f2567faf37184452e794cf\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\0d719bdde7f2567faf37184452e794cf\AndroidManifest.xml:20:5-44
+MERGED from [androidx.sqlite:sqlite-framework:2.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\8fea726c5c7354228f6845974ed5519d\AndroidManifest.xml:20:5-44
+MERGED from [androidx.sqlite:sqlite-framework:2.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\8fea726c5c7354228f6845974ed5519d\AndroidManifest.xml:20:5-44
+MERGED from [androidx.sqlite:sqlite:2.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\4da059a770b00408cf6090df3b39a0ce\AndroidManifest.xml:20:5-44
+MERGED from [androidx.sqlite:sqlite:2.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\4da059a770b00408cf6090df3b39a0ce\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\8b6fae0a5539108c5c300fa1d01939ce\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\8b6fae0a5539108c5c300fa1d01939ce\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\ca66b1a8674f6b854b99390fc592a8ff\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\ca66b1a8674f6b854b99390fc592a8ff\AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\71096615ea26adfe0db351c6837ff63b\AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\71096615ea26adfe0db351c6837ff63b\AndroidManifest.xml:20:5-44
+MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\ffd9b78843e845ddde21da53c5a193e9\AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\ffd9b78843e845ddde21da53c5a193e9\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\4f4bbff984fdf2fcf5fe9f99e0e76031\AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\4f4bbff984fdf2fcf5fe9f99e0e76031\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\3218fd3e5921b2f4348be559a87a0cd7\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\3218fd3e5921b2f4348be559a87a0cd7\AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\8345d488b7f14aa3c2507cd821778906\AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\8345d488b7f14aa3c2507cd821778906\AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\1eec98616532f69557f45e2c3f0ae2f5\AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\1eec98616532f69557f45e2c3f0ae2f5\AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\32bd8b70d07ee1a4b30f8792fe77566b\AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\32bd8b70d07ee1a4b30f8792fe77566b\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\3a0c8424306d7d493a20b67c6a85641d\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\3a0c8424306d7d493a20b67c6a85641d\AndroidManifest.xml:20:5-44
 INJECTED from E:\MyApplication6\app\src\main\AndroidManifest.xml:6:5-62
 INJECTED from E:\MyApplication6\app\src\main\AndroidManifest.xml:6:5-62
 	tools:overrideLibrary
@@ -264,421 +198,153 @@ uses-permission#android.permission.READ_PHONE_NUMBERS
 ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:10:5-77
 	android:name
 		ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:10:22-74
-uses-permission#android.permission.WRITE_CALL_LOG
-ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:11:5-73
-	android:name
-		ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:11:22-70
-uses-permission#android.permission.WRITE_CONTACTS
-ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:12:5-73
-	android:name
-		ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:12:22-70
 uses-permission#android.permission.CALL_PHONE
-ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:13:5-69
+ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:11:5-69
 	android:name
-		ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:13:22-66
+		ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:11:22-66
 uses-permission#android.permission.READ_PHONE_STATE
-ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:14:5-75
+ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:12:5-75
 	android:name
-		ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:14:22-72
+		ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:12:22-72
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:15:5-81
+ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:13:5-81
 	android:name
-		ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:15:22-78
-uses-permission#android.permission.INTERNET
-ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:16:5-66
-MERGED from [com.google.firebase:firebase-measurement-connector-impl:17.0.1] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\bdad0bc9a3acfb4e0f1502724b8855cf\AndroidManifest.xml:22:5-67
-MERGED from [com.google.firebase:firebase-measurement-connector-impl:17.0.1] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\bdad0bc9a3acfb4e0f1502724b8855cf\AndroidManifest.xml:22:5-67
-MERGED from [com.google.firebase:firebase-analytics:16.0.3] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\6a11b7956359e44a313848fae5fe7759\AndroidManifest.xml:23:5-67
-MERGED from [com.google.firebase:firebase-analytics:16.0.3] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\6a11b7956359e44a313848fae5fe7759\AndroidManifest.xml:23:5-67
-MERGED from [com.google.firebase:firebase-analytics-impl:16.2.1] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\c5a5197fb4a9dad6682415ad13ccef43\AndroidManifest.xml:23:5-67
-MERGED from [com.google.firebase:firebase-analytics-impl:16.2.1] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\c5a5197fb4a9dad6682415ad13ccef43\AndroidManifest.xml:23:5-67
-MERGED from [com.google.firebase:firebase-iid:17.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\4019d9badfe501eebd9e8e16379d1292\AndroidManifest.xml:23:5-67
-MERGED from [com.google.firebase:firebase-iid:17.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\4019d9badfe501eebd9e8e16379d1292\AndroidManifest.xml:23:5-67
-	android:name
-		ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:16:22-64
-uses-permission#android.permission.VIBRATE
-ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:17:5-65
-	android:name
-		ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:17:22-63
+		ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:13:22-78
 application
-ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:19:5-116:19
-MERGED from [com.android.support:design:28.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\408126df961bab24d0366e90c3f78dd5\AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:design:28.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\408126df961bab24d0366e90c3f78dd5\AndroidManifest.xml:22:5-20
-MERGED from [com.github.mancj:MaterialSearchBar:0.8.2] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\b7068b224952f721f485878f3eb0e6ec\AndroidManifest.xml:11:5-15:19
-MERGED from [com.github.mancj:MaterialSearchBar:0.8.2] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\b7068b224952f721f485878f3eb0e6ec\AndroidManifest.xml:11:5-15:19
-MERGED from [uk.co.chrisjenx:calligraphy:2.3.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\9d4cfe8e398b4004d10829344fcfd03a\AndroidManifest.xml:11:5-20
-MERGED from [uk.co.chrisjenx:calligraphy:2.3.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\9d4cfe8e398b4004d10829344fcfd03a\AndroidManifest.xml:11:5-20
-MERGED from [com.github.bloder:magic:1.1] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\8a19cd96dcc59a870949b2e836dfc01e\AndroidManifest.xml:11:5-15:19
-MERGED from [com.github.bloder:magic:1.1] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\8a19cd96dcc59a870949b2e836dfc01e\AndroidManifest.xml:11:5-15:19
-MERGED from [com.github.jrvansuita:IconHandler:v2.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\1c977b2e17b2b74dade3ff2d320c22f7\AndroidManifest.xml:11:5-15:19
-MERGED from [com.github.jrvansuita:IconHandler:v2.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\1c977b2e17b2b74dade3ff2d320c22f7\AndroidManifest.xml:11:5-15:19
-MERGED from [com.google.firebase:firebase-messaging:17.3.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\9fe96d2da7fd87cc1d035719ac32dee5\AndroidManifest.xml:22:5-35:19
-MERGED from [com.google.firebase:firebase-messaging:17.3.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\9fe96d2da7fd87cc1d035719ac32dee5\AndroidManifest.xml:22:5-35:19
-MERGED from [com.google.firebase:firebase-core:16.0.3] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\529e4c14353bbccd76a94dfbdcd79395\AndroidManifest.xml:7:5-20
-MERGED from [com.google.firebase:firebase-core:16.0.3] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\529e4c14353bbccd76a94dfbdcd79395\AndroidManifest.xml:7:5-20
-MERGED from [com.google.firebase:firebase-measurement-connector-impl:17.0.1] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\bdad0bc9a3acfb4e0f1502724b8855cf\AndroidManifest.xml:26:5-32:19
-MERGED from [com.google.firebase:firebase-measurement-connector-impl:17.0.1] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\bdad0bc9a3acfb4e0f1502724b8855cf\AndroidManifest.xml:26:5-32:19
-MERGED from [com.google.firebase:firebase-analytics:16.0.3] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\6a11b7956359e44a313848fae5fe7759\AndroidManifest.xml:28:5-53:19
-MERGED from [com.google.firebase:firebase-analytics:16.0.3] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\6a11b7956359e44a313848fae5fe7759\AndroidManifest.xml:28:5-53:19
-MERGED from [com.google.android.gms:play-services-measurement-api:16.0.1] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\d5e88b7f55dd493d880b03d734ab40cd\AndroidManifest.xml:22:5-23:19
-MERGED from [com.google.android.gms:play-services-measurement-api:16.0.1] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\d5e88b7f55dd493d880b03d734ab40cd\AndroidManifest.xml:22:5-23:19
-MERGED from [com.google.firebase:firebase-analytics-impl:16.2.1] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\c5a5197fb4a9dad6682415ad13ccef43\AndroidManifest.xml:28:5-38:19
-MERGED from [com.google.firebase:firebase-analytics-impl:16.2.1] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\c5a5197fb4a9dad6682415ad13ccef43\AndroidManifest.xml:28:5-38:19
-MERGED from [com.google.firebase:firebase-iid:17.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\4019d9badfe501eebd9e8e16379d1292\AndroidManifest.xml:28:5-57:19
-MERGED from [com.google.firebase:firebase-iid:17.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\4019d9badfe501eebd9e8e16379d1292\AndroidManifest.xml:28:5-57:19
-MERGED from [com.google.firebase:firebase-common:16.0.1] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\8451e7b17a496c93c77e13cfa43e3dc0\AndroidManifest.xml:9:5-15:19
-MERGED from [com.google.firebase:firebase-common:16.0.1] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\8451e7b17a496c93c77e13cfa43e3dc0\AndroidManifest.xml:9:5-15:19
-MERGED from [com.google.firebase:firebase-iid-interop:16.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\0bb07e8007f33c0d74e9bfe749aae537\AndroidManifest.xml:7:5-8:19
-MERGED from [com.google.firebase:firebase-iid-interop:16.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\0bb07e8007f33c0d74e9bfe749aae537\AndroidManifest.xml:7:5-8:19
-MERGED from [com.google.android.gms:play-services-base:15.0.1] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\9900d762e5d579bbbb1bae27fff9c68c\AndroidManifest.xml:22:5-27:19
-MERGED from [com.google.android.gms:play-services-base:15.0.1] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\9900d762e5d579bbbb1bae27fff9c68c\AndroidManifest.xml:22:5-27:19
-MERGED from [com.google.android.gms:play-services-tasks:15.0.1] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\cce1707b26180d902b32cbf35d42bf35\AndroidManifest.xml:7:5-20
-MERGED from [com.google.android.gms:play-services-tasks:15.0.1] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\cce1707b26180d902b32cbf35d42bf35\AndroidManifest.xml:7:5-20
-MERGED from [com.google.android.gms:play-services-stats:15.0.1] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\1d1f64366cc55afa43ea947cfa6cf592\AndroidManifest.xml:7:5-20
-MERGED from [com.google.android.gms:play-services-stats:15.0.1] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\1d1f64366cc55afa43ea947cfa6cf592\AndroidManifest.xml:7:5-20
-MERGED from [com.google.firebase:firebase-measurement-connector:17.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\bbe5165c114323acd07032c9d526d2e0\AndroidManifest.xml:22:5-23:19
-MERGED from [com.google.firebase:firebase-measurement-connector:17.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\bbe5165c114323acd07032c9d526d2e0\AndroidManifest.xml:22:5-23:19
-MERGED from [com.google.android.gms:play-services-ads-identifier:15.0.1] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\936d63c4712ebb7a24bf9252242ac564\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-ads-identifier:15.0.1] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\936d63c4712ebb7a24bf9252242ac564\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-basement:15.0.1] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\c5ee82b129643186619a5d602e3631f8\AndroidManifest.xml:22:5-26:19
-MERGED from [com.google.android.gms:play-services-basement:15.0.1] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\c5ee82b129643186619a5d602e3631f8\AndroidManifest.xml:22:5-26:19
-MERGED from [com.bignerdranch.android:expandablerecyclerview:1.0.3] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\11ac64bf7a22f769f02c330462ae04ca\AndroidManifest.xml:11:5-14:19
-MERGED from [com.bignerdranch.android:expandablerecyclerview:1.0.3] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\11ac64bf7a22f769f02c330462ae04ca\AndroidManifest.xml:11:5-14:19
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\ac2b1c9d242da63da48e9a065ef67aaa\AndroidManifest.xml:9:5-20
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\ac2b1c9d242da63da48e9a065ef67aaa\AndroidManifest.xml:9:5-20
-MERGED from [de.hdodenhof:circleimageview:2.2.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\bc19c02a8b4855b5abcffd3ab8169fb4\AndroidManifest.xml:9:5-20
-MERGED from [de.hdodenhof:circleimageview:2.2.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\bc19c02a8b4855b5abcffd3ab8169fb4\AndroidManifest.xml:9:5-20
-MERGED from [io.paperdb:paperdb:2.1] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\efe8990df1400d4fcd9df2c6f96ef6a7\AndroidManifest.xml:12:5-20
-MERGED from [io.paperdb:paperdb:2.1] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\efe8990df1400d4fcd9df2c6f96ef6a7\AndroidManifest.xml:12:5-20
-MERGED from [com.gdacciaro:iosdialog:1.0.3] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\1d77dc32c9c35969c947a2619a753b6d\AndroidManifest.xml:11:5-15:19
-MERGED from [com.gdacciaro:iosdialog:1.0.3] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\1d77dc32c9c35969c947a2619a753b6d\AndroidManifest.xml:11:5-15:19
-MERGED from [com.amulyakhare:com.amulyakhare.textdrawable:1.0.1] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\950cd9ba1cbc7ed61743ce03a528df6c\AndroidManifest.xml:12:5-20
-MERGED from [com.amulyakhare:com.amulyakhare.textdrawable:1.0.1] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\950cd9ba1cbc7ed61743ce03a528df6c\AndroidManifest.xml:12:5-20
-MERGED from [com.android.support:support-compat:28.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\3687546d1f2715f3deb0eeb6f47beef3\AndroidManifest.xml:22:5-94
-MERGED from [com.android.support:support-compat:28.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\3687546d1f2715f3deb0eeb6f47beef3\AndroidManifest.xml:22:5-94
-MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\8366f35d21f112ae8726942f928152d6\AndroidManifest.xml:22:5-23:19
-MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\8366f35d21f112ae8726942f928152d6\AndroidManifest.xml:22:5-23:19
-MERGED from [com.google.android.gms:play-services-measurement-base:16.0.2] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\0272b20e6f3e6409e173693bc28cd8f9\AndroidManifest.xml:7:5-20
-MERGED from [com.google.android.gms:play-services-measurement-base:16.0.2] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\0272b20e6f3e6409e173693bc28cd8f9\AndroidManifest.xml:7:5-20
+ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:15:5-70:19
+MERGED from [com.karumi:dexter:5.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\29de0e1214f961d196ed1b3dd079fc86\AndroidManifest.xml:26:5-30:19
+MERGED from [com.karumi:dexter:5.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\29de0e1214f961d196ed1b3dd079fc86\AndroidManifest.xml:26:5-30:19
+MERGED from [com.google.android.material:material:1.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\5143c2c375d48345ab3ca325a1b3b386\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.material:material:1.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\5143c2c375d48345ab3ca325a1b3b386\AndroidManifest.xml:22:5-20
+MERGED from [com.github.mancj:MaterialSearchBar:0.8.2] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\9c693de99d7d837e487ace81591523ba\AndroidManifest.xml:11:5-15:19
+MERGED from [com.github.mancj:MaterialSearchBar:0.8.2] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\9c693de99d7d837e487ace81591523ba\AndroidManifest.xml:11:5-15:19
+MERGED from [com.github.jrvansuita:IconHandler:v2.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\cc9e71135b5352b7c766bbaab741c4b9\AndroidManifest.xml:11:5-15:19
+MERGED from [com.github.jrvansuita:IconHandler:v2.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\cc9e71135b5352b7c766bbaab741c4b9\AndroidManifest.xml:11:5-15:19
+MERGED from [com.github.bumptech.glide:glide:4.9.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\9027dc823fc405b329079bfc85c1cd9a\AndroidManifest.xml:10:5-20
+MERGED from [com.github.bumptech.glide:glide:4.9.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\9027dc823fc405b329079bfc85c1cd9a\AndroidManifest.xml:10:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\644975d01369a39b514165a4589b5195\AndroidManifest.xml:9:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\644975d01369a39b514165a4589b5195\AndroidManifest.xml:9:5-20
+MERGED from [com.amulyakhare:com.amulyakhare.textdrawable:1.0.1] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\1c6f38217d54d98ce27a7dda5d7d48e3\AndroidManifest.xml:12:5-20
+MERGED from [com.amulyakhare:com.amulyakhare.textdrawable:1.0.1] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\1c6f38217d54d98ce27a7dda5d7d48e3\AndroidManifest.xml:12:5-20
+MERGED from [androidx.core:core:1.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\458adcf02c4ea05541920cdc2efaee20\AndroidManifest.xml:22:5-89
+MERGED from [androidx.core:core:1.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\458adcf02c4ea05541920cdc2efaee20\AndroidManifest.xml:22:5-89
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\b3f6a328b289fd23869d488c0c5c60a7\AndroidManifest.xml:22:5-23:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\b3f6a328b289fd23869d488c0c5c60a7\AndroidManifest.xml:22:5-23:19
+MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\ffd9b78843e845ddde21da53c5a193e9\AndroidManifest.xml:9:5-20
+MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\ffd9b78843e845ddde21da53c5a193e9\AndroidManifest.xml:9:5-20
 	android:appComponentFactory
-		ADDED from [com.android.support:support-compat:28.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\3687546d1f2715f3deb0eeb6f47beef3\AndroidManifest.xml:22:18-91
+		ADDED from [androidx.core:core:1.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\458adcf02c4ea05541920cdc2efaee20\AndroidManifest.xml:22:18-86
 	android:supportsRtl
-		ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:24:9-35
-	android:label
-		ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:22:9-41
-	tools:ignore
-		ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:26:9-48
-	android:roundIcon
-		ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:23:9-54
-	android:icon
-		ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:21:9-43
-	android:allowBackup
 		ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:20:9-35
-	android:theme
-		ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:25:9-44
-activity#com.example.toshiba.myapplication.MainActivity
-ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:28:9-50:20
-	android:name
-		ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:28:19-47
-intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:29:13-33:29
-action#android.intent.action.MAIN
-ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:30:17-68
-	android:name
-		ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:30:25-66
-category#android.intent.category.LAUNCHER
-ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:32:17-76
-	android:name
-		ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:32:27-74
-intent-filter#action:name:android.intent.action.DIAL+action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:scheme:tel
-ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:35:13-43:29
-action#android.intent.action.VIEW
-ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:36:17-68
-	android:name
-		ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:36:25-66
-action#android.intent.action.DIAL
-ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:37:17-68
-	android:name
-		ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:37:25-66
-category#android.intent.category.DEFAULT
-ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:39:17-75
-	android:name
-		ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:39:27-73
-category#android.intent.category.BROWSABLE
-ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:40:17-77
-	android:name
-		ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:40:27-75
-data
-ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:42:17-45
-	android:scheme
-		ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:42:23-43
-intent-filter#action:name:android.intent.action.DIAL+category:name:android.intent.category.DEFAULT
-ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:44:13-48:29
-service#com.example.toshiba.myapplication.CallService
-ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:52:9-62:19
-	android:permission
-		ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:54:13-72
-	android:name
-		ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:53:13-40
-meta-data#android.telecom.IN_CALL_SERVICE_UI
-ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:55:13-57:39
-	android:value
-		ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:57:17-37
-	android:name
-		ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:56:17-66
-intent-filter#action:name:android.telecom.InCallService
-ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:59:13-61:29
-action#android.telecom.InCallService
-ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:60:17-71
-	android:name
-		ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:60:25-69
-service#com.example.toshiba.myapplication.Service.MyFirebaseInstanceService
-ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:64:9-69:19
-	android:name
-		ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:64:18-67
-intent-filter#action:name:com.google.firebase.MESSAGING_EVENT
-ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:65:13-67:29
-action#com.google.firebase.MESSAGING_EVENT
-ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:66:17-77
-	android:name
-		ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:66:25-75
-activity#com.example.toshiba.myapplication.SendGiftActivity
-ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:71:9-73:51
-	android:configChanges
-		ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:73:13-48
-	android:name
-		ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:72:13-45
-activity#com.example.toshiba.myapplication.SearchActivity
-ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:74:9-76:51
-	android:configChanges
-		ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:76:13-48
-	android:name
-		ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:75:13-43
-activity#com.example.toshiba.myapplication.Home
-ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:77:9-81:47
 	android:label
-		ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:80:13-56
-	android:configChanges
-		ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:79:13-137
+		ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:18:9-41
+	tools:ignore
+		ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:22:9-48
+	android:roundIcon
+		ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:19:9-54
+	android:icon
+		ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:17:9-43
+	android:allowBackup
+		ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:16:9-35
 	android:theme
-		ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:81:13-44
+		ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:21:9-44
+activity#com.example.toshiba.myapplication.Helper.SelfPackageActivity
+ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:23:9-106
 	android:name
-		ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:78:13-33
+		ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:23:19-94
+activity#com.example.toshiba.myapplication.MainActivity
+ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:24:9-44:20
+	android:name
+		ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:24:19-80
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:25:13-29:29
+action#android.intent.action.MAIN
+ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:26:17-69
+	android:name
+		ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:26:25-66
+category#android.intent.category.LAUNCHER
+ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:28:17-77
+	android:name
+		ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:28:27-74
+intent-filter#action:name:android.intent.action.DIAL+action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:scheme:tel
+ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:30:13-38:29
+action#android.intent.action.VIEW
+ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:31:17-69
+	android:name
+		ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:31:25-66
+action#android.intent.action.DIAL
+ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:32:17-69
+	android:name
+		ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:32:25-66
+category#android.intent.category.DEFAULT
+ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:34:17-76
+	android:name
+		ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:34:27-73
+category#android.intent.category.BROWSABLE
+ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:35:17-78
+	android:name
+		ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:35:27-75
+data
+ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:37:17-46
+	android:scheme
+		ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:37:23-43
+intent-filter#action:name:android.intent.action.DIAL+category:name:android.intent.category.DEFAULT
+ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:39:13-43:29
+activity#com.example.toshiba.myapplication.SendGiftActivity
+ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:47:9-49:51
+	android:configChanges
+		ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:49:13-48
+	android:name
+		ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:48:13-78
+activity#com.example.toshiba.myapplication.SearchActivity
+ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:50:9-52:51
+	android:configChanges
+		ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:52:13-48
+	android:name
+		ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:51:13-76
+activity#com.example.toshiba.myapplication.Home
+ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:53:9-57:47
+	android:label
+		ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:56:13-56
+	android:configChanges
+		ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:55:13-137
+	android:theme
+		ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:57:13-44
+	android:name
+		ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:54:13-66
 activity#com.example.toshiba.myapplication.DialerPad
-ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:82:9-84:140
+ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:58:9-60:140
 	android:configChanges
-		ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:84:13-137
+		ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:60:13-137
 	android:name
-		ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:83:13-38
+		ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:59:13-71
 activity#com.example.toshiba.myapplication.ActivitySample
-ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:85:9-88:53
+ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:61:9-64:53
 	android:configChanges
-		ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:87:13-48
+		ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:63:13-48
 	android:theme
-		ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:88:13-50
+		ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:64:13-50
 	android:name
-		ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:86:13-43
-service#com.example.toshiba.myapplication.USSDService
-ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:90:9-102:19
-	android:enabled
-		ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:92:13-35
-	android:exported
-		ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:93:13-36
-	android:permission
-		ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:94:13-79
-	android:name
-		ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:91:13-40
-intent-filter#action:name:android.accessibilityservice.AccessibilityService
-ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:95:13-97:29
-action#android.accessibilityservice.AccessibilityService
-ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:96:17-92
-	android:name
-		ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:96:25-89
-meta-data#android.accessibilityservice.AccessibilityService
-ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:99:13-101:59
-	android:resource
-		ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:101:17-56
-	android:name
-		ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:100:17-81
-receiver#com.example.toshiba.myapplication.InterceptCall
-ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:104:9-108:20
-	android:name
-		ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:104:19-48
-intent-filter#action:name:android.intent.action.PHONE_STATE
-ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:105:13-107:29
-action#android.intent.action.PHONE_STATE
-ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:106:17-76
-	android:name
-		ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:106:25-73
+		ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:62:13-76
 activity#com.example.toshiba.myapplication.Settings
-ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:110:9-46
+ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:65:9-79
 	android:name
-		ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:110:19-43
+		ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:65:19-76
 activity#com.example.toshiba.myapplication.DeleteActivity
-ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:111:9-52
+ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:66:9-85
 	android:name
-		ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:111:19-49
+		ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:66:19-82
 activity#com.example.toshiba.myapplication.DeleteContactsActivity
-ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:112:9-69
+ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:67:9-93
 	android:name
-		ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:112:19-57
-activity#com.example.toshiba.myapplication.CallActivity
-ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:113:9-49
+		ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:67:19-90
+activity#com.example.toshiba.myapplication.FragmentActivitySample
+ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:68:9-60
 	android:name
-		ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:113:19-47
-activity#com.example.toshiba.myapplication.MainAc
-ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:114:9-43
-	android:name
-		ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:114:19-41
-service#com.google.firebase.messaging.FirebaseMessagingService
-ADDED from [com.google.firebase:firebase-messaging:17.3.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\9fe96d2da7fd87cc1d035719ac32dee5\AndroidManifest.xml:28:9-34:19
-	android:exported
-		ADDED from [com.google.firebase:firebase-messaging:17.3.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\9fe96d2da7fd87cc1d035719ac32dee5\AndroidManifest.xml:30:13-36
-	android:name
-		ADDED from [com.google.firebase:firebase-messaging:17.3.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\9fe96d2da7fd87cc1d035719ac32dee5\AndroidManifest.xml:29:13-82
-uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from [com.google.firebase:firebase-measurement-connector-impl:17.0.1] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\bdad0bc9a3acfb4e0f1502724b8855cf\AndroidManifest.xml:23:5-79
-MERGED from [com.google.firebase:firebase-analytics:16.0.3] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\6a11b7956359e44a313848fae5fe7759\AndroidManifest.xml:24:5-79
-MERGED from [com.google.firebase:firebase-analytics:16.0.3] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\6a11b7956359e44a313848fae5fe7759\AndroidManifest.xml:24:5-79
-MERGED from [com.google.firebase:firebase-analytics-impl:16.2.1] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\c5a5197fb4a9dad6682415ad13ccef43\AndroidManifest.xml:24:5-79
-MERGED from [com.google.firebase:firebase-analytics-impl:16.2.1] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\c5a5197fb4a9dad6682415ad13ccef43\AndroidManifest.xml:24:5-79
-MERGED from [com.google.firebase:firebase-iid:17.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\4019d9badfe501eebd9e8e16379d1292\AndroidManifest.xml:22:5-79
-MERGED from [com.google.firebase:firebase-iid:17.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\4019d9badfe501eebd9e8e16379d1292\AndroidManifest.xml:22:5-79
-	android:name
-		ADDED from [com.google.firebase:firebase-measurement-connector-impl:17.0.1] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\bdad0bc9a3acfb4e0f1502724b8855cf\AndroidManifest.xml:23:22-76
-uses-permission#android.permission.WAKE_LOCK
-ADDED from [com.google.firebase:firebase-measurement-connector-impl:17.0.1] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\bdad0bc9a3acfb4e0f1502724b8855cf\AndroidManifest.xml:24:5-68
-MERGED from [com.google.firebase:firebase-analytics:16.0.3] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\6a11b7956359e44a313848fae5fe7759\AndroidManifest.xml:25:5-68
-MERGED from [com.google.firebase:firebase-analytics:16.0.3] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\6a11b7956359e44a313848fae5fe7759\AndroidManifest.xml:25:5-68
-MERGED from [com.google.firebase:firebase-analytics-impl:16.2.1] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\c5a5197fb4a9dad6682415ad13ccef43\AndroidManifest.xml:25:5-68
-MERGED from [com.google.firebase:firebase-analytics-impl:16.2.1] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\c5a5197fb4a9dad6682415ad13ccef43\AndroidManifest.xml:25:5-68
-MERGED from [com.google.firebase:firebase-iid:17.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\4019d9badfe501eebd9e8e16379d1292\AndroidManifest.xml:24:5-68
-MERGED from [com.google.firebase:firebase-iid:17.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\4019d9badfe501eebd9e8e16379d1292\AndroidManifest.xml:24:5-68
-	android:name
-		ADDED from [com.google.firebase:firebase-measurement-connector-impl:17.0.1] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\bdad0bc9a3acfb4e0f1502724b8855cf\AndroidManifest.xml:24:22-65
-service#com.google.firebase.components.ComponentDiscoveryService
-ADDED from [com.google.firebase:firebase-measurement-connector-impl:17.0.1] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\bdad0bc9a3acfb4e0f1502724b8855cf\AndroidManifest.xml:27:9-31:19
-MERGED from [com.google.firebase:firebase-iid:17.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\4019d9badfe501eebd9e8e16379d1292\AndroidManifest.xml:29:9-35:19
-MERGED from [com.google.firebase:firebase-iid:17.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\4019d9badfe501eebd9e8e16379d1292\AndroidManifest.xml:29:9-35:19
-	android:exported
-		ADDED from [com.google.firebase:firebase-iid:17.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\4019d9badfe501eebd9e8e16379d1292\AndroidManifest.xml:31:13-37
-	android:name
-		ADDED from [com.google.firebase:firebase-measurement-connector-impl:17.0.1] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\bdad0bc9a3acfb4e0f1502724b8855cf\AndroidManifest.xml:27:18-89
-meta-data#com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar
-ADDED from [com.google.firebase:firebase-measurement-connector-impl:17.0.1] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\bdad0bc9a3acfb4e0f1502724b8855cf\AndroidManifest.xml:28:13-30:85
-	android:value
-		ADDED from [com.google.firebase:firebase-measurement-connector-impl:17.0.1] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\bdad0bc9a3acfb4e0f1502724b8855cf\AndroidManifest.xml:30:17-82
-	android:name
-		ADDED from [com.google.firebase:firebase-measurement-connector-impl:17.0.1] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\bdad0bc9a3acfb4e0f1502724b8855cf\AndroidManifest.xml:29:17-139
-uses-permission#com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE
-ADDED from [com.google.firebase:firebase-analytics:16.0.3] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\6a11b7956359e44a313848fae5fe7759\AndroidManifest.xml:26:5-110
-MERGED from [com.google.firebase:firebase-analytics-impl:16.2.1] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\c5a5197fb4a9dad6682415ad13ccef43\AndroidManifest.xml:26:5-110
-MERGED from [com.google.firebase:firebase-analytics-impl:16.2.1] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\c5a5197fb4a9dad6682415ad13ccef43\AndroidManifest.xml:26:5-110
-	android:name
-		ADDED from [com.google.firebase:firebase-analytics:16.0.3] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\6a11b7956359e44a313848fae5fe7759\AndroidManifest.xml:26:22-107
-receiver#com.google.android.gms.measurement.AppMeasurementReceiver
-ADDED from [com.google.firebase:firebase-analytics:16.0.3] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\6a11b7956359e44a313848fae5fe7759\AndroidManifest.xml:29:9-33:20
-	android:enabled
-		ADDED from [com.google.firebase:firebase-analytics:16.0.3] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\6a11b7956359e44a313848fae5fe7759\AndroidManifest.xml:31:13-35
-	android:exported
-		ADDED from [com.google.firebase:firebase-analytics:16.0.3] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\6a11b7956359e44a313848fae5fe7759\AndroidManifest.xml:32:13-37
-	android:name
-		ADDED from [com.google.firebase:firebase-analytics:16.0.3] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\6a11b7956359e44a313848fae5fe7759\AndroidManifest.xml:30:13-85
-receiver#com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver
-ADDED from [com.google.firebase:firebase-analytics:16.0.3] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\6a11b7956359e44a313848fae5fe7759\AndroidManifest.xml:34:9-42:20
-MERGED from [com.google.firebase:firebase-analytics-impl:16.2.1] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\c5a5197fb4a9dad6682415ad13ccef43\AndroidManifest.xml:29:9-37:20
-MERGED from [com.google.firebase:firebase-analytics-impl:16.2.1] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\c5a5197fb4a9dad6682415ad13ccef43\AndroidManifest.xml:29:9-37:20
-	android:enabled
-		ADDED from [com.google.firebase:firebase-analytics:16.0.3] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\6a11b7956359e44a313848fae5fe7759\AndroidManifest.xml:36:13-35
-	android:exported
-		ADDED from [com.google.firebase:firebase-analytics:16.0.3] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\6a11b7956359e44a313848fae5fe7759\AndroidManifest.xml:37:13-36
-	android:permission
-		ADDED from [com.google.firebase:firebase-analytics:16.0.3] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\6a11b7956359e44a313848fae5fe7759\AndroidManifest.xml:38:13-69
-	android:name
-		ADDED from [com.google.firebase:firebase-analytics:16.0.3] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\6a11b7956359e44a313848fae5fe7759\AndroidManifest.xml:35:13-100
-intent-filter#action:name:com.android.vending.INSTALL_REFERRER
-ADDED from [com.google.firebase:firebase-analytics:16.0.3] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\6a11b7956359e44a313848fae5fe7759\AndroidManifest.xml:39:13-41:29
-action#com.android.vending.INSTALL_REFERRER
-ADDED from [com.google.firebase:firebase-analytics:16.0.3] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\6a11b7956359e44a313848fae5fe7759\AndroidManifest.xml:40:17-79
-	android:name
-		ADDED from [com.google.firebase:firebase-analytics:16.0.3] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\6a11b7956359e44a313848fae5fe7759\AndroidManifest.xml:40:25-76
-service#com.google.android.gms.measurement.AppMeasurementService
-ADDED from [com.google.firebase:firebase-analytics:16.0.3] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\6a11b7956359e44a313848fae5fe7759\AndroidManifest.xml:44:9-47:40
-	android:enabled
-		ADDED from [com.google.firebase:firebase-analytics:16.0.3] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\6a11b7956359e44a313848fae5fe7759\AndroidManifest.xml:46:13-35
-	android:exported
-		ADDED from [com.google.firebase:firebase-analytics:16.0.3] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\6a11b7956359e44a313848fae5fe7759\AndroidManifest.xml:47:13-37
-	android:name
-		ADDED from [com.google.firebase:firebase-analytics:16.0.3] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\6a11b7956359e44a313848fae5fe7759\AndroidManifest.xml:45:13-84
-service#com.google.android.gms.measurement.AppMeasurementJobService
-ADDED from [com.google.firebase:firebase-analytics:16.0.3] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\6a11b7956359e44a313848fae5fe7759\AndroidManifest.xml:48:9-52:72
-	android:enabled
-		ADDED from [com.google.firebase:firebase-analytics:16.0.3] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\6a11b7956359e44a313848fae5fe7759\AndroidManifest.xml:50:13-35
-	android:exported
-		ADDED from [com.google.firebase:firebase-analytics:16.0.3] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\6a11b7956359e44a313848fae5fe7759\AndroidManifest.xml:51:13-37
-	android:permission
-		ADDED from [com.google.firebase:firebase-analytics:16.0.3] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\6a11b7956359e44a313848fae5fe7759\AndroidManifest.xml:52:13-69
-	android:name
-		ADDED from [com.google.firebase:firebase-analytics:16.0.3] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\6a11b7956359e44a313848fae5fe7759\AndroidManifest.xml:49:13-87
-uses-permission#com.google.android.c2dm.permission.RECEIVE
-ADDED from [com.google.firebase:firebase-iid:17.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\4019d9badfe501eebd9e8e16379d1292\AndroidManifest.xml:26:5-82
-	android:name
-		ADDED from [com.google.firebase:firebase-iid:17.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\4019d9badfe501eebd9e8e16379d1292\AndroidManifest.xml:26:22-79
-meta-data#com.google.firebase.components:com.google.firebase.iid.Registrar
-ADDED from [com.google.firebase:firebase-iid:17.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\4019d9badfe501eebd9e8e16379d1292\AndroidManifest.xml:32:13-34:85
-	android:value
-		ADDED from [com.google.firebase:firebase-iid:17.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\4019d9badfe501eebd9e8e16379d1292\AndroidManifest.xml:34:17-82
-	android:name
-		ADDED from [com.google.firebase:firebase-iid:17.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\4019d9badfe501eebd9e8e16379d1292\AndroidManifest.xml:33:17-96
-receiver#com.google.firebase.iid.FirebaseInstanceIdReceiver
-ADDED from [com.google.firebase:firebase-iid:17.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\4019d9badfe501eebd9e8e16379d1292\AndroidManifest.xml:37:9-44:20
-	android:exported
-		ADDED from [com.google.firebase:firebase-iid:17.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\4019d9badfe501eebd9e8e16379d1292\AndroidManifest.xml:39:13-36
-	android:permission
-		ADDED from [com.google.firebase:firebase-iid:17.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\4019d9badfe501eebd9e8e16379d1292\AndroidManifest.xml:40:13-73
-	android:name
-		ADDED from [com.google.firebase:firebase-iid:17.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\4019d9badfe501eebd9e8e16379d1292\AndroidManifest.xml:38:13-78
-intent-filter#action:name:com.google.android.c2dm.intent.RECEIVE
-ADDED from [com.google.firebase:firebase-iid:17.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\4019d9badfe501eebd9e8e16379d1292\AndroidManifest.xml:41:13-43:29
-action#com.google.android.c2dm.intent.RECEIVE
-ADDED from [com.google.firebase:firebase-iid:17.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\4019d9badfe501eebd9e8e16379d1292\AndroidManifest.xml:42:17-81
-	android:name
-		ADDED from [com.google.firebase:firebase-iid:17.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\4019d9badfe501eebd9e8e16379d1292\AndroidManifest.xml:42:25-78
-service#com.google.firebase.iid.FirebaseInstanceIdService
-ADDED from [com.google.firebase:firebase-iid:17.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\4019d9badfe501eebd9e8e16379d1292\AndroidManifest.xml:50:9-56:19
-	android:exported
-		ADDED from [com.google.firebase:firebase-iid:17.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\4019d9badfe501eebd9e8e16379d1292\AndroidManifest.xml:52:13-36
-	android:name
-		ADDED from [com.google.firebase:firebase-iid:17.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\4019d9badfe501eebd9e8e16379d1292\AndroidManifest.xml:51:13-77
-intent-filter#action:name:com.google.firebase.INSTANCE_ID_EVENT
-ADDED from [com.google.firebase:firebase-iid:17.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\4019d9badfe501eebd9e8e16379d1292\AndroidManifest.xml:53:13-55:29
-	android:priority
-		ADDED from [com.google.firebase:firebase-iid:17.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\4019d9badfe501eebd9e8e16379d1292\AndroidManifest.xml:53:28-51
-action#com.google.firebase.INSTANCE_ID_EVENT
-ADDED from [com.google.firebase:firebase-iid:17.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\4019d9badfe501eebd9e8e16379d1292\AndroidManifest.xml:54:17-80
-	android:name
-		ADDED from [com.google.firebase:firebase-iid:17.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\4019d9badfe501eebd9e8e16379d1292\AndroidManifest.xml:54:25-77
-provider#com.google.firebase.provider.FirebaseInitProvider
-ADDED from [com.google.firebase:firebase-common:16.0.1] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\8451e7b17a496c93c77e13cfa43e3dc0\AndroidManifest.xml:10:9-14:39
-	android:authorities
-		ADDED from [com.google.firebase:firebase-common:16.0.1] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\8451e7b17a496c93c77e13cfa43e3dc0\AndroidManifest.xml:12:13-72
-	android:exported
-		ADDED from [com.google.firebase:firebase-common:16.0.1] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\8451e7b17a496c93c77e13cfa43e3dc0\AndroidManifest.xml:13:13-37
-	android:initOrder
-		ADDED from [com.google.firebase:firebase-common:16.0.1] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\8451e7b17a496c93c77e13cfa43e3dc0\AndroidManifest.xml:14:13-36
-	android:name
-		ADDED from [com.google.firebase:firebase-common:16.0.1] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\8451e7b17a496c93c77e13cfa43e3dc0\AndroidManifest.xml:11:13-77
-activity#com.google.android.gms.common.api.GoogleApiActivity
-ADDED from [com.google.android.gms:play-services-base:15.0.1] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\9900d762e5d579bbbb1bae27fff9c68c\AndroidManifest.xml:23:9-26:75
-	android:exported
-		ADDED from [com.google.android.gms:play-services-base:15.0.1] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\9900d762e5d579bbbb1bae27fff9c68c\AndroidManifest.xml:25:13-37
+		ADDED from E:\MyApplication6\app\src\main\AndroidManifest.xml:68:19-57
+activity#com.karumi.dexter.DexterActivity
+ADDED from [com.karumi:dexter:5.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\29de0e1214f961d196ed1b3dd079fc86\AndroidManifest.xml:27:9-29:72
 	android:theme
-		ADDED from [com.google.android.gms:play-services-base:15.0.1] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\9900d762e5d579bbbb1bae27fff9c68c\AndroidManifest.xml:26:13-72
+		ADDED from [com.karumi:dexter:5.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\29de0e1214f961d196ed1b3dd079fc86\AndroidManifest.xml:29:13-69
 	android:name
-		ADDED from [com.google.android.gms:play-services-base:15.0.1] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\9900d762e5d579bbbb1bae27fff9c68c\AndroidManifest.xml:24:13-79
-meta-data#com.google.android.gms.version
-ADDED from [com.google.android.gms:play-services-basement:15.0.1] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\c5ee82b129643186619a5d602e3631f8\AndroidManifest.xml:23:9-25:69
-	android:value
-		ADDED from [com.google.android.gms:play-services-basement:15.0.1] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\c5ee82b129643186619a5d602e3631f8\AndroidManifest.xml:25:13-66
-	android:name
-		ADDED from [com.google.android.gms:play-services-basement:15.0.1] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\c5ee82b129643186619a5d602e3631f8\AndroidManifest.xml:24:13-58
+		ADDED from [com.karumi:dexter:5.0.0] C:\Users\Toshiba\.gradle\caches\transforms-2\files-2.1\29de0e1214f961d196ed1b3dd079fc86\AndroidManifest.xml:28:13-60

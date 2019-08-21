@@ -2,78 +2,70 @@ package com.example.toshiba.myapplication;
 
 import android.Manifest;
 import android.app.Activity;
-import android.content.ContentProvider;
-import android.content.ContentProviderOperation;
-import android.content.ContentResolver;
-import android.content.OperationApplicationException;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.content.res.Configuration;
 import android.database.Cursor;
-import android.net.Uri;
-import android.os.RemoteException;
 import android.provider.CallLog;
-import android.provider.Contacts;
 import android.provider.ContactsContract;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.view.GravityCompat;
-import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
-import android.text.format.DateFormat;
-import android.util.Log;
-import android.util.SparseBooleanArray;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.appcompat.widget.Toolbar;
+
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.Toast;
 
 import com.example.toshiba.myapplication.Adapters.DeleteContactsRecyclerViewAdapter;
-import com.example.toshiba.myapplication.Adapters.DeleteRecyclerViewAdapter;
 import com.example.toshiba.myapplication.Common.Common;
 import com.example.toshiba.myapplication.Helper.ContactHelper;
-import com.example.toshiba.myapplication.Model.ModelCalls;
 import com.example.toshiba.myapplication.Model.ModelContacts;
-import com.example.toshiba.myapplication.ViewHolder.DeleteContactsViewHolder;
-import com.rey.material.widget.CheckBox;
 
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 import java.util.Locale;
-
-import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
 
 public class DeleteContactsActivity extends AppCompatActivity {
 
 
-    List<ModelContacts> localDataSource = new ArrayList<>();
+    // --Commented out by Inspection (8/6/2019 12:18 PM):List<ModelContacts> localDataSource = new ArrayList<>();
 
 
     RecyclerView recyclerView;
 
     DeleteContactsRecyclerViewAdapter adapter;
-    SharedPref sharedPref;
-    private int PERMISSION_CODE = 1000;
+   // --Commented out by Inspection (8/6/2019 12:18 PM): SharedPref sharedPref;
 
-    CheckBox checkBox;
+    // --Commented out by Inspection (8/6/2019 12:18 PM):CheckBox checkBox;
 
-    int number;
+    // --Commented out by Inspection (8/6/2019 12:18 PM):int number;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
         loadLocale();
-        sharedPref = new SharedPref(this);
+      SharedPref  sharedPref = new SharedPref(this);
         if (sharedPref.loadNightModelState())
         {
             setTheme(R.style.darkTheme);
         }
+        else if (sharedPref.loadDarkModelState())
+        {
+            setTheme(R.style.darkerTheme);
+        }
+        else if (sharedPref.loadRoyalModelState())
+        {
+            setTheme(R.style.royalTheme);
+        }
+        else if (sharedPref.loadLightModelState())
+        {
+            setTheme(R.style.lightTheme);
+        }
         else
-            setTheme(R.style.Light);
+            setTheme(R.style.darkTheme);
+        super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_delete_contacts);
 
         final Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -92,6 +84,7 @@ public class DeleteContactsActivity extends AppCompatActivity {
         List<ModelContacts> lists = new ArrayList<>();
 
 
+        int PERMISSION_CODE = 1000;
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.READ_CONTACTS) != PackageManager.PERMISSION_GRANTED)
 
             ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.READ_CONTACTS}, PERMISSION_CODE);
@@ -125,7 +118,6 @@ public class DeleteContactsActivity extends AppCompatActivity {
 
     private void displayLists(List<ModelContacts> lists) {
 
-        localDataSource = lists;
         adapter = new DeleteContactsRecyclerViewAdapter(this, lists);
         recyclerView.setAdapter(adapter);
 
@@ -177,7 +169,6 @@ public class DeleteContactsActivity extends AppCompatActivity {
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
         if (id == R.id.delete_menu) {
 
             deleteContacts();

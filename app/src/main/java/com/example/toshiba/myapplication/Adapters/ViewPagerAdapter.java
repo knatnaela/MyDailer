@@ -1,17 +1,17 @@
 package com.example.toshiba.myapplication.Adapters;
 
-import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentPagerAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class ViewPagerAdapter extends FragmentPagerAdapter{
 
-    private List<Fragment> listFragment = new ArrayList<>();
-    private List<String> listTitle = new ArrayList<>();
+    private final List<Fragment> listFragment = new ArrayList<>();
+    private final List<String> listTitle = new ArrayList<>();
 
 
     public ViewPagerAdapter(FragmentManager fm) {

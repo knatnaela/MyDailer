@@ -10,10 +10,11 @@ import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.provider.ContactsContract;
-import android.support.annotation.NonNull;
-import android.support.v4.app.ActivityCompat;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.widget.RecyclerView;
+import androidx.annotation.NonNull;
+import androidx.core.app.ActivityCompat;
+import androidx.appcompat.app.AlertDialog;
+import androidx.recyclerview.widget.RecyclerView;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -40,18 +41,16 @@ import java.util.List;
 public class CallsRecyclerViewAdapter extends RecyclerView.Adapter<CallViewHolder> {
 
 
-    private Context mContext;
-    private List<ModelCalls> callsList;
+    private final Context mContext;
+    private final List<ModelCalls> callsList;
 
 
 
     private Dialog mDialog,myDialog;
 
-    private ImageView btnCall;
+    // --Commented out by Inspection (8/6/2019 12:18 PM):private ImageView btnCall;
 
-    private String letter;
-
-    private String callMe,transfer;
+    private String callMe;
 
     public CallsRecyclerViewAdapter(Context mContext, List<ModelCalls> callsList) {
         this.mContext = mContext;
@@ -62,15 +61,8 @@ public class CallsRecyclerViewAdapter extends RecyclerView.Adapter<CallViewHolde
     @Override
     public CallViewHolder onCreateViewHolder(@NonNull ViewGroup parent, final int viewType) {
 
-        initLayoutReferences();
         View itemVew = LayoutInflater.from(mContext).inflate(R.layout.item_calls,parent,false );
         return new CallViewHolder(itemVew);
-
-
-    }
-
-    private void initLayoutReferences() {
-
 
     }
 
@@ -99,7 +91,8 @@ public class CallsRecyclerViewAdapter extends RecyclerView.Adapter<CallViewHolde
             holder.btn_fav.setVisibility(View.INVISIBLE);
 
 
-       if (callsList.get(position).getName() !=null)
+        String letter;
+        if (callsList.get(position).getName() !=null)
         {
             holder.name.setText(callsList.get(position).getName());
             letter = String.valueOf(callsList.get(position).getName().charAt(0));
@@ -147,7 +140,7 @@ public class CallsRecyclerViewAdapter extends RecyclerView.Adapter<CallViewHolde
         holder.setItemClickListener(new ItemClickListener() {
 
             @Override
-            public void onClick(View view, int adapterPosition, boolean isLongClick) {
+            public void onClick(boolean isLongClick) {
 
                 if (isLongClick)
                 {
@@ -252,6 +245,7 @@ public class CallsRecyclerViewAdapter extends RecyclerView.Adapter<CallViewHolde
                             Common.number = String.valueOf(callsList.get(position).getNumber());
                             Common.name = callsList.get(position).getName();
                             Common.imageView = callsList.get(position).getPhoto();
+                            Common.giftActivity = true;
                             mContext.startActivity(intent);
                             mDialog.dismiss();
 
@@ -319,6 +313,7 @@ public class CallsRecyclerViewAdapter extends RecyclerView.Adapter<CallViewHolde
 
     private void transfer(final TextView dialog_phone, final MaterialEditText editAmount, TextView name) {
 
+        String transfer;
         if (name.getText().toString().isEmpty() || name.getText().toString().equals("Unnamed")
                 || name.getText().toString().equals("ስም የሌለው"))
         {
@@ -331,7 +326,7 @@ public class CallsRecyclerViewAdapter extends RecyclerView.Adapter<CallViewHolde
 
         AlertDialog.Builder builder = new AlertDialog.Builder(mContext);
         builder.setTitle(R.string.transfer_money);
-        builder.setMessage(mContext.getString(R.string.want_to_transfer)+ editAmount.getText().toString()+ mContext.getString(R.string.birr)+ transfer+ " ?");
+        builder.setMessage(mContext.getString(R.string.want_to_transfer)+ editAmount.getText().toString()+ mContext.getString(R.string.birr)+ transfer + " ?");
         builder.setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {

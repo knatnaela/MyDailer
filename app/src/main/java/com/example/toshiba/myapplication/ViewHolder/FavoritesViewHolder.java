@@ -1,6 +1,6 @@
 package com.example.toshiba.myapplication.ViewHolder;
 
-import android.support.v7.widget.RecyclerView;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ImageView;
@@ -12,14 +12,15 @@ import com.example.toshiba.myapplication.R;
 public class FavoritesViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
 
-    public TextView fav_contact_name,fav_contact_number;
-    public ImageView btn_call_contact,img_contact,btn_message;
-
-    public LinearLayout btn_call_me_back,btn_transfer,btn_gift,btnSend;
+    public final TextView fav_contact_name;
+    public final TextView fav_contact_number;
+    public final ImageView btn_call_contact;
+    public final ImageView img_contact;
+    public final ImageView btn_message;
 
     public AdapterView.OnItemClickListener itemClickListener;
 
-    public LinearLayout fav_contact_item_id;
+    public final LinearLayout fav_contact_item_id;
 
     public FavoritesViewHolder(View itemView) {
         super(itemView);
@@ -29,11 +30,11 @@ public class FavoritesViewHolder extends RecyclerView.ViewHolder implements View
         btn_call_contact = itemView.findViewById(R.id.btn_call);
         btn_message = itemView.findViewById(R.id.btn_sms);
         fav_contact_item_id = (LinearLayout) itemView.findViewById(R.id.fav_contact_item_id);
-        btn_call_me_back = itemView.findViewById(R.id.btn_callMe);
-        btn_transfer = itemView.findViewById(R.id.btn_transfer);
-        btn_gift = itemView.findViewById(R.id.btn_gift);
+        LinearLayout btn_call_me_back = itemView.findViewById(R.id.btn_callMe);
+        LinearLayout btn_transfer = itemView.findViewById(R.id.btn_transfer);
+        LinearLayout btn_gift = itemView.findViewById(R.id.btn_gift);
         img_contact = itemView.findViewById(R.id.img_fav_contact);
-        btnSend = itemView.findViewById(R.id.dialog_btn_send);
+        LinearLayout btnSend = itemView.findViewById(R.id.dialog_btn_send);
 
 
         itemView.setOnClickListener(this);

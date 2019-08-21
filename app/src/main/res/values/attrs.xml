@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
-    <declare-styleable name="ds"/>
     <attr name="backgroundColor" format="color"/>
+    <attr name="goldenBackgroundColor" format="color"/>
     <attr name="cardBackground" format="color"/>
     <attr name="textcolor" format="color"/>
     <attr name="tintColor" format="color"/>

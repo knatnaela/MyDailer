@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.net.Uri;
 import android.view.View;
 import android.widget.FrameLayout;
-import android.widget.Toast;
 
 import com.vansuita.materialabout.builder.AboutBuilder;
 import com.vansuita.materialabout.views.AboutView;
@@ -15,23 +14,23 @@ import com.vansuita.materialabout.views.AboutView;
  */
 public class SampleHelper implements View.OnClickListener {
 
-    private Activity activity;
+    private final Activity activity;
 
     private SampleHelper(Activity activity) {
         this.activity = activity;
     }
 
-    public static SampleHelper with(Activity activity) {
+    private static SampleHelper with(Activity activity) {
         return new SampleHelper(activity);
     }
 
-    public SampleHelper init() {
+    private SampleHelper init() {
         int theme = R.style.Theme_AppCompat;
         activity.setTheme(theme);
         return this;
     }
 
-    public void loadAbout() {
+    private void loadAbout() {
         final FrameLayout flHolder = activity.findViewById(R.id.about);
 
         AboutBuilder builder = AboutBuilder.with(activity)

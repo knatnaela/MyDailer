@@ -3,7 +3,6 @@ package com.example.toshiba.myapplication;
 import android.Manifest;
 import android.app.Activity;
 import android.app.Dialog;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -12,46 +11,41 @@ import android.content.res.Configuration;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
-import android.os.Build;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.TabLayout;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.view.ViewPager;
-import android.support.v4.widget.SwipeRefreshLayout;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatDelegate;
-import android.telecom.TelecomManager;
+
+import com.example.toshiba.myapplication.Database.Local.GEBETARoomDatabase;
+import com.google.android.material.tabs.TabLayout;
+import androidx.core.app.ActivityCompat;
+import androidx.viewpager.widget.ViewPager;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatDelegate;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.support.design.widget.NavigationView;
-import android.support.v4.view.GravityCompat;
-import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBarDrawerToggle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
+import com.google.android.material.navigation.NavigationView;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
-import android.os.Handler;
 
 import com.example.toshiba.myapplication.Adapters.ViewPagerAdapter;
 
 import com.example.toshiba.myapplication.Common.Common;
 
 
-import com.example.toshiba.myapplication.Database.DataSource.CartRepository;
-import com.example.toshiba.myapplication.Database.DataSource.FavoritesRepository;
-import com.example.toshiba.myapplication.Database.Local.CartDataSource;
 import com.example.toshiba.myapplication.Database.Local.FavoritesDataSource;
-import com.example.toshiba.myapplication.Database.Local.GEBETARoomDatabase;
+import com.example.toshiba.myapplication.Helper.SelfPackageActivity;
 import com.example.toshiba.myapplication.fragments.FragmentCalls;
 import com.example.toshiba.myapplication.fragments.FragmentContacts;
 import com.example.toshiba.myapplication.fragments.FragmentFavorites;
 import com.rengwuxian.materialedittext.MaterialEditText;
 
+import android.widget.CompoundButton;
 import android.widget.LinearLayout;
+import android.widget.RadioButton;
 import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -59,13 +53,8 @@ import android.widget.Toast;
 import java.util.Locale;
 
 import io.reactivex.disposables.CompositeDisposable;
-import kotlin.TypeCastException;
-import kotlin.jvm.internal.Intrinsics;
-import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
-import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 import static com.example.toshiba.myapplication.R.drawable.*;
-import static com.example.toshiba.myapplication.R.drawable.img1;
 
 public class Home extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -75,51 +64,41 @@ public class Home extends AppCompatActivity
     private TabLayout tabLayout;
     private ViewPager viewPager;
 
-    private final int PERMISSION_CODE = 1000;
-    LinearLayout layout;
-    TextView view;
-    private int[] img = {img1,img2,img3,img4,img5};
-    int k;
+  private final int PERMISSION_CODE = 1000;
+     LinearLayout layout;
+    TextView view;int k;
     SharedPref sharedPref;
-
     private Switch mSwitch;
-
     MenuItem item;
 
     CompositeDisposable compositeDisposable;
 
-    @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-               if ( requestCode  == PERMISSION_CODE)
-                {
-                    if (grantResults[0] == PackageManager.PERMISSION_GRANTED)
-                    {
-                        load();
-                    }
-                    else {
-                        Toast.makeText(this, "Until you grant permission, we cannot display your calllog and contacts", Toast.LENGTH_SHORT).show();
-                    }
-                }
-
-    }
-
-    @Override
-    protected void attachBaseContext(Context newBase) {
-        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
-    }
+    FavoritesDataSource favoritesDataSource;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        AppCompatDelegate.setCompatVectorFromResourcesEnabled(true);
-         loadLocale();
         sharedPref = new SharedPref(this);
+        AppCompatDelegate.setCompatVectorFromResourcesEnabled(true);
         if (sharedPref.loadNightModelState())
         {
             setTheme(R.style.darkTheme);
         }
+        else if (sharedPref.loadDarkModelState())
+        {
+            setTheme(R.style.darkerTheme);
+        }
+        else if (sharedPref.loadRoyalModelState())
+        {
+            setTheme(R.style.royalTheme);
+        }
+        else if (sharedPref.loadLightModelState())
+        {
+            setTheme(R.style.lightTheme);
+        }
         else
-            setTheme(R.style.Light);
+            setTheme(R.style.darkTheme);
+         loadLocale();
+        super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         final Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle(R.string.menu);
@@ -127,15 +106,12 @@ public class Home extends AppCompatActivity
         setSupportActionBar(toolbar);
         compositeDisposable = new CompositeDisposable();
 
-     //   checkDefaultDailer();
-
-
         tabLayout = findViewById(R.id.tabLayout);
         viewPager = findViewById(R.id.viewPager);
         layout = findViewById(R.id.nav_header);
 
-      //  FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-/*        fab.setOnClickListener(new View.OnClickListener() {
+       /* FloatingActionButton fab = findViewById(R.id.fab);
+       fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 dialerPad();
@@ -157,30 +133,13 @@ public class Home extends AppCompatActivity
 
         layout = headerView.findViewById(R.id.nav_header);
 
-
-        final Handler handler = new Handler();
-        Runnable runnable = new Runnable() {
-            int i = 0;
-            @Override
-            public void run() {
-
-                layout.setBackgroundResource(img[i]);
-                i++;
-                if (i > img.length  - 1)
-                {
-                    i = 0;
-                }
-                handler.postDelayed(this,50000 );
-            }
-        };
-        handler.postDelayed(runnable,2000 );
-
         initDB();
 
         load();
+
     }
 
- /*   private void checkDefaultDailer() {
+/*   private void checkDefaultDailer() {
 
         startActivity(new Intent(Home.this,Main.class));
     }*/
@@ -197,18 +156,13 @@ public class Home extends AppCompatActivity
     }
 
     private void initDB() {
-
-
-        Common.gebetaRoomDatabase = GEBETARoomDatabase.getInstance(this);
-        Common.cartRepository = CartRepository.getInstance(CartDataSource.getInstance(Common.gebetaRoomDatabase.cartDAO()));
-        Common.favoritesRepository = FavoritesRepository.getInstance(FavoritesDataSource.getInstance(Common.gebetaRoomDatabase.favoritesDAO()));
-
-
+        favoritesDataSource = new FavoritesDataSource(GEBETARoomDatabase.getInstance(this).favoritesDAO());
     }
 
     private void dialerPad() {
 
         startActivity(new Intent(Home.this, DialerPad.class));
+
 
     }
 
@@ -231,19 +185,15 @@ public class Home extends AppCompatActivity
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.home, menu);
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
+
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
         if (id == R.id.search_menu) {
             startActivity(new Intent(Home.this, SearchActivity.class));
         }
@@ -251,10 +201,9 @@ public class Home extends AppCompatActivity
         return super.onOptionsItemSelected(item);
     }
 
-    @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
-        // Handle navigation view item clicks here.
+
         int id = item.getItemId();
 
         NavigationView navigationView = findViewById(R.id.nav_view);
@@ -293,21 +242,36 @@ public class Home extends AppCompatActivity
         }else if (id == R.id._borrow_service) {
 
             showBorrowDialog();
-        } else if (id == R.id.nav_settings) {
+        }/* else if (id == R.id.nav_language) {
 
-            startActivity(new Intent(Home.this,Settings.class));
+            showLanguageDialog();
+        }*/else if (id == R.id.nav_theme) {
+
+            showThemeDialog();
         }
         else if (id == R.id.nav_internet) {
 
-            showInternetDialog();
+          //  showInternetDialog();
+            Common.giftActivity = false;
+            Common.currentTab = "internet";
+            startActivity(new Intent(Home.this, SelfPackageActivity.class)
+            .putExtra("fragmentName","internetPackage"));
 
         } else if (id == R.id.nav_SMS) {
 
-            showSMSDialog();
+           // showSMSDialog();
+            Common.giftActivity = false;
+            Common.currentTab = "sms";
+            startActivity(new Intent(Home.this, SelfPackageActivity.class)
+                    .putExtra("fragmentName","smsPackage"));
 
         }else if (id == R.id.nav_voice) {
 
-            showVoiceDialog();
+            /*showVoiceDialog();*/
+            Common.giftActivity = false;
+            Common.currentTab = "voice";
+            startActivity(new Intent(Home.this, SelfPackageActivity.class)
+                    .putExtra("fragmentName","voicePackage"));
         } else if (id == R.id.about) {
 
             startActivity(new Intent(Home.this,ActivitySample.class));
@@ -316,6 +280,130 @@ public class Home extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    private void showLanguageDialog() {
+
+        AlertDialog.Builder languageLayout = new AlertDialog.Builder(this);
+
+        View itemView = LayoutInflater.from(this)
+                .inflate(R.layout.language_layout,null);
+
+        RadioButton btnEnglish = itemView.findViewById(R.id.language_eng);
+        RadioButton btnAmharic = itemView.findViewById(R.id.language_amh);
+
+        btnAmharic.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+
+                if (isChecked)
+                {
+
+                    setLocale("am");
+                    restartApp();
+                }
+            }
+        });
+
+        btnEnglish.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+
+                if (isChecked)
+                {
+                    setLocale("en");
+                    restartApp();
+                }
+            }
+        });
+
+
+        languageLayout.setView(itemView);
+        languageLayout.show();
+
+    }
+    private void restartApp() {
+
+        startActivity(new Intent(getApplicationContext(),Home.class));
+        finish();
+    }
+
+    private void showThemeDialog() {
+
+        AlertDialog.Builder theme = new AlertDialog.Builder(this);
+
+        View itemView = LayoutInflater.from(this)
+                .inflate(R.layout.layout_theme,null);
+
+        RadioButton rdi_night_mode = itemView.findViewById(R.id.rdi_night);
+        RadioButton rdi_royal_mode = itemView.findViewById(R.id.rdi_royal);
+        RadioButton rdi_light_mode = itemView.findViewById(R.id.rdi_light);
+        RadioButton rdi_darker_mode = itemView.findViewById(R.id.rdi_darker);
+
+        rdi_night_mode.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+
+                if (isChecked)
+                {
+                    sharedPref.setNightModeState(true);
+                    sharedPref.setLightModeState(false);
+                    sharedPref.setDarkModeState(false);
+                    sharedPref.setRoyalModeState(false);
+                    restartApp();
+                }
+            }
+        });
+
+        rdi_royal_mode.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+
+                if (isChecked)
+                {
+                    sharedPref.setNightModeState(false);
+                    sharedPref.setLightModeState(false);
+                    sharedPref.setDarkModeState(false);
+                    sharedPref.setRoyalModeState(true);
+                    restartApp();
+                }
+            }
+        });
+
+        rdi_darker_mode.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+
+                if (isChecked)
+                {
+
+                    sharedPref.setNightModeState(false);
+                    sharedPref.setLightModeState(false);
+                    sharedPref.setDarkModeState(true);
+                    sharedPref.setRoyalModeState(false);
+                    restartApp();
+                }
+            }
+        });
+
+        rdi_light_mode.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+
+                if (isChecked)
+                {
+
+                    sharedPref.setNightModeState(false);
+                    sharedPref.setLightModeState(true);
+                    sharedPref.setDarkModeState(false);
+                    sharedPref.setRoyalModeState(false);
+                    restartApp();
+                }
+            }
+        });
+
+        theme.setView(itemView);
+        theme.show();
     }
 
     private void showBorrowDialog() {
@@ -488,1764 +576,9 @@ public class Home extends AppCompatActivity
 
     }
 
-    private void showVoiceDialog() {
-
-        final android.support.v7.app.AlertDialog.Builder builder = new android.support.v7.app.AlertDialog.Builder(this);
-        View itemView = LayoutInflater.from(this)
-                .inflate(R.layout.dialog_layout_voice_package, null);
-
-
-        Button Night_voice__Birr3 = itemView.findViewById(R.id.BirrNightVoice3);
-        Button Night_voice__Birr4 = itemView.findViewById(R.id.BirrNightVoice4);
-        Button Night_voice__Birr6 = itemView.findViewById(R.id.BirrNightVoice6);
-        Button Night_voice__Birr9 = itemView.findViewById(R.id.BirrNightVoice9);
-
-
-        Night_voice__Birr3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                AlertDialog.Builder alertDialog = new AlertDialog.Builder(Home.this);
-                alertDialog.setTitle(R.string.self_voice_package);
-                alertDialog.setMessage(R.string.do_u_want_buy_package);
-
-                 alertDialog.setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
-                     @Override
-                     public void onClick(DialogInterface dialogInterface, int i) {
-
-                         Intent intent = new Intent(Intent.ACTION_CALL);
-                         intent.setData(Uri.parse(Uri.parse("tel:" +"*999*1*1*1*1*1*1")+Uri.encode("#")));
-                         {
-                             permission();
-                             startActivity(intent);
-
-                         }
-                     }
-                 }).setNegativeButton(R.string.No, new DialogInterface.OnClickListener() {
-                     @Override
-                     public void onClick(DialogInterface dialogInterface, int i) {
-                         dialogInterface.dismiss();
-                     }
-                 }).show();
-
-            }
-        });
-
-        Night_voice__Birr4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-
-
-                AlertDialog.Builder alertDialog = new AlertDialog.Builder(Home.this);
-                alertDialog.setTitle(R.string.self_voice_package);
-                alertDialog.setMessage(R.string.do_u_want_buy_package);
-
-                alertDialog.setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-
-                        Intent intent = new Intent(Intent.ACTION_CALL);
-                        intent.setData(Uri.parse(Uri.parse("tel:" +"*999*1*1*1*1*2*1")+Uri.encode("#")));
-                        {
-                            permission();
-                            startActivity(intent);
-
-                        }
-                    }
-                }).setNegativeButton(R.string.No, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        dialogInterface.dismiss();
-                    }
-                }).show();
-            }
-        });
-
-        Night_voice__Birr6.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-
-
-                AlertDialog.Builder alertDialog = new AlertDialog.Builder(Home.this);
-                alertDialog.setTitle(R.string.self_voice_package);
-                alertDialog.setMessage(R.string.do_u_want_buy_package);
-
-                alertDialog.setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-
-                        Intent intent = new Intent(Intent.ACTION_CALL);
-                        intent.setData(Uri.parse(Uri.parse("tel:" +"*999*1*1*1*1*3*1")+Uri.encode("#")));
-                        {
-                            permission();
-                            startActivity(intent);
-
-                        }
-                    }
-                }).setNegativeButton(R.string.No, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        dialogInterface.dismiss();
-                    }
-                }).show();
-            }
-        });
-
-        Night_voice__Birr9.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-
-
-                AlertDialog.Builder alertDialog = new AlertDialog.Builder(Home.this);
-                alertDialog.setTitle(R.string.self_voice_package);
-                alertDialog.setMessage(R.string.do_u_want_buy_package);
-
-                alertDialog.setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-
-                        Intent intent = new Intent(Intent.ACTION_CALL);
-                        intent.setData(Uri.parse(Uri.parse("tel:" +"*999*1*1*1*1*4*1")+Uri.encode("#")));
-                        {
-                            permission();
-                            startActivity(intent);
-
-                        }
-                    }
-                }).setNegativeButton(R.string.No, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        dialogInterface.dismiss();
-                    }
-                }).show();
-            }
-        });
-
-        Button Daily_voice__Birr3 = itemView.findViewById(R.id.BirrDailyVoice3);
-        Button Daily_voice__Birr5 = itemView.findViewById(R.id.BirrDailyVoice5);
-        Button Daily_voice__Birr10 = itemView.findViewById(R.id.BirrDailyVoice10);
-
-
-
-        Daily_voice__Birr3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-
-
-                AlertDialog.Builder alertDialog = new AlertDialog.Builder(Home.this);
-                alertDialog.setTitle(R.string.self_voice_package);
-                alertDialog.setMessage(R.string.do_u_want_buy_package);
-
-                alertDialog.setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-
-                        Intent intent = new Intent(Intent.ACTION_CALL);
-                        intent.setData(Uri.parse(Uri.parse("tel:" +"*999*1*1*1*2*1*1")+Uri.encode("#")));
-                        {
-                            permission();
-                            startActivity(intent);
-
-                        }
-                    }
-                }).setNegativeButton(R.string.No, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        dialogInterface.dismiss();
-                    }
-                }).show();
-
-            }
-        });
-
-        Daily_voice__Birr5.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-
-
-                AlertDialog.Builder alertDialog = new AlertDialog.Builder(Home.this);
-                alertDialog.setTitle(R.string.self_voice_package);
-                alertDialog.setMessage(R.string.do_u_want_buy_package);
-
-                alertDialog.setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-
-                        Intent intent = new Intent(Intent.ACTION_CALL);
-                        intent.setData(Uri.parse(Uri.parse("tel:" +"*999*1*1*1*2*2*1")+Uri.encode("#")));
-                        {
-                            permission();
-                            startActivity(intent);
-
-                        }
-                    }
-                }).setNegativeButton(R.string.No, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        dialogInterface.dismiss();
-                    }
-                }).show();
-            }
-        });
-
-        Daily_voice__Birr10.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                AlertDialog.Builder alertDialog = new AlertDialog.Builder(Home.this);
-                alertDialog.setTitle(R.string.self_voice_package);
-                alertDialog.setMessage(R.string.do_u_want_buy_package);
-
-                alertDialog.setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-
-                        Intent intent = new Intent(Intent.ACTION_CALL);
-                        intent.setData(Uri.parse(Uri.parse("tel:" +"*999*1*1*1*2*3*1")+Uri.encode("#")));
-                        {
-                            permission();
-                            startActivity(intent);
-
-                        }
-
-                    }
-                }).setNegativeButton(R.string.No, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        dialogInterface.dismiss();
-                    }
-                }).show();
-            }
-        });
-
-
-        Button Weekly_voice__Birr15 = itemView.findViewById(R.id.BirrWeeklyVoice15);
-        Button Weekly_voice__Birr20 = itemView.findViewById(R.id.BirrWeeklyVoice20);
-
-        Weekly_voice__Birr15.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-
-                AlertDialog.Builder alertDialog = new AlertDialog.Builder(Home.this);
-                alertDialog.setTitle(R.string.self_voice_package);
-                alertDialog.setMessage(R.string.do_u_want_buy_package);
-
-                alertDialog.setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-
-                        Intent intent = new Intent(Intent.ACTION_CALL);
-                        intent.setData(Uri.parse(Uri.parse("tel:" +"*999*1*1*1*3*1*1")+Uri.encode("#")));
-                        {
-                            permission();
-                            startActivity(intent);
-
-                        }
-                    }
-                }).setNegativeButton(R.string.No, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        dialogInterface.dismiss();
-                    }
-                }).show();
-            }
-        });
-
-
-        Weekly_voice__Birr20.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-
-                AlertDialog.Builder alertDialog = new AlertDialog.Builder(Home.this);
-                alertDialog.setTitle(R.string.self_voice_package);
-                alertDialog.setMessage(R.string.do_u_want_buy_package);
-
-                alertDialog.setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-
-                        Intent intent = new Intent(Intent.ACTION_CALL);
-                        intent.setData(Uri.parse(Uri.parse("tel:" +"*999*1*1*1*3*2*1")+Uri.encode("#")));
-                        {
-                            permission();
-                            startActivity(intent);
-
-                        }
-
-                    }
-                }).setNegativeButton(R.string.No, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        dialogInterface.dismiss();
-                    }
-                }).show();
-            }
-        });
-
-
-        //--------Monthly Button----------
-
-        Button Monthly_voice__Birr60 = itemView.findViewById(R.id.BirrMonthlyVoice60);
-        Button Monthly_voice__Birr100 = itemView.findViewById(R.id.BirrMonthlyVoice100);
-        Button Monthly_voice__Birr140 = itemView.findViewById(R.id.BirrMonthlyVoice140);
-        Button Monthly_voice__Birr150 = itemView.findViewById(R.id.BirrMonthlyVoice150);
-        Button Monthly_voice__Birr200 = itemView.findViewById(R.id.BirrMonthlyVoice200);
-        Button Monthly_voice__Birr250 = itemView.findViewById(R.id.BirrMonthlyVoice250);
-        Button Monthly_voice__Birr270 = itemView.findViewById(R.id.BirrMonthlyVoice270);
-        Button Monthly_voice__Birr300 = itemView.findViewById(R.id.BirrMonthlyVoice300);
-        Button Monthly_voice__Birr350 = itemView.findViewById(R.id.BirrMonthlyVoice350);
-        Button Monthly_voice__Birr400 = itemView.findViewById(R.id.BirrMonthlyVoice400);
-        Button Monthly_voice__Birr450 = itemView.findViewById(R.id.BirrMonthlyVoice450);
-        Button Monthly_voice__Birr500 = itemView.findViewById(R.id.BirrMonthlyVoice500);
-        Button Monthly_voice__Birr540 = itemView.findViewById(R.id.BirrMonthlyVoice540);
-        Button Monthly_voice__Birr600 = itemView.findViewById(R.id.BirrMonthlyVoice600);
-        Button Monthly_voice__Birr1350 = itemView.findViewById(R.id.BirrMonthlyVoice1350);
-
-
-        //-----Monthly button Action listener
-
-        Monthly_voice__Birr60.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-               AlertDialog.Builder alertDialog = new AlertDialog.Builder(Home.this);
-                alertDialog.setTitle(R.string.self_voice_package);
-                alertDialog.setMessage(R.string.do_u_want_buy_package);
-
-                alertDialog.setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-
-                        Intent intent = new Intent(Intent.ACTION_CALL);
-                        intent.setData(Uri.parse(Uri.parse("tel:" +"*999*1*1*1*4*1*1")+Uri.encode("#")));
-                        {
-                            permission();
-                            startActivity(intent);
-
-                        }
-                    }
-                }).setNegativeButton(R.string.No, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        dialogInterface.dismiss();
-                    }
-                }).show();
-
-            }
-        });
-        Monthly_voice__Birr100.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                AlertDialog.Builder alertDialog = new AlertDialog.Builder(Home.this);
-                alertDialog.setTitle(R.string.self_voice_package);
-                alertDialog.setMessage(R.string.do_u_want_buy_package);
-
-                alertDialog.setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-
-                        Intent intent = new Intent(Intent.ACTION_CALL);
-                        intent.setData(Uri.parse(Uri.parse("tel:" +"*999*1*1*1*4*2*1")+Uri.encode("#")));
-                        {
-                            permission();
-                            startActivity(intent);
-
-                        }
-                    }
-                }).setNegativeButton(R.string.No, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        dialogInterface.dismiss();
-                    }
-                }).show();
-            }
-        });
-        Monthly_voice__Birr140.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-               AlertDialog.Builder alertDialog = new AlertDialog.Builder(Home.this);
-                alertDialog.setTitle(R.string.self_voice_package);
-                alertDialog.setMessage(R.string.do_u_want_buy_package);
-
-                alertDialog.setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-
-                        Intent intent = new Intent(Intent.ACTION_CALL);
-                        intent.setData(Uri.parse(Uri.parse("tel:" +"*999*1*1*1*4*3*1")+Uri.encode("#")));
-                        {
-                            permission();
-                            startActivity(intent);
-
-                        }
-                    }
-                }).setNegativeButton(R.string.No, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        dialogInterface.dismiss();
-                    }
-                }).show();
-            }
-        });
-        Monthly_voice__Birr150.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-
-
-                AlertDialog.Builder alertDialog = new AlertDialog.Builder(Home.this);
-                alertDialog.setTitle(R.string.self_voice_package);
-                alertDialog.setMessage(R.string.do_u_want_buy_package);
-
-                alertDialog.setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-
-                        Intent intent = new Intent(Intent.ACTION_CALL);
-                        intent.setData(Uri.parse(Uri.parse("tel:" +"*999*1*1*1*4*4*1")+Uri.encode("#")));
-                        {
-                            permission();
-                            startActivity(intent);
-
-                        }
-                    }
-                }).setNegativeButton(R.string.No, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        dialogInterface.dismiss();
-                    }
-                }).show();
-            }
-        });
-        Monthly_voice__Birr200.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                 AlertDialog.Builder alertDialog = new AlertDialog.Builder(Home.this);
-                alertDialog.setTitle(R.string.self_voice_package);
-                alertDialog.setMessage(R.string.do_u_want_buy_package);
-
-                alertDialog.setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-
-                        Intent intent = new Intent(Intent.ACTION_CALL);
-                        intent.setData(Uri.parse(Uri.parse("tel:" +"*999*1*1*1*4")+Uri.encode("#")+Uri.parse("*5*1")+Uri.encode("#")));
-                        {
-                            permission();
-                            startActivity(intent);
-
-                        }
-
-                    }
-                }).setNegativeButton(R.string.No, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        dialogInterface.dismiss();
-                    }
-                }).show();
-            }
-        });
-        Monthly_voice__Birr250.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-
-                AlertDialog.Builder alertDialog = new AlertDialog.Builder(Home.this);
-                alertDialog.setTitle(R.string.self_voice_package);
-                alertDialog.setMessage(R.string.do_u_want_buy_package);
-
-                alertDialog.setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-
-                        Intent intent = new Intent(Intent.ACTION_CALL);
-                        intent.setData(Uri.parse(Uri.parse("tel:" +"*999*1*1*1*4")+ Uri.encode("#")+Uri.parse("*6*1")+Uri.encode("#")));
-
-                        {
-                            permission();
-                            startActivity(intent);
-
-                        }
-
-                    }
-                }).setNegativeButton(R.string.No, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        dialogInterface.dismiss();
-                    }
-                }).show();
-            }
-        });
-        Monthly_voice__Birr270.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-
-                AlertDialog.Builder alertDialog = new AlertDialog.Builder(Home.this);
-                alertDialog.setTitle(R.string.self_voice_package);
-                alertDialog.setMessage(R.string.do_u_want_buy_package);
-
-                alertDialog.setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-
-                        Intent intent = new Intent(Intent.ACTION_CALL);
-                        intent.setData(Uri.parse(Uri.parse("tel:" +"*999*1*1*1*4")+Uri.encode("#")+Uri.parse("*7*1")+Uri.encode("#")));
-                        {
-                            permission();
-                            startActivity(intent);
-
-                        }
-
-                    }
-                }).setNegativeButton(R.string.No, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        dialogInterface.dismiss();
-                    }
-                }).show();
-            }
-        });
-        Monthly_voice__Birr300.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-
-                AlertDialog.Builder alertDialog = new AlertDialog.Builder(Home.this);
-                alertDialog.setTitle(R.string.self_voice_package);
-                alertDialog.setMessage(R.string.do_u_want_buy_package);
-
-                alertDialog.setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-
-                        Intent intent = new Intent(Intent.ACTION_CALL);
-                        intent.setData(Uri.parse(Uri.parse("tel:" +"*999*1*1*1*4")+Uri.encode("#")+ Uri.parse("*8*1")+Uri.encode("#")));
-                        {
-                            permission();
-                            startActivity(intent);
-
-                        }
-
-                    }
-                }).setNegativeButton(R.string.No, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        dialogInterface.dismiss();
-                    }
-                }).show();
-            }
-        });
-        Monthly_voice__Birr350.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-
-
-                AlertDialog.Builder alertDialog = new AlertDialog.Builder(Home.this);
-                alertDialog.setTitle(R.string.self_voice_package);
-                alertDialog.setMessage(R.string.do_u_want_buy_package);
-
-                alertDialog.setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-
-                        Intent intent = new Intent(Intent.ACTION_CALL);
-                        intent.setData(Uri.parse(Uri.parse("tel:" +"*999*1*1*1*4")+Uri.encode("#")+Uri.encode("#")+Uri.parse("*9*1")+Uri.encode("#")));
-                        {
-                            permission();
-                            startActivity(intent);
-
-                        }
-                    }
-                }).setNegativeButton(R.string.No, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        dialogInterface.dismiss();
-                    }
-                }).show();
-            }
-        });
-        Monthly_voice__Birr400.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-
-                AlertDialog.Builder alertDialog = new AlertDialog.Builder(Home.this);
-                alertDialog.setTitle(R.string.self_voice_package);
-                alertDialog.setMessage(R.string.do_u_want_buy_package);
-
-                alertDialog.setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-
-                        Intent intent = new Intent(Intent.ACTION_CALL);
-                        intent.setData(Uri.parse(Uri.parse("tel:" +"*999*1*1*1*4")+Uri.encode("#")+Uri.encode("#")+Uri.parse("*10*1")+Uri.encode("#")));
-                        {
-                            permission();
-                            startActivity(intent);
-
-                        }
-                    }
-                }).setNegativeButton(R.string.No, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        dialogInterface.dismiss();
-                    }
-                }).show();
-            }
-        });
-        Monthly_voice__Birr450.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                AlertDialog.Builder alertDialog = new AlertDialog.Builder(Home.this);
-                alertDialog.setTitle(R.string.self_voice_package);
-                alertDialog.setMessage(R.string.do_u_want_buy_package);
-
-                alertDialog.setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-
-                        Intent intent = new Intent(Intent.ACTION_CALL);
-                        intent.setData(Uri.parse(Uri.parse("tel:" +"*999*1*1*1*4")+Uri.encode("#")+Uri.encode("#")+Uri.parse("*11*1")+Uri.encode("#")));
-                        {
-                            permission();
-                            startActivity(intent);
-
-                        }
-                    }
-                }).setNegativeButton(R.string.No, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        dialogInterface.dismiss();
-                    }
-                }).show();
-            }
-        });
-        Monthly_voice__Birr500.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-
-
-                AlertDialog.Builder alertDialog = new AlertDialog.Builder(Home.this);
-                alertDialog.setTitle(R.string.self_voice_package);
-                alertDialog.setMessage(R.string.do_u_want_buy_package);
-
-                alertDialog.setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-
-                        Intent intent = new Intent(Intent.ACTION_CALL);
-                        intent.setData(Uri.parse(Uri.parse("tel:" +"*999*1*1*1*4")+Uri.encode("#")+Uri.encode("#")+Uri.parse("*12*1")+Uri.encode("#")));
-                        {
-                            permission();
-                            startActivity(intent);
-
-                        }
-                    }
-                }).setNegativeButton(R.string.No, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        dialogInterface.dismiss();
-                    }
-                }).show();
-            }
-        });
-        Monthly_voice__Birr540.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                AlertDialog.Builder alertDialog = new AlertDialog.Builder(Home.this);
-                alertDialog.setTitle(R.string.self_voice_package);
-                alertDialog.setMessage(R.string.do_u_want_buy_package);
-
-                alertDialog.setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-
-                        Intent intent = new Intent(Intent.ACTION_CALL);
-                        intent.setData(Uri.parse(Uri.parse("tel:" +"*999*1*1*1*4")+Uri.encode("#")
-                                +Uri.encode("#")+Uri.encode("#")+Uri.parse("*13*1")+Uri.encode("#")));
-                        {
-                            permission();
-                            startActivity(intent);
-
-                        }
-                    }
-                }).setNegativeButton(R.string.No, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        dialogInterface.dismiss();
-                    }
-                }).show();
-            }
-        });
-        Monthly_voice__Birr600.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                AlertDialog.Builder alertDialog = new AlertDialog.Builder(Home.this);
-                alertDialog.setTitle(R.string.self_voice_package);
-                alertDialog.setMessage(R.string.do_u_want_buy_package);
-
-                alertDialog.setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-
-                        Intent intent = new Intent(Intent.ACTION_CALL);
-                        intent.setData(Uri.parse(Uri.parse("tel:" +"*999*1*1*1*4")+Uri.encode("#")
-                                +Uri.encode("#")+Uri.encode("#")+Uri.parse("*14*1")+Uri.encode("#")));
-                        {
-                            permission();
-                            startActivity(intent);
-
-                        }
-                    }
-                }).setNegativeButton(R.string.No, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        dialogInterface.dismiss();
-                    }
-                }).show();
-            }
-        });
-        Monthly_voice__Birr1350.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-
-
-                AlertDialog.Builder alertDialog = new AlertDialog.Builder(Home.this);
-                alertDialog.setTitle(R.string.self_voice_package);
-                alertDialog.setMessage(R.string.do_u_want_buy_package);
-
-                alertDialog.setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-
-                        Intent intent = new Intent(Intent.ACTION_CALL);
-                        intent.setData(Uri.parse(Uri.parse("tel:" +"*999*1*1*1*4")+Uri.encode("#")+Uri.encode("#")
-                                +Uri.encode("#")+Uri.parse("*15*1")+Uri.encode("#")));
-                        {
-                            permission();
-                            startActivity(intent);
-
-                        }
-                    }
-                }).setNegativeButton(R.string.No, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        dialogInterface.dismiss();
-                    }
-                }).show();
-            }
-        });
-
-        builder.setView(itemView);
-        builder.show();
-
-
-    }
 
     private void permission() {
         ActivityCompat.checkSelfPermission(this, Manifest.permission.CALL_PHONE);
-    }
-
-    private void showSMSDialog() {
-
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        View itemView = LayoutInflater.from(this)
-                .inflate(R.layout.dialog_layout_sms_package,null);
-
-
-        Button Daily_SMS_Birr2 = itemView.findViewById(R.id.BirrSMS2);
-        Button Daily_SMS_Birr3 = itemView.findViewById(R.id.BirrSMS3);
-        Button Daily_SMS_Birr5 = itemView.findViewById(R.id.BirrSMS5);
-
-        Daily_SMS_Birr2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                AlertDialog.Builder alertDialog = new AlertDialog.Builder(Home.this);
-                alertDialog.setTitle(R.string.self_sms_package);
-                alertDialog.setMessage(R.string.do_u_want_buy_package);
-
-                alertDialog.setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-
-                        Intent intent = new Intent(Intent.ACTION_CALL);
-                        intent.setData(Uri.parse(Uri.parse("tel:" +"*999*1*1*3*1*1*1")+Uri.encode("#")));
-                        {
-                            permission();
-                            startActivity(intent);
-
-                        }
-                    }
-                }).setNegativeButton(R.string.No, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        dialogInterface.dismiss();
-                    }
-                }).show();
-
-
-            }
-        });
-
-        Daily_SMS_Birr3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                AlertDialog.Builder alertDialog = new AlertDialog.Builder(Home.this);
-                alertDialog.setTitle(R.string.self_sms_package);
-                alertDialog.setMessage(R.string.do_u_want_buy_package);
-
-                alertDialog.setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-
-
-                        Intent intent = new Intent(Intent.ACTION_CALL);
-                        intent.setData(Uri.parse(Uri.parse("tel:" +"*999*1*1*3*1*2*1")+Uri.encode("#")));
-                        {
-                            permission();
-                            startActivity(intent);
-
-                        }
-
-                    }
-                }).setNegativeButton(R.string.No, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        dialogInterface.dismiss();
-                    }
-                }).show();
-
-            }
-        });
-
-        Daily_SMS_Birr5.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                AlertDialog.Builder alertDialog = new AlertDialog.Builder(Home.this);
-                alertDialog.setTitle(R.string.self_sms_package);
-                alertDialog.setMessage(R.string.do_u_want_buy_package);
-
-                alertDialog.setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-
-
-                        Intent intent = new Intent(Intent.ACTION_CALL);
-                        intent.setData(Uri.parse(Uri.parse("tel:" +"*999*1*1*3*1*3*1")+Uri.encode("#")));
-                        {
-                            permission();
-                            startActivity(intent);
-
-                        }
-
-                    }
-                }).setNegativeButton(R.string.No, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        dialogInterface.dismiss();
-                    }
-                }).show();
-            }
-        });
-
-        Button Weekly_SMS_Birr10 = itemView.findViewById(R.id.BirrSMS10);
-        Button Weekly_SMS_Birr15 = itemView.findViewById(R.id.BirrSMS15);
-
-        Weekly_SMS_Birr10.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-
-                AlertDialog.Builder alertDialog = new AlertDialog.Builder(Home.this);
-                alertDialog.setTitle(R.string.self_sms_package);
-                alertDialog.setMessage(R.string.do_u_want_buy_package);
-
-                alertDialog.setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-
-
-                        Intent intent = new Intent(Intent.ACTION_CALL);
-                        intent.setData(Uri.parse(Uri.parse("tel:" +"*999*1*1*3*2*1*1")+Uri.encode("#")));
-
-                        {
-
-                            permission();
-                            startActivity(intent);
-                        }
-
-                    }
-                }).setNegativeButton(R.string.No, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        dialogInterface.dismiss();
-                    }
-                }).show();
-
-            }
-        });
-
-        Weekly_SMS_Birr15.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-
-                AlertDialog.Builder alertDialog = new AlertDialog.Builder(Home.this);
-                alertDialog.setTitle(R.string.self_sms_package);
-                alertDialog.setMessage(R.string.do_u_want_buy_package);
-
-                alertDialog.setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-
-                        Intent intent = new Intent(Intent.ACTION_CALL);
-                        intent.setData(Uri.parse(Uri.parse("tel:" +"*999*1*1*3*2*2*1")+Uri.encode("#")));
-                        {
-                            permission();
-                            startActivity(intent);
-
-                        }
-
-                    }
-                }).setNegativeButton(R.string.No, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        dialogInterface.dismiss();
-                    }
-                }).show();
-
-            }
-        });
-
-        Button Monthly_SMS_Birr30 = itemView.findViewById(R.id.BirrSMS30);
-        Button Monthly_SMS_Birr50 = itemView.findViewById(R.id.BirrSMS50);
-
-        Monthly_SMS_Birr30.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                AlertDialog.Builder alertDialog = new AlertDialog.Builder(Home.this);
-                alertDialog.setTitle(R.string.self_sms_package);
-                alertDialog.setMessage(R.string.do_u_want_buy_package);
-
-                alertDialog.setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-
-                        Intent intent = new Intent(Intent.ACTION_CALL);
-                        intent.setData(Uri.parse(Uri.parse("tel:" +"*999*1*1*3*3*1*1")+Uri.encode("#")));
-                        {
-                            permission();
-                            startActivity(intent);
-
-                        }
-
-                    }
-                }).setNegativeButton(R.string.No, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        dialogInterface.dismiss();
-                    }
-                }).show();
-
-
-            }
-        });
-
-        Monthly_SMS_Birr50.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                AlertDialog.Builder alertDialog = new AlertDialog.Builder(Home.this);
-                alertDialog.setTitle(R.string.self_sms_package);
-                alertDialog.setMessage(R.string.do_u_want_buy_package);
-
-                alertDialog.setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-
-
-                        Intent intent = new Intent(Intent.ACTION_CALL);
-                        intent.setData(Uri.parse(Uri.parse("tel:" +"*999*1*1*3*3*2*1")+Uri.encode("#")));
-                        {
-                            permission();
-                            startActivity(intent);
-
-                        }
-                    }
-                }).setNegativeButton(R.string.No, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        dialogInterface.dismiss();
-                    }
-                }).show();
-
-            }
-        });
-
-        builder.setView(itemView);
-        builder.show();
-    }
-
-    private void showInternetDialog() {
-
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        View itemView = LayoutInflater.from(this)
-                .inflate(R.layout.dialog_layout_internet_package, null);
-
-
-
-        Button Night_internet__Birr3 = itemView.findViewById(R.id.BirrNight3);
-        Button Night_internet__Birr5 = itemView.findViewById(R.id.BirrNight5);
-        Button Night_internet__Birr7 = itemView.findViewById(R.id.BirrNight7);
-
-
-        Night_internet__Birr3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-
-
-                AlertDialog.Builder alertDialog = new AlertDialog.Builder(Home.this);
-                alertDialog.setTitle(R.string.self_internet_package);
-                alertDialog.setMessage(R.string.do_u_want_buy_package);
-
-                alertDialog.setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-
-                        Intent intent = new Intent(Intent.ACTION_CALL);
-                        intent.setData(Uri.parse(Uri.parse("tel:" + "*999*1*1*2*4*1*1")+Uri.encode("#")));
-                        {
-                            permission();
-                            startActivity(intent);
-
-                        }
-                    }
-                }).setNegativeButton(R.string.No, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        dialogInterface.dismiss();
-                    }
-                }).show();
-
-            }
-        });
-
-        Night_internet__Birr5.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                AlertDialog.Builder alertDialog = new AlertDialog.Builder(Home.this);
-                alertDialog.setTitle(R.string.self_sms_package);
-                alertDialog.setMessage(R.string.do_u_want_buy_package);
-
-                alertDialog.setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-
-                        Intent intent = new Intent(Intent.ACTION_CALL);
-                        intent.setData(Uri.parse(Uri.parse("tel:" + "*999*1*1*2*4*2*1") + Uri.encode("#")));
-                        {
-                            permission();
-                            startActivity(intent);
-
-                        }
-                    }
-                }).setNegativeButton(R.string.No, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        dialogInterface.dismiss();
-                    }
-                }).show();
-
-            }
-        });
-
-        Night_internet__Birr7.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-
-                AlertDialog.Builder alertDialog = new AlertDialog.Builder(Home.this);
-                alertDialog.setTitle(R.string.self_sms_package);
-                alertDialog.setMessage(R.string.do_u_want_buy_package);
-
-                alertDialog.setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-
-
-                        Intent intent = new Intent(Intent.ACTION_CALL);
-                        intent.setData(Uri.parse(Uri.parse("tel:" + "*999*1*1*2*4*3*1") + Uri.encode("#")));
-                        {
-
-                            permission();
-                            startActivity(intent);
-                        }
-                    }
-                }).setNegativeButton(R.string.No, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        dialogInterface.dismiss();
-                    }
-                }).show();
-
-            }
-        });
-
-
-        Button Daily_internet__Birr3 = itemView.findViewById(R.id.BirrDaily3);
-        Button Daily_internet__Birr5 = itemView.findViewById(R.id.BirrDaily5);
-        Button Daily_internet__Birr10 = itemView.findViewById(R.id.BirrDaily10);
-        Button Daily_internet__Birr15 = itemView.findViewById(R.id.BirrDaily15);
-        Button Daily_internet__Birr35 = itemView.findViewById(R.id.BirrDaily35);
-
-
-        Daily_internet__Birr3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-
-
-                AlertDialog.Builder alertDialog = new AlertDialog.Builder(Home.this);
-                alertDialog.setTitle(R.string.self_internet_package);
-                alertDialog.setMessage(R.string.do_u_want_buy_package);
-
-                alertDialog.setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-
-                        Intent intent = new Intent(Intent.ACTION_CALL);
-                        intent.setData(Uri.parse(Uri.parse("tel:" +"*999*1*1*2*1*1*1")+Uri.encode("#")));
-                        {
-                            permission();
-                            startActivity(intent);
-
-                        }
-                    }
-                }).setNegativeButton(R.string.No, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        dialogInterface.dismiss();
-                    }
-                }).show();
-
-            }
-        });
-
-        Daily_internet__Birr5.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-
-
-                AlertDialog.Builder alertDialog = new AlertDialog.Builder(Home.this);
-                alertDialog.setTitle(R.string.self_internet_package);
-                alertDialog.setMessage(R.string.do_u_want_buy_package);
-
-                alertDialog.setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-
-                        Intent intent = new Intent(Intent.ACTION_CALL);
-                        intent.setData(Uri.parse(Uri.parse("tel:" +"*999*1*1*2*1*2*1")+Uri.encode("#")));
-                        {
-                            permission();
-                            startActivity(intent);
-
-                        }
-                    }
-                }).setNegativeButton(R.string.No, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        dialogInterface.dismiss();
-                    }
-                }).show();
-
-            }
-        });
-
-        Daily_internet__Birr10.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-
-
-                AlertDialog.Builder alertDialog = new AlertDialog.Builder(Home.this);
-                alertDialog.setTitle(R.string.self_internet_package);
-                alertDialog.setMessage(R.string.do_u_want_buy_package);
-
-                alertDialog.setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-
-                        Intent intent = new Intent(Intent.ACTION_CALL);
-                        intent.setData(Uri.parse(Uri.parse("tel:" +"*999*1*1*2*1*3*1")+Uri.encode("#")));
-                        {
-                            permission();
-                            startActivity(intent);
-
-                        }
-                    }
-                }).setNegativeButton(R.string.No, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        dialogInterface.dismiss();
-                    }
-                }).show();
-
-            }
-        });
-
-        Daily_internet__Birr15.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-
-
-                AlertDialog.Builder alertDialog = new AlertDialog.Builder(Home.this);
-                alertDialog.setTitle(R.string.self_internet_package);
-                alertDialog.setMessage(R.string.do_u_want_buy_package);
-
-                alertDialog.setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-
-                        Intent intent = new Intent(Intent.ACTION_CALL);
-                        intent.setData(Uri.parse(Uri.parse("tel:" +"*999*1*1*2*1*4*1")+Uri.encode("#")));
-                        {
-                            permission();
-                            startActivity(intent);
-
-                        }
-                    }
-                }).setNegativeButton(R.string.No, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        dialogInterface.dismiss();
-                    }
-                }).show();
-
-
-            }
-        });
-
-
-        Daily_internet__Birr35.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-
-                AlertDialog.Builder alertDialog = new AlertDialog.Builder(Home.this);
-                alertDialog.setTitle(R.string.self_internet_package);
-                alertDialog.setMessage(R.string.do_u_want_buy_package);
-
-                alertDialog.setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-
-                        Intent intent = new Intent(Intent.ACTION_CALL);
-                        intent.setData(Uri.parse(Uri.parse("tel:" +"*999*1*1*2*1*5*1")+Uri.encode("#")));
-                        {
-                            permission();
-                            startActivity(intent);
-
-                        }
-
-                    }
-                }).setNegativeButton(R.string.No, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        dialogInterface.dismiss();
-                    }
-                }).show();
-            }
-        });
-
-        Button Weekly_internet__Birr50 = itemView.findViewById(R.id.BirrWeekly50);
-        Button Weekly_internet__Birr60 = itemView.findViewById(R.id.BirrWeekly60);
-        Button Weekly_internet__Birr80 = itemView.findViewById(R.id.BirrWeekly80);
-
-        Weekly_internet__Birr50.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                AlertDialog.Builder alertDialog = new AlertDialog.Builder(Home.this);
-                alertDialog.setTitle(R.string.self_internet_package);
-                alertDialog.setMessage(R.string.do_u_want_buy_package);
-
-                alertDialog.setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-
-                        Intent intent = new Intent(Intent.ACTION_CALL);
-                        intent.setData(Uri.parse(Uri.parse("tel:" +"*999*1*1*2*2*1*1")+Uri.encode("#")));
-                        {
-                            permission();
-                            startActivity(intent);
-
-                        }
-                    }
-                }).setNegativeButton(R.string.No, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        dialogInterface.dismiss();
-                    }
-                }).show();
-
-
-            }
-        });
-
-        Weekly_internet__Birr60.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-
-
-                AlertDialog.Builder alertDialog = new AlertDialog.Builder(Home.this);
-                alertDialog.setTitle(R.string.self_internet_package);
-                alertDialog.setMessage(R.string.do_u_want_buy_package);
-
-                alertDialog.setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-
-                        Intent intent = new Intent(Intent.ACTION_CALL);
-                        intent.setData(Uri.parse(Uri.parse("tel:" +"*999*1*1*2*2*2*1")+Uri.encode("#")));
-                        {
-                            permission();
-                            startActivity(intent);
-
-                        }
-                    }
-                }).setNegativeButton(R.string.No, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        dialogInterface.dismiss();
-                    }
-                }).show();
-
-            }
-        });
-
-        Weekly_internet__Birr80.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-
-                AlertDialog.Builder alertDialog = new AlertDialog.Builder(Home.this);
-                alertDialog.setTitle(R.string.self_internet_package);
-                alertDialog.setMessage(R.string.do_u_want_buy_package);
-
-                alertDialog.setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-
-
-                        Intent intent = new Intent(Intent.ACTION_CALL);
-                        intent.setData(Uri.parse(Uri.parse("tel:" +"*999*1*1*2*2*3*1")+Uri.encode("#")));
-                        {
-                            permission();
-                            startActivity(intent);
-
-                        }
-                    }
-                }).setNegativeButton(R.string.No, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        dialogInterface.dismiss();
-                    }
-                }).show();
-
-            }
-        });
-
-
-        Button Monthly_internet__Birr55 = itemView.findViewById(R.id.BirrMonthly55);
-        Button Monthly_internet__Birr100 = itemView.findViewById(R.id.BirrMonthly100);
-        Button Monthly_internet__Birr190 = itemView.findViewById(R.id.BirrMonthly190);
-        Button Monthly_internet__Birr350 = itemView.findViewById(R.id.BirrMonthly350);
-        Button Monthly_internet__Birr600 = itemView.findViewById(R.id.BirrMonthly600);
-        Button Monthly_internet__Birr700 = itemView.findViewById(R.id.BirrMonthly700);
-        Button Monthly_internet__Birr1300 = itemView.findViewById(R.id.BirrMonthly1300);
-        Button Monthly_internet__Birr1800 = itemView.findViewById(R.id.BirrMonthly1800);
-
-        Monthly_internet__Birr55.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-
-
-                AlertDialog.Builder alertDialog = new AlertDialog.Builder(Home.this);
-                alertDialog.setTitle(R.string.self_internet_package);
-                alertDialog.setMessage(R.string.do_u_want_buy_package);
-
-                alertDialog.setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-
-
-                        Intent intent = new Intent(Intent.ACTION_CALL);
-                        intent.setData(Uri.parse(Uri.parse("tel:" +"*999*1*1*2*3*1*1")+Uri.encode("#")));
-                        {
-                            permission();
-                            startActivity(intent);
-
-                        }
-                    }
-                }).setNegativeButton(R.string.No, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        dialogInterface.dismiss();
-                    }
-                }).show();
-
-            }
-        });
-
-        Monthly_internet__Birr100.setOnClickListener(new View.OnClickListener() {
-
-             @Override
-            public void onClick(View view) {
-
-
-                 AlertDialog.Builder alertDialog = new AlertDialog.Builder(Home.this);
-                 alertDialog.setTitle(R.string.self_internet_package);
-                 alertDialog.setMessage(R.string.do_u_want_buy_package);
-
-                 alertDialog.setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
-                     @Override
-                     public void onClick(DialogInterface dialogInterface, int i) {
-
-                         Intent intent = new Intent(Intent.ACTION_CALL);
-                         intent.setData(Uri.parse(Uri.parse("tel:" +"*999*1*1*2*3*2*1")+Uri.encode("#")));
-                         {
-                             permission();
-                             startActivity(intent);
-
-                         }
-
-                     }
-                 }).setNegativeButton(R.string.No, new DialogInterface.OnClickListener() {
-                     @Override
-                     public void onClick(DialogInterface dialogInterface, int i) {
-                         dialogInterface.dismiss();
-                     }
-                 }).show();
-
-             }
-        });
-
-        Monthly_internet__Birr190.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                AlertDialog.Builder alertDialog = new AlertDialog.Builder(Home.this);
-                alertDialog.setTitle(R.string.self_internet_package);
-                alertDialog.setMessage(R.string.do_u_want_buy_package);
-
-                alertDialog.setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-
-                        Intent intent = new Intent(Intent.ACTION_CALL);
-                        intent.setData(Uri.parse(Uri.parse("tel:" +"*999*1*1*2*3*3*1")+Uri.encode("#")));
-                        {
-                            permission();
-                            startActivity(intent);
-
-                        }
-                    }
-                }).setNegativeButton(R.string.No, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        dialogInterface.dismiss();
-                    }
-                }).show();
-
-            }
-        });
-
-        Monthly_internet__Birr350.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-
-
-                AlertDialog.Builder alertDialog = new AlertDialog.Builder(Home.this);
-                alertDialog.setTitle(R.string.self_internet_package);
-                alertDialog.setMessage(R.string.do_u_want_buy_package);
-
-                alertDialog.setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-
-                        Intent intent = new Intent(Intent.ACTION_CALL);
-                        intent.setData(Uri.parse(Uri.parse("tel:" +"*999*1*1*2*3*4*1")+Uri.encode("#")));
-                        {
-                            permission();
-                            startActivity(intent);
-
-                        }
-                    }
-                }).setNegativeButton(R.string.No, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        dialogInterface.dismiss();
-                    }
-                }).show();
-
-            }
-        });
-
-        Monthly_internet__Birr600.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-
-
-                AlertDialog.Builder alertDialog = new AlertDialog.Builder(Home.this);
-                alertDialog.setTitle(R.string.self_internet_package);
-                alertDialog.setMessage(R.string.do_u_want_buy_package);
-
-                alertDialog.setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-
-                        Intent intent = new Intent(Intent.ACTION_CALL);
-                        intent.setData(Uri.parse(Uri.parse("tel:" +"*999*1*1*2*3")+Uri.encode("#")+Uri.parse("*5*1")+Uri.encode("#")));
-                        {
-                            permission();
-                            startActivity(intent);
-
-                        }
-                    }
-                }).setNegativeButton(R.string.No, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        dialogInterface.dismiss();
-                    }
-                }).show();
-
-            }
-        });
-
-        Monthly_internet__Birr700.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-
-                AlertDialog.Builder alertDialog = new AlertDialog.Builder(Home.this);
-                alertDialog.setTitle(R.string.self_internet_package);
-                alertDialog.setMessage(R.string.do_u_want_buy_package);
-
-                alertDialog.setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-
-                        Intent intent = new Intent(Intent.ACTION_CALL);
-                        intent.setData(Uri.parse(Uri.parse("tel:" +"*999*1*1*2*3")+Uri.encode("#")+Uri.parse("*6*1")+Uri.encode("#")));
-                        {
-                            permission();
-                            startActivity(intent);
-
-                        }
-
-                    }
-                }).setNegativeButton(R.string.No, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        dialogInterface.dismiss();
-                    }
-                }).show();
-
-            }
-        });
-
-        Monthly_internet__Birr1300.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-
-                AlertDialog.Builder alertDialog = new AlertDialog.Builder(Home.this);
-                alertDialog.setTitle(R.string.self_internet_package);
-                alertDialog.setMessage(R.string.do_u_want_buy_package);
-
-                alertDialog.setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-
-                        Intent intent = new Intent(Intent.ACTION_CALL);
-                        intent.setData(Uri.parse(Uri.parse("tel:" +"*999*1*1*2*3")+Uri.encode("#")+Uri.parse("*7*1")+Uri.encode("#")));
-                        {
-                            permission();
-                            startActivity(intent);
-
-                        }
-
-                    }
-                }).setNegativeButton(R.string.No, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        dialogInterface.dismiss();
-                    }
-                }).show();
-
-            }
-        });
-
-        Monthly_internet__Birr1800.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-
-                AlertDialog.Builder alertDialog = new AlertDialog.Builder(Home.this);
-                alertDialog.setTitle(R.string.self_internet_package);
-                alertDialog.setMessage(R.string.do_u_want_buy_package);
-
-                alertDialog.setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-
-                        Intent intent = new Intent(Intent.ACTION_CALL);
-                        intent.setData(Uri.parse(Uri.parse("tel:" +"*999*1*1*2*3")+Uri.encode("#")+Uri.parse("*8*1")+Uri.encode("#")));
-                        {
-                            permission();
-                            startActivity(intent);
-                        }
-
-                    }
-                }).setNegativeButton(R.string.No, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        dialogInterface.dismiss();
-                    }
-                }).show();
-
-
-            }
-        });
-
-        Button Weekend_internet__Birr35 = itemView.findViewById(R.id.BirrWeekend35);
-        Button Weekend_internet__Birr60 = itemView.findViewById(R.id.BirrWeekend60);
-        Button Weekend_internet__Birr110 = itemView.findViewById(R.id.BirrWeekend110);
-
-        Weekend_internet__Birr35.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                AlertDialog.Builder alertDialog = new AlertDialog.Builder(Home.this);
-                alertDialog.setTitle(R.string.self_internet_package);
-                alertDialog.setMessage(R.string.do_u_want_buy_package);
-
-                alertDialog.setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-
-                        Intent intent = new Intent(Intent.ACTION_CALL);
-                        intent.setData(Uri.parse(Uri.parse("tel:" + "*999*1*1*2*5*1*1") + Uri.encode("#")));
-                        {
-
-                            startActivity(intent);
-                        }
-                    }
-                }).setNegativeButton(R.string.No, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        dialogInterface.dismiss();
-                    }
-                }).show();
-
-            }
-        });
-
-        Weekend_internet__Birr60.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                AlertDialog.Builder alertDialog = new AlertDialog.Builder(Home.this);
-                alertDialog.setTitle(R.string.self_internet_package);
-                alertDialog.setMessage(R.string.do_u_want_buy_package);
-
-                alertDialog.setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-
-                        Intent intent = new Intent(Intent.ACTION_CALL);
-                        intent.setData(Uri.parse(Uri.parse("tel:" + "*999*1*1*2*5*2*1") + Uri.encode("#")));
-                        {
-
-
-                            startActivity(intent);
-                        }
-
-                    }
-                }).setNegativeButton(R.string.No, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        dialogInterface.dismiss();
-                    }
-                }).show();
-
-            }
-        });
-
-        Weekend_internet__Birr110.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                AlertDialog.Builder alertDialog = new AlertDialog.Builder(Home.this);
-                alertDialog.setTitle(R.string.self_internet_package);
-                alertDialog.setMessage(R.string.do_u_want_buy_package);
-
-                alertDialog.setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        Intent intent = new Intent(Intent.ACTION_CALL);
-                        intent.setData(Uri.parse(Uri.parse("tel:" + "*999*1*1*2*5*3*1") + Uri.encode("#")));
-                        {
-
-
-                            startActivity(intent);
-                        }
-
-                    }
-                }).setNegativeButton(R.string.No, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        dialogInterface.dismiss();
-                    }
-                }).show();
-
-            }
-        });
-
-
-        builder.setView(itemView);
-        builder.show();
-
     }
 
     private void rechargeDialog() {
@@ -2342,6 +675,7 @@ public class Home extends AppCompatActivity
         viewPager.setAdapter(adapter);
 
         tabLayout.setupWithViewPager(viewPager);
+        viewPager.setOffscreenPageLimit(4);
 
         for (int i = 0; i < tabLayout.getTabCount(); i++) {
 
@@ -2352,6 +686,4 @@ public class Home extends AppCompatActivity
         }
 
     }
-
-
 }

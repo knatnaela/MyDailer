@@ -1,4 +1,4 @@
-#Tue May 28 09:56:43 EAT 2019
+#Tue Aug 06 15:02:52 EAT 2019
 base.0=E\:\\MyApplication6\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\out
 path.1=classes2.dex
 renamed.1=classes2.dex

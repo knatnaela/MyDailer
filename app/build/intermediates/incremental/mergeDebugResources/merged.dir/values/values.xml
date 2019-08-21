@@ -55,7 +55,7 @@
         <enum name="invisible" value="1"/>
     </attr>
     <attr name="floatingActionButtonStyle"/>
-    <attr format="string" name="fontPath"/>
+    <attr format="color" name="goldenBackgroundColor"/>
     <attr format="dimension" name="height"/>
     <attr format="reference" name="hideMotionSpec"/>
     <attr format="boolean" name="isLightTheme"/>
@@ -216,17 +216,6 @@
     <color name="abc_search_url_text_normal">#7fa87f</color>
     <color name="abc_search_url_text_pressed">@android:color/black</color>
     <color name="abc_search_url_text_selected">@android:color/black</color>
-    <color name="about_description_color">#595959</color>
-    <color name="about_facebook_color">#3b5998</color>
-    <color name="about_github_color">#333333</color>
-    <color name="about_instagram_color">#3f729b</color>
-    <color name="about_item_icon_color">#313131</color>
-    <color name="about_item_text_color">#7c7c7c</color>
-    <color name="about_play_store_color">#45BBC2</color>
-    <color name="about_separator_color">#e1e1e1</color>
-    <color name="about_text_color">#595959</color>
-    <color name="about_twitter_color">#55acee</color>
-    <color name="about_youtube_color">#cd201f</color>
     <color name="accent">#000000</color>
     <color name="accent_material_dark">@color/material_deep_teal_200</color>
     <color name="accent_material_light">@color/material_deep_teal_500</color>
@@ -254,14 +243,6 @@
     <color name="colorAccent">#52b7f8</color>
     <color name="colorPrimary">#393939</color>
     <color name="colorPrimaryDark">#2f2f2f</color>
-    <color name="common_google_signin_btn_text_dark_default">@android:color/white</color>
-    <color name="common_google_signin_btn_text_dark_disabled">#1F000000</color>
-    <color name="common_google_signin_btn_text_dark_focused">@android:color/black</color>
-    <color name="common_google_signin_btn_text_dark_pressed">@android:color/white</color>
-    <color name="common_google_signin_btn_text_light_default">#90000000</color>
-    <color name="common_google_signin_btn_text_light_disabled">#1F000000</color>
-    <color name="common_google_signin_btn_text_light_focused">#90000000</color>
-    <color name="common_google_signin_btn_text_light_pressed">#DE000000</color>
     <color name="design_bottom_navigation_shadow_color">#14000000</color>
     <color name="design_default_color_primary">#3F51B5</color>
     <color name="design_default_color_primary_dark">#303F9F</color>
@@ -280,31 +261,9 @@
     <color name="divider">#BDBDBD</color>
     <color name="error_color_material_dark">#ff7043</color>
     <color name="error_color_material_light">#ff5722</color>
-    <color name="fbutton_color_alizarin">#e74c3c</color>
-    <color name="fbutton_color_amethyst">#9b59b6</color>
-    <color name="fbutton_color_asbestos">#7f8c8d</color>
-    <color name="fbutton_color_belize_hole">#2980b9</color>
-    <color name="fbutton_color_carrot">#e67e22</color>
-    <color name="fbutton_color_clouds">#ecf0f1</color>
-    <color name="fbutton_color_concrete">#95a5a6</color>
-    <color name="fbutton_color_emerald">#2ecc71</color>
-    <color name="fbutton_color_green_sea">#16a085</color>
-    <color name="fbutton_color_midnight_blue">#2c3e50</color>
-    <color name="fbutton_color_nephritis">#27ae60</color>
-    <color name="fbutton_color_orange">#f39c12</color>
-    <color name="fbutton_color_peter_river">#3498db</color>
-    <color name="fbutton_color_pomegranate">#c0392b</color>
-    <color name="fbutton_color_pumpkin">#d35400</color>
-    <color name="fbutton_color_silver">#bdc3c7</color>
-    <color name="fbutton_color_sun_flower">#f1c40f</color>
-    <color name="fbutton_color_transparent">@android:color/transparent</color>
-    <color name="fbutton_color_turquoise">#1abc9c</color>
-    <color name="fbutton_color_wet_asphalt">#34495e</color>
-    <color name="fbutton_color_wisteria">#8e44ad</color>
-    <color name="fbutton_default_color">#3eadeb</color>
-    <color name="fbutton_default_shadow_color">#ff3493c8</color>
     <color name="foreground_material_dark">@android:color/white</color>
     <color name="foreground_material_light">@android:color/black</color>
+    <color name="goldenBackgroundColor">#ffbf00</color>
     <color name="highlighted_text_material_dark">#6680cbc4</color>
     <color name="highlighted_text_material_light">#66009688</color>
     <color name="icons">#FFFFFF</color>
@@ -1120,14 +1079,6 @@
     <dimen name="abc_text_size_subtitle_material_toolbar">16dp</dimen>
     <dimen name="abc_text_size_title_material">20sp</dimen>
     <dimen name="abc_text_size_title_material_toolbar">20dp</dimen>
-    <dimen name="about_description_text_size">16sp</dimen>
-    <dimen name="about_group_item_text_size">18sp</dimen>
-    <dimen name="about_group_text_padding">16dp</dimen>
-    <dimen name="about_icon_padding">8dp</dimen>
-    <dimen name="about_icon_size">34dp</dimen>
-    <dimen name="about_item_text_size">16sp</dimen>
-    <dimen name="about_separator_height">0.5dp</dimen>
-    <dimen name="about_text_padding">8dp</dimen>
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="app_icon_size">90dp</dimen>
@@ -1199,12 +1150,6 @@
     <dimen name="fastscroll_default_thickness">8dp</dimen>
     <dimen name="fastscroll_margin">0dp</dimen>
     <dimen name="fastscroll_minimum_range">50dp</dimen>
-    <dimen name="fbutton_default_conner_radius">8dp</dimen>
-    <dimen name="fbutton_default_padding_bottom">5dp</dimen>
-    <dimen name="fbutton_default_padding_left">10dp</dimen>
-    <dimen name="fbutton_default_padding_right">10dp</dimen>
-    <dimen name="fbutton_default_padding_top">5dp</dimen>
-    <dimen name="fbutton_default_shadow_height">4dp</dimen>
     <dimen name="floating_label_text_size">12sp</dimen>
     <item format="float" name="highlight_alpha_material_colored" type="dimen">0.26</item>
     <item format="float" name="highlight_alpha_material_dark" type="dimen">0.20</item>
@@ -1312,8 +1257,8 @@
     <item name="action_bar_spinner" type="id"/>
     <item name="action_menu_divider" type="id"/>
     <item name="action_menu_presenter" type="id"/>
-    <item name="calligraphy_tag_id" type="id"/>
     <item name="ghost_view" type="id"/>
+    <item name="glide_custom_view_target_tag" type="id"/>
     <item name="home" type="id"/>
     <item name="item_touch_helper_previous_elevation" type="id"/>
     <item name="line1" type="id"/>
@@ -1354,7 +1299,6 @@
     <integer name="config_tooltipAnimTime">150</integer>
     <integer name="design_snackbar_text_max_lines">2</integer>
     <integer name="design_tab_indicator_anim_duration_ms">300</integer>
-    <integer name="google_play_services_version">12451000</integer>
     <integer name="hide_password_duration">320</integer>
     <integer name="icon_animation_duration">250</integer>
     <integer name="mtb_from">0</integer>
@@ -1408,31 +1352,22 @@
     <string name="abc_shareactionprovider_share_with_application">Share with <ns1:g example="Mail" id="application_name">%s</ns1:g></string>
     <string name="abc_toolbar_collapse_description">Collapse</string>
     <string name="about">About</string>
-    <string name="about_contact_us">Contact us</string>
-    <string name="about_facebook">Like us on Facebook</string>
-    <string name="about_github">Fork us on GitHub</string>
-    <string name="about_instagram">Follow us on Instagram</string>
-    <string name="about_page_description" translatable="false">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vehicula ligula tortor, in pellentesque dui congue ac. Vestibulum lacinia urna magna, quis cursus ante iaculis nec. Nunc ut ligula sit amet odio ultrices euismod vel vel purus. Sed lacus mauris, aliquam et placerat id</string>
-    <string name="about_play_store">Rate us on the Play Store</string>
-    <string name="about_twitter">Follow us on Twitter</string>
-    <string name="about_website">Visit our website</string>
-    <string name="about_youtube">Watch us on Youtube</string>
     <string name="action_search">Search</string>
-    <string name="action_settings">Settings</string>
+    <string name="action_settings" translatable="false">Settings</string>
     <string name="add_to_contact">Add to contact</string>
     <string name="affan_oromo">Affan Oromo</string>
     <string name="after_changing_language_pull_down_to_refresh"> After changing language pull down to refresh</string>
     <string name="amharic">Amharic</string>
     <string name="android">Android</string>
-    <string name="app_name">My Dialer</string>
-    <string name="appbar_scrolling_view_behavior" translatable="false">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
+    <string name="app_name" translatable="false">My Dialer</string>
+    <string name="appbar_scrolling_view_behavior" translatable="false">com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior</string>
     <string name="back_pressed">Touch again to exit</string>
     <string name="back_vector_path" translatable="false">M50 25,L80 50,M20 50,L80 50,M50 75,L80 50</string>
     <string name="birr">Birr to</string>
     <string name="bitbucket">Bitbucket</string>
     <string name="borrow_air_time">Borrow air time</string>
     <string name="borrow_service">Borrow Service</string>
-    <string name="bottom_sheet_behavior" translatable="false">android.support.design.widget.BottomSheetBehavior</string>
+    <string name="bottom_sheet_behavior" translatable="false">com.google.android.material.bottomsheet.BottomSheetBehavior</string>
     <string name="cancel">Cancel</string>
     <string name="change">CHANGE</string>
     <string name="change_language">Change Language</string>
@@ -1441,30 +1376,13 @@
     <string name="character_counter_pattern" translatable="false">%1$d / %2$d</string>
     <string name="check_your_balance">Check your balance</string>
     <string name="common">Common</string>
-    <string msgid="2523291102206661146" name="common_google_play_services_enable_button">Enable</string>
-    <string msgid="227660514972886228" name="common_google_play_services_enable_text"><ns1:g id="app_name">%1$s</ns1:g> won\'t work unless you enable Google Play services.</string>
-    <string msgid="5122002158466380389" name="common_google_play_services_enable_title">Enable Google Play services</string>
-    <string msgid="7153882981874058840" name="common_google_play_services_install_button">Install</string>
-    <string name="common_google_play_services_install_text"><ns1:g id="app_name">%1$s</ns1:g> won\'t run without Google Play services, which are missing from your device.</string>
-    <string msgid="7215213145546190223" name="common_google_play_services_install_title">Get Google Play services</string>
-    <string name="common_google_play_services_notification_channel_name">Google Play services availability</string>
-    <string name="common_google_play_services_notification_ticker">Google Play services error</string>
-    <string name="common_google_play_services_unknown_issue"><ns1:g id="app_name">%1$s</ns1:g> is having trouble with Google Play services. Please try again.</string>
-    <string name="common_google_play_services_unsupported_text"><ns1:g id="app_name">%1$s</ns1:g> won\'t run without Google Play services, which are not supported by your device.</string>
-    <string msgid="6556509956452265614" name="common_google_play_services_update_button">Update</string>
-    <string msgid="9053896323427875356" name="common_google_play_services_update_text"><ns1:g id="app_name">%1$s</ns1:g> won\'t run unless you update Google Play services.</string>
-    <string msgid="6006316683626838685" name="common_google_play_services_update_title">Update Google Play services</string>
-    <string name="common_google_play_services_updating_text"><ns1:g id="app_name">%1$s</ns1:g> won\'t run without Google Play services, which are currently updating.</string>
-    <string name="common_google_play_services_wear_update_text">New version of Google Play services needed. It will update itself shortly.</string>
-    <string name="common_open_on_phone">Open on phone</string>
-    <string name="common_signin_button_text">Sign in</string>
-    <string name="common_signin_button_text_long">Sign in with Google</string>
     <string name="create_new_contact">Create new contact</string>
     <string name="custom_theme">Custom Theme</string>
     <string name="daily_internet_package">Daily Internet Package</string>
     <string name="daily_sms">Daily SMS</string>
     <string name="daily_voice_package">Daily Voice Package</string>
     <string name="dark_theme">Dark Theme</string>
+    <string name="default_web_client_id" translatable="false">165841565739-hf5nlq69eb6a4t3okeq3ugkvkjkt4dqu.apps.googleusercontent.com</string>
     <string name="do_u_want_buy_package">Do you want buy package?</string>
     <string name="donate">Donate</string>
     <string name="dribbble">Dribbble</string>
@@ -1474,21 +1392,26 @@
     <string name="enter_birr">Enter Birr</string>
     <string name="enter_card_number">Enter Card Number</string>
     <string name="error">Error</string>
-    <string name="fab_transformation_scrim_behavior" translatable="false">android.support.design.transformation.FabTransformationScrimBehavior</string>
-    <string name="fab_transformation_sheet_behavior" translatable="false">android.support.design.transformation.FabTransformationSheetBehavior</string>
+    <string name="fab_transformation_scrim_behavior" translatable="false">com.google.android.material.transformation.FabTransformationScrimBehavior</string>
+    <string name="fab_transformation_sheet_behavior" translatable="false">com.google.android.material.transformation.FabTransformationSheetBehavior</string>
     <string name="facebook">Facebook</string>
-    <string name="favorites">Favorites</string>
-    <string name="fcm_fallback_notification_channel_label">Miscellaneous</string>
+    <string name="favorites" translatable="false">Favorites</string>
     <string name="feedback_app">Give me a feedback</string>
+    <string name="firebase_database_url" translatable="false">https://myapplication6-1eb39.firebaseio.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">165841565739</string>
     <string name="geez">Geez</string>
     <string name="gift">Gift</string>
     <string name="github">GitHub</string>
     <string name="google">Google</string>
+    <string name="google_api_key" translatable="false">AIzaSyAACW4YfSdMHYRjym1pY8nnMcccTYnkMig</string>
+    <string name="google_app_id" translatable="false">1:165841565739:android:362f0e9f1eaa8a67</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyAACW4YfSdMHYRjym1pY8nnMcccTYnkMig</string>
     <string name="google_play_games">Play Games</string>
     <string name="google_play_store">Play Store</string>
     <string name="google_plus">Google +</string>
+    <string name="google_storage_bucket" translatable="false">myapplication6-1eb39.appspot.com</string>
     <string name="help">Help</string>
-    <string name="hide_bottom_view_on_scroll_behavior" translatable="false">android.support.design.behavior.HideBottomViewOnScrollBehavior</string>
+    <string name="hide_bottom_view_on_scroll_behavior" translatable="false">com.google.android.material.behavior.HideBottomViewOnScrollBehavior</string>
     <string name="id_facebook_app">com.facebook.katana</string>
     <string name="id_google_plus_app">com.google.android.apps.plus</string>
     <string name="id_instagram_app">com.instagram.android</string>
@@ -1501,6 +1424,7 @@
     <string name="introduce_app">Introduce the app</string>
     <string name="language">Language</string>
     <string name="license">License</string>
+    <string name="light_mode">Light mode</string>
     <string name="light_theme">Light Theme</string>
     <string name="linkedin">LinkedIn</string>
     <string name="menu">Menu</string>
@@ -1512,11 +1436,11 @@
     <string name="more_apps">More apps from me</string>
     <string name="more_services">More Services</string>
     <string name="mtrl_chip_close_icon_content_description">Remove %1$s</string>
-    <string name="nav_header_desc">Navigation header</string>
-    <string name="nav_header_subtitle">android.studio@android.com</string>
-    <string name="nav_header_title">Android Studio</string>
-    <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="nav_header_desc" translatable="false">Navigation header</string>
+    <string name="nav_header_subtitle" translatable="false">android.studio@android.com</string>
+    <string name="nav_header_title" translatable="false">Android Studio</string>
+    <string name="navigation_drawer_close" translatable="false">Close navigation drawer</string>
+    <string name="navigation_drawer_open" translatable="false">Open navigation drawer</string>
     <string name="night_internet_package">Night Internet Package</string>
     <string name="night_mode">Night mode</string>
     <string name="night_voice_package">Night Voice Package</string>
@@ -1532,10 +1456,12 @@
     <string name="premium">Premium</string>
     <string name="premium_limited_internet_package">Premium Limited Internet Package</string>
     <string name="privacy">Privacy Policy</string>
+    <string name="project_id" translatable="false">myapplication6-1eb39</string>
     <string name="rate_five_stars">Rate this app 5 stars</string>
     <string name="recharge_your_phone">Recharge your phone</string>
     <string name="remove_ads">Remove ads</string>
     <string name="removed_from_fav"> removed from favorites</string>
+    <string name="royal_mode">Royal mode</string>
     <string name="search_menu_title">Search</string>
     <string name="self_internet_package">Self Internet Package</string>
     <string name="self_sms_package">Self SMS Package</string>
@@ -1544,17 +1470,17 @@
     <string name="send_call_me_back">Send Call Me Back</string>
     <string name="send_gift">Send Gift</string>
     <string name="send_sms">Send SMS</string>
-    <string name="service">This service records popups sent by your mobile operatior,and saves them in MyDialer App.It is absolutely safe to use</string>
+    <string name="service" translatable="false">This service records popups sent by your mobile operatior,and saves them in MyDialer App.It is absolutely safe to use</string>
     <string name="settings">Settings</string>
     <string name="share">Share</string>
     <string name="share_app">Share this app</string>
     <string name="skype">Skype</string>
-    <string name="sms">SMS</string>
+    <string name="sms" translatable="false">SMS</string>
     <string name="status_bar_notification_info_overflow">999+</string>
     <string name="sure_to_send_call_me">Are you sure you want to send call me back to :</string>
     <string name="theme">Theme</string>
     <string name="tigrigna">Tigrigna</string>
-    <string name="title_activity_home">Home</string>
+    <string name="title_activity_home" translatable="false">Home</string>
     <string name="transfer_money">Transfer Money</string>
     <string name="twitter">Twitter</string>
     <string name="unnamed">Unnamed</string>
@@ -1591,6 +1517,7 @@
     <string name="weekly_voice_package">Weekly Voice Package</string>
     <string name="whastapp">Whatsapp</string>
     <string name="yes">YES</string>
+    <string name="you_must_accept_this_permission_to_use_our_app">You must accept this permission to use our app</string>
     <string name="youtube">Youtube</string>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>
     <style name="AlertDialog.AppCompat.Light" parent="Base.AlertDialog.AppCompat.Light"/>
@@ -2027,7 +1954,7 @@
     <style name="Base.ThemeOverlay.MaterialComponents.Dialog" parent="Base.V14.ThemeOverlay.MaterialComponents.Dialog"/>
     <style name="Base.ThemeOverlay.MaterialComponents.Dialog.Alert" parent="Base.V14.ThemeOverlay.MaterialComponents.Dialog.Alert"/>
     <style name="Base.V14.Theme.MaterialComponents" parent="Base.V14.Theme.MaterialComponents.Bridge">
-    <item name="viewInflaterClass">android.support.design.theme.MaterialComponentsViewInflater</item>
+    <item name="viewInflaterClass">com.google.android.material.theme.MaterialComponentsViewInflater</item>
 
     <!-- Colors -->
     <item name="colorPrimary">@color/design_default_color_primary</item>
@@ -2077,7 +2004,7 @@
     <item name="textAppearanceOverline">@style/TextAppearance.MaterialComponents.Overline</item>
   </style>
     <style name="Base.V14.Theme.MaterialComponents.Dialog" parent="Platform.MaterialComponents.Dialog">
-    <item name="viewInflaterClass">android.support.design.theme.MaterialComponentsViewInflater</item>
+    <item name="viewInflaterClass">com.google.android.material.theme.MaterialComponentsViewInflater</item>
 
     <!-- Colors -->
     <item name="colorPrimary">@color/design_default_color_primary</item>
@@ -2123,7 +2050,7 @@
     <item name="textAppearanceOverline">@style/TextAppearance.MaterialComponents.Overline</item>
   </style>
     <style name="Base.V14.Theme.MaterialComponents.Light" parent="Base.V14.Theme.MaterialComponents.Light.Bridge">
-    <item name="viewInflaterClass">android.support.design.theme.MaterialComponentsViewInflater</item>
+    <item name="viewInflaterClass">com.google.android.material.theme.MaterialComponentsViewInflater</item>
 
     <!-- Colors -->
     <item name="colorPrimary">@color/design_default_color_primary</item>
@@ -2193,7 +2120,7 @@
     <item name="textAppearanceOverline">@style/TextAppearance.MaterialComponents.Overline</item>
   </style>
     <style name="Base.V14.Theme.MaterialComponents.Light.Dialog" parent="Platform.MaterialComponents.Light.Dialog">
-    <item name="viewInflaterClass">android.support.design.theme.MaterialComponentsViewInflater</item>
+    <item name="viewInflaterClass">com.google.android.material.theme.MaterialComponentsViewInflater</item>
 
     <!-- Colors -->
     <item name="colorPrimary">@color/design_default_color_primary</item>
@@ -2247,7 +2174,7 @@
     <item name="buttonBarButtonStyle">@style/Widget.MaterialComponents.Button.TextButton.Dialog</item>
   </style>
     <style name="Base.V7.Theme.AppCompat" parent="Platform.AppCompat">
-        <item name="viewInflaterClass">android.support.v7.app.AppCompatViewInflater</item>
+        <item name="viewInflaterClass">androidx.appcompat.app.AppCompatViewInflater</item>
         <item name="windowNoTitle">false</item>
         <item name="windowActionBar">true</item>
         <item name="windowActionBarOverlay">false</item>
@@ -2441,7 +2368,7 @@
         <item name="android:windowCloseOnTouchOutside">true</item>
     </style>
     <style name="Base.V7.Theme.AppCompat.Light" parent="Platform.AppCompat.Light">
-        <item name="viewInflaterClass">android.support.v7.app.AppCompatViewInflater</item>
+        <item name="viewInflaterClass">androidx.appcompat.app.AppCompatViewInflater</item>
 
         <item name="windowNoTitle">false</item>
         <item name="windowActionBar">true</item>
@@ -3087,24 +3014,17 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:scaleType">centerCrop</item>
     </style>
+    <style name="Dexter.Internal.Theme.Transparent" parent="android:Theme">
+    <item name="android:windowIsTranslucent">true</item>
+    <item name="android:windowBackground">@android:color/transparent</item>
+    <item name="android:windowContentOverlay">@null</item>
+    <item name="android:windowNoTitle">true</item>
+    <item name="android:windowIsFloating">true</item>
+    <item name="android:backgroundDimEnabled">false</item>
+  </style>
     <style name="DialogNoAnimation">
         <item name="android:windowEnterAnimation">@null</item>
         <item name="android:windowExitAnimation">@null</item>
-    </style>
-    <style name="Light" parent="Theme.AppCompat.Light.NoActionBar">
-        <!-- Customize your theme here. -->
-        <item name="colorPrimary">#2196F3</item>
-        <item name="colorPrimaryDark">#1976D2</item>
-        <item name="colorAccent">@color/colorAccent</item>
-        <item name="backgroundColor">#fcfcfc</item>
-        <item name="tabColor">#2196F3</item>
-        <item name="cardBackground">#ffffff</item>
-        <item name="textcolor">#808008</item>
-        <item name="tintColor">#000000</item>
-        <item name="buttonColor">#2196F3</item>
-        <item name="overlayBackgroundColor">#fcfcfc</item>
-        <item name="magic">#424242</item>
-        <item name="android:windowAnimationStyle">@style/WindowAnimationTransition</item>
     </style>
     <style name="Material"/>
     <style name="Material.App"/>
@@ -3645,6 +3565,7 @@
     <style name="MyDailer.Widget.Text.Body" parent="TextAppearance.AppCompat">
 
         <item name="android:textSize">25dp</item>
+        <item name="android:textAllCaps">false</item>
         <item name="android:textColor">@android:color/darker_gray</item>
 
     </style>
@@ -3859,6 +3780,9 @@
         <item name="android:layout_gravity">center_horizontal</item>
         <item name="android:textSize">12sp</item>
         <item name="android:padding">3dp</item>
+    </style>
+    <style name="SplashTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@layout/activity_main</item>
     </style>
     <style name="SubTitle" parent="@style/TextLabel">
         <item name="android:textSize">16sp</item>
@@ -4602,53 +4526,11 @@
         <item name="android:windowExitAnimation">@android:anim/fade_out</item>
 
     </style>
-    <style name="about_About"/>
-    <style name="about_About.wrapper">
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">match_parent</item>
-        <item name="android:orientation">vertical</item>
-        <item name="android:gravity">center</item>
-        <item name="android:background">#ffffff</item>
+    <style name="buttonColor" parent="Widget.AppCompat.Button">
+        <item name="android:background">?attr/buttonColor</item>
     </style>
-    <style name="about_description" parent="@android:style/TextAppearance">
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:text">@string/about_page_description</item>
-        <item name="android:lineSpacingExtra">8dp</item>
-        <item name="android:layout_marginBottom">20dp</item>
-        <item name="android:textColor">@color/about_description_color</item>
-        <item name="android:textSize">@dimen/about_description_text_size</item>
-    </style>
-    <style name="about_elementTextAppearance" parent="@android:style/TextAppearance">
-        <item name="android:textColor">@color/about_text_color</item>
-        <item name="android:textSize">@dimen/about_item_text_size</item>
-    </style>
-    <style name="about_groupTextAppearance" parent="@android:style/TextAppearance">
-        <item name="android:textColor">@color/about_item_text_color</item>
-        <item name="android:textSize">@dimen/about_group_item_text_size</item>
-    </style>
-    <style name="about_image">
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:gravity">center</item>
-        <item name="android:layout_marginBottom">30dp</item>
-        <item name="android:layout_marginTop">20dp</item>
-    </style>
-    <style name="about_separator">
-        <item name="android:layout_height">@dimen/about_separator_height</item>
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:background">@color/about_separator_color</item>
-        <item name="android:padding">0dp</item>
-        <item name="android:layout_weight">1</item>
-        <item name="android:layout_marginTop">0dp</item>
-        <item name="android:layout_marginBottom">0dp</item>
-    </style>
-    <style name="about_sub_wrapper">
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:orientation">vertical</item>
-        <item name="android:gravity">center</item>
-        <item name="android:padding">20dp</item>
+    <style name="cardBackground" parent="Widget.MaterialComponents.CardView">
+        <item name="cardBackgroundColor">?attr/cardBackground</item>
     </style>
     <style name="darkTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
@@ -4675,10 +4557,25 @@
         <item name="backgroundColor">#000000</item>
         <item name="tabColor">#000000</item>
         <item name="cardBackground">#ffffff</item>
-        <item name="textcolor">#000000</item>
+        <item name="textcolor">#805B5B</item>
         <item name="tintColor">#000000</item>
         <item name="buttonColor">#2196F3</item>
-        <item name="overlayBackgroundColor">#7f333639</item>
+        <item name="overlayBackgroundColor">#333639</item>
+        <item name="magic">#424242</item>
+        <item name="android:windowAnimationStyle">@style/WindowAnimationTransition</item>
+    </style>
+    <style name="lightTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#2196F3</item>
+        <item name="colorPrimaryDark">#1976D2</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="backgroundColor">#fcfcfc</item>
+        <item name="tabColor">#2196F3</item>
+        <item name="cardBackground">#ffffff</item>
+        <item name="textcolor">#808008</item>
+        <item name="tintColor">#000000</item>
+        <item name="buttonColor">#2196F3</item>
+        <item name="overlayBackgroundColor">#fcfcfc</item>
         <item name="magic">#424242</item>
         <item name="android:windowAnimationStyle">@style/WindowAnimationTransition</item>
     </style>
@@ -4696,6 +4593,11 @@
         <item name="overlayBackgroundColor">#333639</item>
         <item name="magic">#424242</item>
         <item name="android:windowAnimationStyle">@style/WindowAnimationTransition</item>
+    </style>
+    <style name="textColor" parent="TextAppearance.AppCompat">
+
+        <item name="android:textColor">?attr/textcolor</item>
+
     </style>
     <declare-styleable name="ActionBar">
         <!-- The type of navigation to use. -->
@@ -5375,10 +5277,6 @@
         <attr format="string" name="viewInflaterClass"/>
     </declare-styleable>
     <declare-styleable name="AutoCompleteTextView"><attr name="android:completionHint"/><attr name="android:completionThreshold"/><attr name="android:dropDownAnchor"/><attr name="android:dropDownHeight"/><attr name="android:dropDownHorizontalOffset"/><attr name="android:dropDownVerticalOffset"/><attr name="android:dropDownWidth"/><attr name="android:popupBackground"/></declare-styleable>
-    <declare-styleable name="AvatarImageView"><attr format="color" name="avatarBackgroundColor"/><attr format="dimension" name="textSize"/><attr format="color" name="textColor"/><attr format="string" name="text"/><attr format="enum" name="state">
-            <enum name="INITIAL" value="1"/>
-            <enum name="IMAGE" value="2"/>
-        </attr></declare-styleable>
     <declare-styleable name="BottomAppBar"><attr name="backgroundTint"/><attr name="fabAlignmentMode">
       
       <enum name="center" value="0"/>
@@ -5436,7 +5334,6 @@
     <declare-styleable name="CheckBoxDrawable"><attr format="reference|dimension" name="cbd_width"/><attr format="reference|dimension" name="cbd_height"/><attr format="reference|dimension" name="cbd_boxSize"/><attr format="reference|dimension" name="cbd_cornerRadius"/><attr format="reference|dimension" name="cbd_strokeSize"/><attr format="reference|color" name="cbd_strokeColor"/><attr format="reference|color" name="cbd_tickColor"/><attr format="reference|integer" name="cbd_animDuration"/></declare-styleable>
     <declare-styleable name="Chip"><attr format="color" name="chipBackgroundColor"/><attr format="dimension" name="chipMinHeight"/><attr format="dimension" name="chipCornerRadius"/><attr format="color" name="chipStrokeColor"/><attr format="dimension" name="chipStrokeWidth"/><attr name="rippleColor"/><attr name="android:text"/><attr name="android:textAppearance"/><attr name="android:ellipsize"/><attr name="android:maxWidth"/><attr format="boolean" name="chipIconVisible"/><attr format="boolean" name="chipIconEnabled"/><attr format="reference" name="chipIcon"/><attr format="color" name="chipIconTint"/><attr format="dimension" name="chipIconSize"/><attr format="boolean" name="closeIconVisible"/><attr format="boolean" name="closeIconEnabled"/><attr format="reference" name="closeIcon"/><attr format="color" name="closeIconTint"/><attr format="dimension" name="closeIconSize"/><attr name="android:checkable"/><attr format="boolean" name="checkedIconVisible"/><attr format="boolean" name="checkedIconEnabled"/><attr format="reference" name="checkedIcon"/><attr name="showMotionSpec"/><attr name="hideMotionSpec"/><attr format="dimension" name="chipStartPadding"/><attr format="dimension" name="iconStartPadding"/><attr format="dimension" name="iconEndPadding"/><attr format="dimension" name="textStartPadding"/><attr format="dimension" name="textEndPadding"/><attr format="dimension" name="closeIconStartPadding"/><attr format="dimension" name="closeIconEndPadding"/><attr format="dimension" name="chipEndPadding"/></declare-styleable>
     <declare-styleable name="ChipGroup"><attr format="dimension" name="chipSpacing"/><attr format="dimension" name="chipSpacingHorizontal"/><attr format="dimension" name="chipSpacingVertical"/><attr format="boolean" name="singleLine"/><attr format="boolean" name="singleSelection"/><attr format="reference" name="checkedChip"/></declare-styleable>
-    <declare-styleable name="CircleImageView"><attr format="color" name="strokeColor"/><attr format="dimension" name="strokeWidth"/><attr format="boolean" name="highlightEnable"/><attr format="color" name="highlightColor"/><attr format="dimension" name="civ_border_width"/><attr format="color" name="civ_border_color"/><attr format="boolean" name="civ_border_overlay"/><attr format="color" name="civ_fill_color"/><attr format="color" name="civ_circle_background_color"/></declare-styleable>
     <declare-styleable name="CircularProgressDrawable"><attr format="reference|dimension" name="cpd_padding"/><attr format="reference|integer" name="cpd_initialAngle"/><attr format="reference|integer" name="cpd_maxSweepAngle"/><attr format="reference|integer" name="cpd_minSweepAngle"/><attr format="reference|dimension" name="cpd_strokeSize"/><attr format="reference|color" name="cpd_strokeColor"/><attr format="reference|color" name="cpd_strokeSecondaryColor"/><attr format="reference" name="cpd_strokeColors"/><attr format="boolean" name="cpd_reverse"/><attr format="reference|integer" name="cpd_rotateDuration"/><attr format="reference|integer" name="cpd_transformDuration"/><attr format="reference|integer" name="cpd_keepDuration"/><attr format="reference" name="cpd_transformInterpolator"/><attr format="reference|integer" name="cpd_inAnimDuration"/><attr format="reference|integer" name="cpd_outAnimDuration"/><attr format="reference" name="cpd_inStepColors"/><attr format="float" name="cpd_inStepPercent"/><attr name="pv_progressMode"/><attr name="pv_progress"/><attr name="pv_secondaryProgress"/></declare-styleable>
     <declare-styleable name="CollapsingToolbarLayout"><attr format="dimension" name="expandedTitleMargin"/><attr format="dimension" name="expandedTitleMarginStart"/><attr format="dimension" name="expandedTitleMarginTop"/><attr format="dimension" name="expandedTitleMarginEnd"/><attr format="dimension" name="expandedTitleMarginBottom"/><attr format="reference" name="expandedTitleTextAppearance"/><attr format="reference" name="collapsedTitleTextAppearance"/><attr format="color" name="contentScrim"/><attr format="color" name="statusBarScrim"/><attr format="reference" name="toolbarId"/><attr format="dimension" name="scrimVisibleHeightTrigger"/><attr format="integer" name="scrimAnimationDuration"/><attr name="collapsedTitleGravity">
       
@@ -5647,7 +5544,6 @@
         <attr format="dimension" name="thickness"/>
     </declare-styleable>
     <declare-styleable name="EditText"><attr format="reference" name="et_inputId"/><attr format="boolean" name="et_labelEnable"/><attr format="reference|dimension" name="et_labelPadding"/><attr format="reference|dimension" name="et_labelTextSize"/><attr format="reference|color" name="et_labelTextColor"/><attr format="reference" name="et_labelTextAppearance"/><attr format="integer" name="et_labelEllipsize"><enum name="start" value="0x00000001"/><enum name="middle" value="0x00000002"/><enum name="end" value="0x00000003"/><enum name="marquee" value="0x00000004"/></attr><attr format="reference" name="et_labelInAnim"/><attr format="reference" name="et_labelOutAnim"/><attr format="integer" name="et_supportMode"><enum name="none" value="0x00000000"/><enum name="helper" value="0x00000001"/><enum name="helperWithError" value="0x00000002"/><enum name="charCounter" value="0x00000003"/></attr><attr format="reference|integer" name="et_supportMaxChars"/><attr format="reference|string" name="et_helper"/><attr format="reference|string" name="et_error"/><attr format="reference|dimension" name="et_supportPadding"/><attr format="reference|dimension" name="et_supportTextSize"/><attr format="reference|color" name="et_supportTextColor"/><attr format="reference|color" name="et_supportTextErrorColor"/><attr format="reference" name="et_supportTextAppearance"/><attr format="boolean" name="et_supportSingleLine"/><attr format="reference|integer" name="et_supportMaxLines"/><attr format="reference|integer" name="et_supportLines"/><attr format="integer" name="et_supportEllipsize"><enum name="start" value="0x00000001"/><enum name="middle" value="0x00000002"/><enum name="end" value="0x00000003"/><enum name="marquee" value="0x00000004"/></attr><attr format="reference|color" name="et_dividerColor"/><attr format="reference|color" name="et_dividerErrorColor"/><attr format="reference|dimension" name="et_dividerHeight"/><attr format="reference|dimension" name="et_dividerPadding"/><attr format="reference|integer" name="et_dividerAnimDuration"/><attr format="boolean" name="et_dividerCompoundPadding"/><attr format="integer" name="et_autoCompleteMode"><enum name="none" value="0"/><enum name="single" value="1"/><enum name="multi" value="2"/></attr></declare-styleable>
-    <declare-styleable name="FButton"><attr format="boolean" name="shadowEnabled"/><attr format="color|reference" name="fButtonColor"/><attr format="color|reference" name="shadowColor"/><attr format="dimension" name="shadowHeight"/><attr format="dimension" name="cornerRadius"/></declare-styleable>
     <declare-styleable name="FloatingActionButton"><attr format="reference|color" name="fab_backgroundColor"/><attr format="reference|integer" name="fab_backgroundAnimDuration"/><attr format="reference|dimension" name="fab_radius"/><attr format="reference|dimension" name="fab_elevation"/><attr format="reference" name="fab_iconSrc"/><attr format="reference" name="fab_iconLineMorphing"/><attr format="reference|dimension" name="fab_iconSize"/><attr format="reference" name="fab_interpolator"/><attr format="reference|integer" name="fab_animDuration"/><attr name="backgroundTint"/><attr name="backgroundTintMode"/><attr name="rippleColor"/><attr name="fabSize">
       
       <enum name="auto" value="-1"/>
@@ -5829,20 +5725,6 @@
         <!-- Amount of pixels by which the drop down should be offset horizontally. -->
         <attr name="android:dropDownHorizontalOffset"/>
     </declare-styleable>
-    <declare-styleable name="LoadingImageView"><attr name="imageAspectRatioAdjust">
-<enum name="none" value="0"/>
-
-<enum name="adjust_width" value="1"/>
-
-<enum name="adjust_height" value="2"/>
-
-</attr>
-
-<attr format="float" name="imageAspectRatio"/>
-
-<attr format="boolean" name="circleCrop"/>
-</declare-styleable>
-    <declare-styleable name="MagicButton"><attr format="string" name="hide_text"/><attr format="color" name="expandable_area_color"/><attr format="color" name="icon_button_color"/><attr format="dimension" name="magic_button_size"/><attr format="integer" name="button_icon"/><attr format="dimension" name="button_icon_width"/><attr format="dimension" name="button_icon_height"/><attr format="dimension" name="hide_text_size"/><attr format="color" name="hide_text_color"/></declare-styleable>
     <declare-styleable name="MaterialButton"><attr name="android:insetLeft"/><attr name="android:insetRight"/><attr name="android:insetTop"/><attr name="android:insetBottom"/><attr name="backgroundTint"/><attr name="backgroundTintMode"/><attr format="reference" name="icon"/><attr format="dimension" name="iconSize"/><attr format="dimension" name="iconPadding"/><attr name="iconGravity">
       
       <flag name="start" value="0x1"/>
@@ -6169,25 +6051,6 @@
         <attr format="reference" name="submitBackground"/>
         <attr name="android:focusable"/>
     </declare-styleable>
-    <declare-styleable name="SignInButton"><attr format="reference" name="buttonSize">
-<enum name="standard" value="0"/>
-
-<enum name="wide" value="1"/>
-
-<enum name="icon_only" value="2"/>
-
-</attr>
-<attr format="reference" name="colorScheme">
-<enum name="dark" value="0"/>
-
-<enum name="light" value="1"/>
-
-<enum name="auto" value="2"/>
-
-</attr>
-
-<attr format="reference|string" name="scopeUris"/>
-</declare-styleable>
     <declare-styleable name="SimpleDialog"><attr format="reference" name="di_messageTextAppearance"/><attr format="color|reference" name="di_messageTextColor"/><attr format="reference" name="di_radioButtonStyle"/><attr format="reference" name="di_checkBoxStyle"/><attr format="dimension|reference" name="di_itemHeight"/><attr format="reference" name="di_itemTextAppearance"/></declare-styleable>
     <declare-styleable name="Slider"><attr format="reference|dimension" name="sl_trackSize"/><attr format="reference|color" name="sl_primaryColor"/><attr format="reference|color" name="sl_secondaryColor"/><attr format="integer" name="sl_trackCap"><enum name="butt" value="0x00000000"/><enum name="round" value="0x00000001"/><enum name="square" value="0x00000002"/></attr><attr format="reference|dimension" name="sl_thumbBorderSize"/><attr format="reference|dimension" name="sl_thumbRadius"/><attr format="reference|dimension" name="sl_thumbFocusRadius"/><attr format="reference|dimension" name="sl_thumbTouchRadius"/><attr format="reference|integer" name="sl_travelAnimDuration"/><attr format="reference|integer" name="sl_transformAnimDuration"/><attr format="reference" name="sl_interpolator"/><attr format="reference|integer" name="sl_minValue"/><attr format="reference|integer" name="sl_maxValue"/><attr format="reference|integer" name="sl_stepValue"/><attr format="reference|integer" name="sl_value"/><attr format="reference|boolean" name="sl_discreteMode"/><attr format="string|reference" name="sl_fontFamily"/><attr format="integer" name="sl_textStyle"><enum name="normal" value="0"/><enum name="bold" value="1"/><enum name="italic" value="2"/><enum name="bold_italic" value="3"/></attr><attr format="reference|dimension" name="sl_textSize"/><attr format="reference|color" name="sl_textColor"/><attr format="reference|boolean" name="sl_alwaysFillThumb"/><attr format="reference|dimension" name="sl_baselineOffset"/><attr name="android:gravity"/><attr name="android:enabled"/></declare-styleable>
     <declare-styleable name="SnackBar"><attr format="reference|color" name="sb_backgroundColor"/><attr format="reference|dimension" name="sb_backgroundCornerRadius"/><attr format="reference|dimension" name="sb_horizontalPadding"/><attr format="reference|dimension" name="sb_verticalPadding"/><attr format="reference|dimension|integer" name="sb_width"><enum name="match_parent" value="-1"/><enum name="wrap_content" value="-2"/></attr><attr format="reference|dimension" name="sb_minWidth"/><attr format="reference|dimension" name="sb_maxWidth"/><attr format="reference|dimension|integer" name="sb_height"><enum name="match_parent" value="-1"/><enum name="wrap_content" value="-2"/></attr><attr format="reference|dimension" name="sb_minHeight"/><attr format="reference|dimension" name="sb_maxHeight"/><attr format="reference|dimension" name="sb_marginStart"/><attr format="reference|dimension" name="sb_marginBottom"/><attr format="reference|dimension" name="sb_textSize"/><attr format="reference|color" name="sb_textColor"/><attr format="reference" name="sb_textAppearance"/><attr format="reference|string" name="sb_text"/><attr format="boolean" name="sb_singleLine"/><attr format="reference|integer" name="sb_maxLines"/><attr format="reference|integer" name="sb_lines"/><attr format="integer" name="sb_ellipsize"><enum name="start" value="0x00000001"/><enum name="middle" value="0x00000002"/><enum name="end" value="0x00000003"/><enum name="marquee" value="0x00000004"/></attr><attr format="reference|dimension" name="sb_actionTextSize"/><attr format="reference|color" name="sb_actionTextColor"/><attr format="reference" name="sb_actionTextAppearance"/><attr format="reference|string" name="sb_actionText"/><attr format="reference" name="sb_actionRipple"/><attr format="reference|integer" name="sb_duration"/><attr format="reference" name="sb_inAnimation"/><attr format="reference" name="sb_outAnimation"/><attr format="boolean" name="sb_removeOnDismiss"/></declare-styleable>
@@ -6446,5 +6309,4 @@
         <attr name="android:id"/>
     </declare-styleable>
     <declare-styleable name="YearPicker"><attr name="dp_yearMin"/><attr name="dp_yearMax"/><attr name="dp_year"/><attr format="dimension|reference" name="dp_yearTextSize"/><attr format="dimension|reference" name="dp_yearItemHeight"/><attr name="dp_textHighlightColor"/><attr name="dp_textColor"/><attr name="dp_selectionColor"/><attr name="dp_animDuration"/><attr name="dp_inInterpolator"/><attr name="dp_outInterpolator"/><attr name="dp_fontFamily"/><attr name="dp_textStyle"/></declare-styleable>
-    <declare-styleable name="ds"/>
 </resources>

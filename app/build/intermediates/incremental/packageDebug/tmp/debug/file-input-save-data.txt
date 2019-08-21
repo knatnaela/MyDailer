@@ -1,19 +1,11 @@
 #Internal package file, do not edit.
-#Tue May 28 09:56:43 EAT 2019
-1.base=E\:\\MyApplication6\\app\\build\\intermediates\\merged_assets\\debug\\out
-2.path=classes.dex
+#Tue Aug 06 15:02:57 EAT 2019
+1.base=E\:\\MyApplication6\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\out
 0.baseType=DIRECTORY
-3.baseType=DIRECTORY
-2.base=E\:\\MyApplication6\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\out
-3.set=DEX
-2.set=DEX
 1.baseType=DIRECTORY
-3.path=classes2.dex
-count=4
-1.set=ASSET
-0.path=fonts/CALIBRI.TTF
-3.base=E\:\\MyApplication6\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\out
-0.set=ASSET
-0.base=E\:\\MyApplication6\\app\\build\\intermediates\\merged_assets\\debug\\out
-2.baseType=DIRECTORY
-1.path=fonts/GaramondPremrPro.otf
+count=2
+1.set=DEX
+0.path=classes.dex
+0.set=DEX
+0.base=E\:\\MyApplication6\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\out
+1.path=classes2.dex

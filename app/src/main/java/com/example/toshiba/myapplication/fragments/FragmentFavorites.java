@@ -2,10 +2,10 @@ package com.example.toshiba.myapplication.fragments;
 
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
-import android.support.v4.view.ViewPager;
-import android.support.v7.widget.LinearLayoutManager;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+import androidx.viewpager.widget.ViewPager;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -29,19 +29,12 @@ import io.reactivex.schedulers.Schedulers;
 
 public class FragmentFavorites extends Fragment{
 
-    private View v,view;
     private RecyclerViewWithEmptySupport recyclerView;
 
-     CompositeDisposable compositeDisposable = new CompositeDisposable();
-
-    List<Favorites> favoritesList;
+     private final CompositeDisposable compositeDisposable = new CompositeDisposable();
 
 
-    FavoritesAdapter favoritesAdapter;
-
-    RelativeLayout rootLayout;
-
-    TextView addFav;
+    private RelativeLayout rootLayout;
 
 
     public FragmentFavorites() {
@@ -51,16 +44,16 @@ public class FragmentFavorites extends Fragment{
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
 
-        v = inflater.inflate(R.layout.fragment_fav,container,false);
+        View v = inflater.inflate(R.layout.fragment_fav, container, false);
 
-        view = inflater.inflate(R.layout.activity_main,container,false);
+        View view = inflater.inflate(R.layout.activity_main, container, false);
 
 
         recyclerView = v.findViewById(R.id.recycler_fav);
 
         rootLayout = v.findViewById(R.id.rootLayout);
 
-        addFav = v.findViewById(R.id.txtMakeFav);
+        TextView addFav = v.findViewById(R.id.txtMakeFav);
 
         addFav.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -88,7 +81,7 @@ public class FragmentFavorites extends Fragment{
         .subscribeOn(Schedulers.io())
         .subscribe(new Consumer<List<Favorites>>() {
             @Override
-            public void accept(List<Favorites> favorites) throws Exception {
+            public void accept(List<Favorites> favorites) {
                 displayFav(favorites);
             }
         }));
@@ -97,8 +90,8 @@ public class FragmentFavorites extends Fragment{
     private void displayFav(List<Favorites> favorites) {
 
 
-            favoritesList = favorites;
-            favoritesAdapter = new FavoritesAdapter(getContext(),favorites);
+        List<Favorites> favoritesList = favorites;
+        FavoritesAdapter favoritesAdapter = new FavoritesAdapter(getContext(), favorites);
             recyclerView.setAdapter(favoritesAdapter);
             recyclerView.setEmptyView(rootLayout.findViewById(R.id.rootLayout));
 

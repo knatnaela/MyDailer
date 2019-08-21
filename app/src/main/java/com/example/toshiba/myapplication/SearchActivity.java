@@ -2,23 +2,20 @@ package com.example.toshiba.myapplication;
 
 import android.Manifest;
 import android.app.Activity;
-import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.content.res.Configuration;
 import android.database.Cursor;
-import android.os.Build;
 import android.provider.CallLog;
 import android.provider.ContactsContract;
-import android.support.v4.app.ActivityCompat;
-import android.support.v7.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.widget.Toast;
 
 import com.example.toshiba.myapplication.Adapters.ContactsRecyclerViewAdapter;
 import com.example.toshiba.myapplication.Model.ModelContacts;
@@ -28,13 +25,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
-import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
-import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
-
 public class SearchActivity extends AppCompatActivity {
 
 
-    List<String> suggestList = new ArrayList<>();
+    final List<String> suggestList = new ArrayList<>();
     List<ModelContacts> localDataSource = new ArrayList<>();
 
     MaterialSearchBar searchBar;
@@ -45,22 +39,31 @@ public class SearchActivity extends AppCompatActivity {
 
     SharedPref sharedPref;
 
-    @Override
-    protected void attachBaseContext(Context newBase) {
-        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
-    }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
         loadLocale();
         sharedPref = new SharedPref(this);
         if (sharedPref.loadNightModelState())
         {
             setTheme(R.style.darkTheme);
         }
+        else if (sharedPref.loadDarkModelState())
+        {
+            setTheme(R.style.darkerTheme);
+        }
+        else if (sharedPref.loadRoyalModelState())
+        {
+            setTheme(R.style.royalTheme);
+        }
+        else if (sharedPref.loadLightModelState())
+        {
+            setTheme(R.style.lightTheme);
+        }
         else
-            setTheme(R.style.Light);
+            setTheme(R.style.darkTheme);
+        super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search);
 
         recyclerView = findViewById(R.id.recycler_search);

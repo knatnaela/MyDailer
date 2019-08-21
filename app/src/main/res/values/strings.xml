@@ -1,18 +1,18 @@
 <resources>
-    <string name="app_name">My Dialer</string>
-    <string name="title_activity_home">Home</string>
-    <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_title">Android Studio</string>
-    <string name="nav_header_subtitle">android.studio@android.com</string>
-    <string name="nav_header_desc">Navigation header</string>
-    <string name="action_settings">Settings</string>
+    <string name="app_name" translatable="false">My Dialer</string>
+    <string name="title_activity_home" translatable="false">Home</string>
+    <string name="navigation_drawer_open" translatable="false">Open navigation drawer</string>
+    <string name="navigation_drawer_close" translatable="false">Close navigation drawer</string>
+    <string name="nav_header_title" translatable="false">Android Studio</string>
+    <string name="nav_header_subtitle" translatable="false">android.studio@android.com</string>
+    <string name="nav_header_desc" translatable="false">Navigation header</string>
+    <string name="action_settings" translatable="false">Settings</string>
     <string name="create_new_contact">Create new contact</string>
     <string name="add_to_contact">Add to contact</string>
     <string name="send_sms">Send SMS</string>
     <string name="gift">Gift</string>
     <string name="internet">Internet</string>
-    <string name="sms">SMS</string>
+    <string name="sms" translatable="false">SMS</string>
     <string name="voice">Voice</string>
     <string name="send_call_me_back">Send Call Me Back</string>
     <string name="transfer_money">Transfer Money</string>
@@ -54,11 +54,11 @@
     <string name="please_choose_language">Please choose language</string>
     <string name="back_pressed">Touch again to exit</string>
     <string name="amharic">Amharic</string>
-    <string name="service">This service records popups sent by your mobile operatior,and saves them in MyDialer App.It is absolutely safe to use</string>
+    <string name="service" translatable="false">This service records popups sent by your mobile operatior,and saves them in MyDialer App.It is absolutely safe to use</string>
     <string name="unnamed">Unnamed</string>
     <string name="weekly_voice_package">Weekly Voice Package</string>
     <string name="weekend_internet_package">Weekend Internet Package</string>
-    <string name="favorites">Favorites</string>
+    <string name="favorites" translatable="false">Favorites</string>
     <string name="common">Common</string>
     <string name="premium">Premium</string>
     <string name="premium_limited_internet_package">Premium Limited Internet Package</string>
@@ -83,5 +83,9 @@
     <string name="more_services">More Services</string>
     <string name="_10_service_fee_on_borrowed_amount_chargeable_on_next_topup">10% Service fee on borrowed amount chargeable on next topup</string>
     <string name="do_u_want_buy_package">Do you want buy package?</string>
+    <string name="light_mode">Light mode</string>
+    <string name="royal_mode">Royal mode</string>
+    <string name="you_must_accept_this_permission_to_use_our_app">You must accept this permission to use our app</string>
+    <string name="knatnaelaadane_gmail_com">knatnaelaadane@gmail.com</string>
 
 </resources>

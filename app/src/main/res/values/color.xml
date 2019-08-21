@@ -10,4 +10,5 @@
     <color name="divider">#BDBDBD</color>
     <color name="background">#6163ce</color>
     <color name="backgroundDark">#353554</color>
+    <color name="goldenBackgroundColor">#ffbf00</color>
 </resources>

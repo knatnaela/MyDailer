@@ -3,8 +3,8 @@ package com.example.toshiba.myapplication.Model;
 
 public class ModelContacts  {
 
-    public String name,number,Id;
-    String  Photo;
+    private String name,number,Id;
+    private String  Photo;
 
     public ModelContacts(String name, String number, String id, String photo) {
         this.name = name;
@@ -18,18 +18,17 @@ public class ModelContacts  {
     }
 
     public void setName(String name) {
-        this.name = name;
+       this.name = name;
     }
-
     public String getNumber() {
+
         return number;
     }
 
     public void setNumber(String number) {
         this.number = number;
-    }
-
-    public String getPhoto() {
+  }
+   public String getPhoto() {
         return Photo;
     }
 
@@ -43,5 +42,5 @@ public class ModelContacts  {
 
     public void setId(String id) {
         Id = id;
-    }
+   }
 }

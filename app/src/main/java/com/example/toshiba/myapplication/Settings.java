@@ -1,81 +1,86 @@
 package com.example.toshiba.myapplication;
 
-import android.Manifest;
 import android.app.Activity;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
-import android.os.Build;
-import android.support.v4.content.ContextCompat;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
+
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatDelegate;
-import android.view.View;
+
 import android.widget.CompoundButton;
 import android.widget.RadioButton;
-import android.widget.ScrollView;
-import android.widget.Switch;
-import android.widget.Toast;
-
-import com.example.toshiba.myapplication.Common.Common;
-import com.gdacciaro.iOSDialog.iOSDialog;
 
 import java.util.Locale;
 
-import io.paperdb.Paper;
-import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
-import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class Settings extends AppCompatActivity {
 
-    private Switch mSwitch,royal,dark;
-
-    SharedPref sharedPref;
-
-    String Radio;
-
-    Context context;
-
-    @Override
-    protected void attachBaseContext(Context newBase) {
-        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
-    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         loadLocale();
-        sharedPref = new SharedPref(this);
-        if (sharedPref.loadNightModelState())
-        {
-            setTheme(R.style.darkTheme);
-        }
-        else
-            setTheme(R.style.Light);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
 
 
-        mSwitch = findViewById(R.id.mySwitch);
-        royal = findViewById(R.id.royal);
-        dark = findViewById(R.id.dark);
-        if (sharedPref.loadNightModelState())
+        final RadioButton mDefault = findViewById(R.id.mySwitch);
+        final RadioButton royal = findViewById(R.id.royal);
+        final RadioButton dark = findViewById(R.id.dark);
+        final RadioButton light = findViewById(R.id.light);
+
+      /*  if (checkTheme.equals("dark"))
         {
-            mSwitch.setChecked(true);
+            mDefault.setChecked(true);
+            dark.setChecked(false);
+            royal.setChecked(false);
+            light.setChecked(false);
         }
+        else if (checkTheme.equals("darker")){
+            dark.setChecked(true);
+            mDefault.setChecked(false);
+            royal.setChecked(false);
+            light.setChecked(false);
+        }
+        else if (checkTheme.equals("royal")){
+            royal.setChecked(true);
+            dark.setChecked(false);
+            mDefault.setChecked(false);
+            light.setChecked(false);
+        }
+        else if (checkTheme.equals("light")){
+            royal.setChecked(false);
+            dark.setChecked(false);
+            mDefault.setChecked(false);
+            light.setChecked(true);
+        }*/
 
-        mSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+        mDefault.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
-            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                if (b)
-                {
-                    sharedPref.setNightModeState(true);
-                    restartApp();
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
 
+                if (isChecked)
+                {
+                    mDefault.setChecked(true);
+                    dark.setChecked(false);
+                    royal.setChecked(false);
+                    light.setChecked(false);
+                    restartApp();
                 }
-                else {
-                    sharedPref.setNightModeState(false);
+            }
+        });
+
+        dark.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+
+                if (isChecked)
+                {
+                    dark.setChecked(true);
+                    mDefault.setChecked(false);
+                    royal.setChecked(false);
+                    light.setChecked(false);
                     restartApp();
                 }
             }
@@ -83,47 +88,31 @@ public class Settings extends AppCompatActivity {
 
         royal.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
-            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
 
-                royal.setChecked(false);
-
-                AlertDialog.Builder builder = new AlertDialog.Builder(Settings.this);
-
-                builder.setTitle("Change Theme");
-                builder.setMessage("This feature is for pro version !!");
-                builder.setIcon(R.drawable.ic_color_lens_black_24dp);
-                builder.setNegativeButton("Ok", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        dialogInterface.dismiss();
-
-                    }
-                });
-
-                builder.show();
+                if (isChecked)
+                {
+                    royal.setChecked(true);
+                    dark.setChecked(false);
+                    mDefault.setChecked(false);
+                    light.setChecked(false);
+                    restartApp();
+                }
             }
         });
 
-
-        dark.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+        light.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
-            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
 
-                dark.setChecked(false);
-
-                final AlertDialog.Builder builder = new AlertDialog.Builder(Settings.this);
-
-                builder.setTitle("Change Theme");
-                builder.setMessage("This feature is for pro version !!");
-                builder.setIcon(R.drawable.ic_color_lens_black_24dp);
-                builder.setNegativeButton("Ok", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        dialogInterface.dismiss();
-                    }
-                });
-
-                builder.show();
+                if (isChecked)
+                {
+                    royal.setChecked(false);
+                    dark.setChecked(false);
+                    mDefault.setChecked(false);
+                    light.setChecked(true);
+                    restartApp();
+                }
             }
         });
 
@@ -132,27 +121,15 @@ public class Settings extends AppCompatActivity {
         final RadioButton rdi_Language_oro = findViewById(R.id.language_oro);
         final RadioButton rdi_Language_tig = findViewById(R.id.language_tig);
         final RadioButton rdi_Language_gez = findViewById(R.id.language_gez);
-        Paper.init(this);
 
-        String Check = Paper.book().read(Common.check);
-
-        if (Check == null || Check.equals("1"))
-        {
-            rdi_Language_eng.setChecked(true);
-        }
-        else if (Check.equals("2"))
-        {
-            rdi_Language_amh.setChecked(true);
-        }
 
 
 
         rdi_Language_eng.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-               if (rdi_Language_eng.isChecked())
+               if (b)
                {
-                   Paper.book().write(Common.check,"1" );
                    setLocale("en");
                    restartApp();
                }
@@ -162,9 +139,8 @@ public class Settings extends AppCompatActivity {
         rdi_Language_amh.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-               if (rdi_Language_amh.isChecked())
+               if (b)
                {
-                   Paper.book().write(Common.check,"2" );
                    setLocale("am");
                    restartApp();
 
@@ -176,7 +152,7 @@ public class Settings extends AppCompatActivity {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
 
-                Paper.init(Settings.this);
+
 
                 AlertDialog.Builder builder = new AlertDialog.Builder(Settings.this);
 
@@ -189,16 +165,7 @@ public class Settings extends AppCompatActivity {
                     public void onClick(DialogInterface dialogInterface, int i) {
                         dialogInterface.dismiss();
 
-                        String Check = Paper.book().read(Common.check);
 
-                        if (Check == null || Check.equals("1"))
-                        {
-                            rdi_Language_eng.setChecked(true);
-                        }
-                        else if (Check.equals("2"))
-                        {
-                            rdi_Language_amh.setChecked(true);
-                        }
 
                     }
                 });
@@ -212,7 +179,6 @@ public class Settings extends AppCompatActivity {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
 
-                Paper.init(Settings.this);
 
              AlertDialog.Builder builder = new AlertDialog.Builder(Settings.this);
 
@@ -226,16 +192,7 @@ public class Settings extends AppCompatActivity {
 
                         dialogInterface.dismiss();
 
-                        String Check = Paper.book().read(Common.check);
 
-                        if (Check == null || Check.equals("1"))
-                        {
-                            rdi_Language_eng.setChecked(true);
-                        }
-                        else if (Check.equals("2"))
-                        {
-                            rdi_Language_amh.setChecked(true);
-                        }
 
                     }
                 });
@@ -248,7 +205,7 @@ public class Settings extends AppCompatActivity {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
 
-                Paper.init(Settings.this);
+
 
                 AlertDialog.Builder builder = new AlertDialog.Builder(Settings.this);
 
@@ -262,16 +219,6 @@ public class Settings extends AppCompatActivity {
 
                         dialogInterface.dismiss();
 
-                        String Check = Paper.book().read(Common.check);
-
-                        if (Check == null || Check.equals("1"))
-                        {
-                            rdi_Language_eng.setChecked(true);
-                        }
-                        else if (Check.equals("2"))
-                        {
-                            rdi_Language_amh.setChecked(true);
-                        }
 
                     }
                 });

@@ -70,4 +70,8 @@
     <string name="more_services">More Services</string>
     <string name="_10_service_fee_on_borrowed_amount_chargeable_on_next_topup">10% Service fee on borrowed amount chargeable on next topup</string>
     <string name="do_u_want_buy_package">Do you want buy package?</string>
+    <string name="royal_mode">Royal mode</string>
+    <string name="light_mode">Light mode</string>
+    <string name="you_must_accept_this_permission_to_use_our_app">You must accept this permission to use our app</string>
+    <string name="knatnaelaadane_gmail_com">knatnaelaadane@gmail.com</string>
 </resources>

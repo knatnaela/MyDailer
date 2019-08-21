@@ -1,15 +1,12 @@
 package com.example.toshiba.myapplication.Adapters;
 
-import android.app.Dialog;
 import android.content.Context;
-import android.support.annotation.NonNull;
-import android.support.v7.widget.RecyclerView;
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CompoundButton;
-import android.widget.ImageView;
-import android.widget.Toast;
 
 import com.amulyakhare.textdrawable.TextDrawable;
 import com.amulyakhare.textdrawable.util.ColorGenerator;
@@ -18,28 +15,14 @@ import com.example.toshiba.myapplication.Interface.ItemClickListener;
 import com.example.toshiba.myapplication.Model.ModelCalls;
 import com.example.toshiba.myapplication.R;
 import com.example.toshiba.myapplication.ViewHolder.DeleteViewHolder;
-import com.rey.material.widget.CheckBox;
 
-import java.util.Collections;
 import java.util.List;
 
 public class DeleteRecyclerViewAdapter extends RecyclerView.Adapter<DeleteViewHolder> {
 
 
-    private Context mContext;
-    private List<ModelCalls> callsList;
-
-    CheckBox checkBox;
-
-
-
-    private Dialog mDialog,myDialog;
-
-    private ImageView btnCall;
-
-    private String letter;
-
-    private String callMe,transfer;
+    private final Context mContext;
+    private final List<ModelCalls> callsList;
 
     public DeleteRecyclerViewAdapter(Context mContext, List<ModelCalls> callsList) {
         this.mContext = mContext;
@@ -93,12 +76,13 @@ public class DeleteRecyclerViewAdapter extends RecyclerView.Adapter<DeleteViewHo
 
         holder.setItemClickListener(new ItemClickListener() {
             @Override
-            public void onClick(View view, int adapterPosition, boolean isLongClick) {
+            public void onClick(boolean isLongClick) {
 
             }
         });
 
 
+        String letter;
         if (callsList.get(position).getName() != null) {
             holder.name.setText(callsList.get(position).getName());
             letter = String.valueOf(callsList.get(position).getName().charAt(0));

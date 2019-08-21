@@ -11,7 +11,7 @@ import io.reactivex.Flowable;
 
 public class FavoritesDataSource implements IFavoritesDataSource {
 
-    private FavoritesDAO favoritesDAO;
+    private final FavoritesDAO favoritesDAO;
     private static FavoritesDataSource instance;
 
     public FavoritesDataSource(FavoritesDAO favoritesDAO) {

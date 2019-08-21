@@ -8,12 +8,11 @@ import android.database.Cursor;
 import android.os.Bundle;
 import android.provider.CallLog;
 import android.provider.ContactsContract;
-import android.support.annotation.Nullable;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.app.Fragment;
-import android.support.v4.view.ViewPager;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
+import androidx.annotation.Nullable;
+import androidx.core.app.ActivityCompat;
+import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -24,18 +23,16 @@ import com.example.toshiba.myapplication.Adapters.ContactsRecyclerViewAdapter;
 import com.example.toshiba.myapplication.Helper.RecyclerViewWithEmptySupport;
 import com.example.toshiba.myapplication.Model.ModelContacts;
 import com.example.toshiba.myapplication.R;
-import com.mancj.materialsearchbar.MaterialSearchBar;
-import com.rey.material.widget.FloatingActionButton;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class FragmentContacts extends Fragment {
 
-    private View v,view;
+    // --Commented out by Inspection (8/6/2019 12:18 PM):private View view;
     private RecyclerViewWithEmptySupport recyclerView;
 
-    MaterialSearchBar searchBar;
+    // --Commented out by Inspection (8/6/2019 12:18 PM):MaterialSearchBar searchBar;
 
     ContactsRecyclerViewAdapter adapter;
     RelativeLayout relativeLayout;
@@ -51,7 +48,7 @@ public class FragmentContacts extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
 
-        v = inflater.inflate(R.layout.fragment_contacts, container, false);
+        View v = inflater.inflate(R.layout.fragment_contacts, container, false);
 
         recyclerView = v.findViewById(R.id.recycler_contacts);
         relativeLayout = v.findViewById(R.id.rootLayout);

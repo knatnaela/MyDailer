@@ -1,19 +1,15 @@
 package com.example.toshiba.myapplication.Helper;
 
 import android.content.Context;
-import android.support.v7.widget.RecyclerView;
+import androidx.recyclerview.widget.RecyclerView;
 import android.util.AttributeSet;
 import android.view.View;
-
-import com.example.toshiba.myapplication.Model.ModelCalls;
-
-import java.util.List;
 
 public class RecyclerViewWithEmptySupport extends RecyclerView {
 
     private View emptyView;
 
-    private AdapterDataObserver emptyObserver = new AdapterDataObserver() {
+    private final AdapterDataObserver emptyObserver = new AdapterDataObserver() {
         @Override
         public void onChanged() {
             Adapter<?> adapter = getAdapter();

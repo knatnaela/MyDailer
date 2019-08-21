@@ -9,16 +9,15 @@ import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
-import android.support.annotation.NonNull;
-import android.support.v4.app.ActivityCompat;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.widget.RecyclerView;
+import androidx.annotation.NonNull;
+import androidx.core.app.ActivityCompat;
+import androidx.appcompat.app.AlertDialog;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -26,32 +25,24 @@ import com.amulyakhare.textdrawable.TextDrawable;
 import com.amulyakhare.textdrawable.util.ColorGenerator;
 import com.example.toshiba.myapplication.Common.Common;
 import com.example.toshiba.myapplication.Database.ModelDB.Favorites;
-import com.example.toshiba.myapplication.DeleteActivity;
 import com.example.toshiba.myapplication.DeleteContactsActivity;
 import com.example.toshiba.myapplication.Interface.ItemClickListener;
 import com.example.toshiba.myapplication.Model.ModelContacts;
 import com.example.toshiba.myapplication.R;
 import com.example.toshiba.myapplication.SendGiftActivity;
-import com.example.toshiba.myapplication.ViewHolder.CallViewHolder;
 import com.example.toshiba.myapplication.ViewHolder.ContactViewHolder;
-import com.example.toshiba.myapplication.fragments.FragmentContacts;
 import com.rengwuxian.materialedittext.MaterialEditText;
-import com.squareup.picasso.Picasso;
-
 import java.util.List;
-
-import de.hdodenhof.circleimageview.CircleImageView;
 
 public class ContactsRecyclerViewAdapter extends RecyclerView.Adapter<ContactViewHolder>{
 
-    private Context mContext;
-    private LayoutInflater inflater;
-    private List<ModelContacts> mListContacts;
-    private String letter;
+    private final Context mContext;
+    // --Commented out by Inspection (8/6/2019 12:18 PM):private LayoutInflater inflater;
+    private final List<ModelContacts> mListContacts;
 
     private Dialog mDialog,Dialog;
 
-    private String callMe,transfer;
+    private String callMe;
 
 
     public ContactsRecyclerViewAdapter(Context mContext, List<ModelContacts> callsList) {
@@ -76,6 +67,7 @@ public class ContactsRecyclerViewAdapter extends RecyclerView.Adapter<ContactVie
         ColorGenerator colorGenerator = ColorGenerator.MATERIAL;
 
 
+        String letter;
         if (mListContacts.get(position).getName() !=null )
         {
 
@@ -108,7 +100,7 @@ public class ContactsRecyclerViewAdapter extends RecyclerView.Adapter<ContactVie
 
         holder.setItemClickListener(new ItemClickListener() {
             @Override
-            public void onClick(View view, int adapterPosition, boolean isLongClick) {
+            public void onClick(boolean isLongClick) {
 
                if (isLongClick)
                {
@@ -143,11 +135,15 @@ public class ContactsRecyclerViewAdapter extends RecyclerView.Adapter<ContactVie
                        id = id.replace("+", "");
                        id = id.replaceAll("\\s+", "");
                    }
-                       if (Common.favoritesRepository.isFavorite(Long.parseLong(id)) == 1)
-                           dialog_fav.setImageResource(R.drawable.ic_star_golden_24dp);
-                       else
-                           dialog_fav.setImageResource(R.drawable.ic_star_border_black_24dp);
+                      try{
+                          if (Common.favoritesRepository.isFavorite(Long.parseLong(id)) == 1)
+                              dialog_fav.setImageResource(R.drawable.ic_star_golden_24dp);
+                          else
+                              dialog_fav.setImageResource(R.drawable.ic_star_border_black_24dp);
 
+                      }catch (Exception e){
+                       e.printStackTrace();
+                      }
 
 
                    dialog_fav.setOnClickListener(new View.OnClickListener() {
@@ -188,6 +184,7 @@ public class ContactsRecyclerViewAdapter extends RecyclerView.Adapter<ContactVie
                            Common.number = mListContacts.get(position).getNumber();
                            Common.name = mListContacts.get(position).getName();
                            Common.imageView = mListContacts.get(position).getPhoto();
+                           Common.giftActivity = true;
                            mContext.startActivity(intent);
                            mDialog.dismiss();
 
@@ -331,6 +328,7 @@ public class ContactsRecyclerViewAdapter extends RecyclerView.Adapter<ContactVie
     private void transfer(final TextView dialog_phone, final MaterialEditText editAmount, TextView dialog_name) {
 
 
+        String transfer;
         if (dialog_name.getText().toString().isEmpty() || dialog_name.getText().toString().equals("Unnamed")
                 || dialog_name.getText().toString().equals("ስም የሌለው"))
         {
@@ -343,7 +341,7 @@ public class ContactsRecyclerViewAdapter extends RecyclerView.Adapter<ContactVie
 
         AlertDialog.Builder builder = new AlertDialog.Builder(mContext);
         builder.setTitle(R.string.transfer_money);
-        builder.setMessage(mContext.getString(R.string.want_to_transfer)+ editAmount.getText().toString()+ mContext.getString(R.string.birr)+ transfer+ " ?");
+        builder.setMessage(mContext.getString(R.string.want_to_transfer)+ editAmount.getText().toString()+ mContext.getString(R.string.birr)+ transfer + " ?");
         builder.setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
@@ -403,29 +401,32 @@ public class ContactsRecyclerViewAdapter extends RecyclerView.Adapter<ContactVie
             id = id.replaceAll("\\s+", "");
         }
 
-            if (Common.favoritesRepository.isFavorite(Long.parseLong(id)) != 1)
-            {
-                addOrRemoveToFavorite(mListContacts.get(position),true);
-                dialog_fav.setImageResource(R.drawable.ic_star_golden_24dp);
+           try{
+               if (Common.favoritesRepository.isFavorite(Long.parseLong(id)) != 1) {
+                   addOrRemoveToFavorite(mListContacts.get(position),true);
+                   dialog_fav.setImageResource(R.drawable.ic_star_golden_24dp);
 
-                if (dialog_name.getText().toString().isEmpty() ||dialog_name.getText().toString().equals("Unnamed")
-                        || dialog_name.getText().toString().equals("ስም የሌለው"))
-                {
-                    callMe = dialogPhone.getText().toString();
-                }
-                else
-                {
-                    callMe = dialog_name.getText().toString();
-                }
+                   if (dialog_name.getText().toString().isEmpty() ||dialog_name.getText().toString().equals("Unnamed")
+                           || dialog_name.getText().toString().equals("ስም የሌለው"))
+                   {
+                       callMe = dialogPhone.getText().toString();
+                   }
+                   else
+                   {
+                       callMe = dialog_name.getText().toString();
+                   }
 
-                Toast.makeText(mContext, callMe+" "+ mContext.getString(R.string.was_added_to_fav), Toast.LENGTH_SHORT).show();
-            }
-            else
-            {
-                addOrRemoveToFavorite(mListContacts.get(position),false);
-                dialog_fav.setImageResource(R.drawable.ic_star_border_black_24dp);
-                Toast.makeText(mContext, callMe + mContext.getString(R.string.removed_from_fav), Toast.LENGTH_SHORT).show();
-            }
+                   Toast.makeText(mContext, callMe+" "+ mContext.getString(R.string.was_added_to_fav), Toast.LENGTH_SHORT).show();
+               }
+               else
+               {
+                   addOrRemoveToFavorite(mListContacts.get(position),false);
+                   dialog_fav.setImageResource(R.drawable.ic_star_border_black_24dp);
+                   Toast.makeText(mContext, callMe + mContext.getString(R.string.removed_from_fav), Toast.LENGTH_SHORT).show();
+               }
+           }catch (Exception e){
+               e.printStackTrace();
+           }
     }
 
     private void call(String number) {

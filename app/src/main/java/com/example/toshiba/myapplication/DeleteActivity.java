@@ -2,70 +2,73 @@ package com.example.toshiba.myapplication;
 
 import android.Manifest;
 import android.app.Activity;
-import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.content.res.Configuration;
 import android.database.Cursor;
 import android.net.Uri;
 import android.provider.CallLog;
-import android.provider.ContactsContract;
-import android.support.v4.app.ActivityCompat;
-import android.support.v7.app.AppCompatActivity;
+
+import androidx.core.app.ActivityCompat;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
-import android.telecom.Call;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.appcompat.widget.Toolbar;
+
 import android.text.format.DateFormat;
-import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
-import com.example.toshiba.myapplication.Adapters.CallsRecyclerViewAdapter;
-import com.example.toshiba.myapplication.Adapters.ContactsRecyclerViewAdapter;
 import com.example.toshiba.myapplication.Adapters.DeleteRecyclerViewAdapter;
 import com.example.toshiba.myapplication.Common.Common;
 import com.example.toshiba.myapplication.Model.ModelCalls;
-import com.example.toshiba.myapplication.Model.ModelContacts;
-import com.mancj.materialsearchbar.MaterialSearchBar;
-import com.rey.material.widget.CheckBox;
 
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 
-import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
 
 public class DeleteActivity extends AppCompatActivity {
 
 
-    List<ModelCalls> localDataSource = new ArrayList<>();
+    // --Commented out by Inspection (8/6/2019 12:18 PM):List<ModelCalls> localDataSource = new ArrayList<>();
 
 
     RecyclerView recyclerView;
 
     DeleteRecyclerViewAdapter adapter;
     SharedPref sharedPref;
-    private int PERMISSION_CODE = 1000;
 
-    CheckBox checkBox;
+    // --Commented out by Inspection (8/6/2019 12:18 PM):CheckBox checkBox;
 
     int number;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
         loadLocale();
         sharedPref = new SharedPref(this);
         if (sharedPref.loadNightModelState())
         {
             setTheme(R.style.darkTheme);
         }
+        else if (sharedPref.loadDarkModelState())
+        {
+            setTheme(R.style.darkerTheme);
+        }
+        else if (sharedPref.loadRoyalModelState())
+        {
+            setTheme(R.style.royalTheme);
+        }
+        else if (sharedPref.loadLightModelState())
+        {
+            setTheme(R.style.lightTheme);
+        }
         else
-            setTheme(R.style.Light);
+            setTheme(R.style.darkTheme);
+        super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_delete);
 
         final Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -85,6 +88,7 @@ public class DeleteActivity extends AppCompatActivity {
         List<ModelCalls> lists = new ArrayList<>();
 
 
+        int PERMISSION_CODE = 1000;
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.READ_CALL_LOG) != PackageManager.PERMISSION_GRANTED)
 
             ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.READ_CALL_LOG}, PERMISSION_CODE);
@@ -124,7 +128,7 @@ public class DeleteActivity extends AppCompatActivity {
 
     private void displayLists(List<ModelCalls> lists) {
 
-            localDataSource = lists;
+
             adapter = new DeleteRecyclerViewAdapter(this, lists);
             recyclerView.setAdapter(adapter);
 
@@ -175,7 +179,6 @@ public class DeleteActivity extends AppCompatActivity {
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
         if (id == R.id.delete_menu) {
 
             for (String line:Common.numberAdded) {

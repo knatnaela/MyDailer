@@ -1,52 +1,41 @@
 package com.example.toshiba.myapplication;
 
+import android.Manifest;
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
-import android.os.Handler;
-import android.support.v7.app.AppCompatActivity;
+import android.net.Uri;
+
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatDelegate;
-import android.widget.Button;
+import androidx.appcompat.app.AppCompatDelegate;
 
 import com.example.toshiba.myapplication.Common.Common;
 
-import com.example.toshiba.myapplication.Database.DataSource.CartRepository;
 import com.example.toshiba.myapplication.Database.DataSource.FavoritesRepository;
-import com.example.toshiba.myapplication.Database.Local.CartDataSource;
 import com.example.toshiba.myapplication.Database.Local.FavoritesDataSource;
 import com.example.toshiba.myapplication.Database.Local.GEBETARoomDatabase;
+import com.karumi.dexter.Dexter;
+import com.karumi.dexter.MultiplePermissionsReport;
+import com.karumi.dexter.PermissionToken;
+import com.karumi.dexter.listener.PermissionRequest;
+import com.karumi.dexter.listener.multi.MultiplePermissionsListener;
 
+import java.util.List;
 import java.util.Locale;
+import android.provider.Settings;
+import android.widget.Toast;
 
-import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
-import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class MainActivity extends AppCompatActivity {
 
-    private static final int PERMISSION_CODE = 1001;
-    Button btnContinue;
+    // --Commented out by Inspection (8/6/2019 12:18 PM):private static final int PERMISSION_CODE = 1001;
+    // --Commented out by Inspection (8/6/2019 12:18 PM):Button btnContinue;
     SharedPref sharedPref;
 
-    Handler handler = new Handler();
-    Runnable runnable = new Runnable() {
-        @Override
-        public void run() {
-
-            startActivity(new Intent(MainActivity.this,Home.class));
-        }
-    };
-
-
-    @Override
-    protected void attachBaseContext(Context newBase) {
-        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
-    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
         AppCompatDelegate.setCompatVectorFromResourcesEnabled(true);
         loadLocale();
         sharedPref = new SharedPref(this);
@@ -54,33 +43,65 @@ public class MainActivity extends AppCompatActivity {
         {
             setTheme(R.style.darkTheme);
         }
+        else if (sharedPref.loadDarkModelState())
+        {
+            setTheme(R.style.darkerTheme);
+        }
+        else if (sharedPref.loadRoyalModelState())
+        {
+            setTheme(R.style.royalTheme);
+        }
+        else if (sharedPref.loadLightModelState())
+        {
+            setTheme(R.style.lightTheme);
+        }
         else
-            setTheme(R.style.Light);
-      /*  CalligraphyConfig.initDefault(new CalligraphyConfig.Builder()
-                .setDefaultFontPath("fonts/CALIBRI.TTF")
-                .setFontAttrId(R.attr.fontPath)
-                .build());*/
+            setTheme(R.style.darkTheme);
+        super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
 
         initDB();
 
+        Dexter.withActivity(this)
+                .withPermissions(Manifest.permission.CALL_PHONE,
+                        Manifest.permission.READ_CALL_LOG,
+                        Manifest.permission.READ_EXTERNAL_STORAGE,
+                        Manifest.permission.READ_CONTACTS
 
-    handler.postDelayed(runnable,500 );
+                        )
+                .withListener(new MultiplePermissionsListener() {
+                    @Override
+                    public void onPermissionsChecked(MultiplePermissionsReport report) {
 
+                        if (report.areAllPermissionsGranted())
+                        {
+                            startActivity(new Intent(MainActivity.this,Home.class));
+                        }
+                        if (report.isAnyPermissionPermanentlyDenied())
+                        {
+                            Toast.makeText(MainActivity.this, getResources().getString(R.string.you_must_accept_this_permission_to_use_our_app), Toast.LENGTH_SHORT).show();
+                            Intent intent = new Intent();
+                            intent.setAction(Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
+                            Uri uri = Uri.fromParts("package", getPackageName(), null);
+                            intent.setData(uri);
+                            startActivity(intent);
+                        }
+                    }
 
-
-
+                    @Override
+                    public void onPermissionRationaleShouldBeShown(List<PermissionRequest> permissions, PermissionToken token) {
+                        token.continuePermissionRequest();
+                    }
+                })
+                .onSameThread()
+                .check();
     }
 
     private void initDB() {
 
 
         Common.gebetaRoomDatabase = GEBETARoomDatabase.getInstance(this);
-        Common.cartRepository = CartRepository.getInstance(CartDataSource.getInstance(Common.gebetaRoomDatabase.cartDAO()));
         Common.favoritesRepository = FavoritesRepository.getInstance(FavoritesDataSource.getInstance(Common.gebetaRoomDatabase.favoritesDAO()));
-
-
     }
 
     private void setLocale(String lang) {

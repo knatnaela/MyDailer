@@ -6,7 +6,7 @@
     android:background="?attr/backgroundColor"
     android:id="@+id/rootLayout"
     android:animateLayoutChanges="true"
-    tools:context="com.example.toshiba.myapplication.MainAc">
+    tools:context="com.example.toshiba.myapplication.MainActivity">
 
 
 

@@ -9,10 +9,10 @@ import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
-import android.support.annotation.NonNull;
-import android.support.v4.app.ActivityCompat;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.widget.RecyclerView;
+import androidx.annotation.NonNull;
+import androidx.core.app.ActivityCompat;
+import androidx.appcompat.app.AlertDialog;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -36,14 +36,12 @@ import java.util.List;
 
 public class FavoritesAdapter extends RecyclerView.Adapter<FavoritesViewHolder>{
 
-    Context context;
-    List<Favorites> favoritesList;
-
-    private String letter;
+    final Context context;
+    final List<Favorites> favoritesList;
 
     private Dialog mDialog,Dialog;
 
-    private String callMe,transfer;
+    private String callMe;
 
 
     public FavoritesAdapter(Context context, List<Favorites> favoritesList) {
@@ -147,6 +145,7 @@ public class FavoritesAdapter extends RecyclerView.Adapter<FavoritesViewHolder>{
                         Intent intent = new Intent(context,SendGiftActivity.class);
                         Common.number = favoritesList.get(favoritesViewHolder.getAdapterPosition()).name;
                         Common.name = favoritesList.get(favoritesViewHolder.getAdapterPosition()).number;
+                        Common.giftActivity = true;
                         context.startActivity(intent);
                         mDialog.dismiss();
 
@@ -256,6 +255,7 @@ public class FavoritesAdapter extends RecyclerView.Adapter<FavoritesViewHolder>{
     private void transfer(final TextView dialog_phone, final MaterialEditText editAmount, TextView name) {
 
 
+        String transfer;
         if (name.getText().toString().isEmpty() || name.getText().toString().equals("Unnamed")
                 || name.getText().toString().equals("ስም የሌለው"))
         {
@@ -268,7 +268,7 @@ public class FavoritesAdapter extends RecyclerView.Adapter<FavoritesViewHolder>{
 
         AlertDialog.Builder builder = new AlertDialog.Builder(context);
         builder.setTitle(R.string.transfer_money);
-        builder.setMessage(context.getString(R.string.want_to_transfer)+ editAmount.getText().toString()+ " Birr to "+ transfer+ " ?");
+        builder.setMessage(context.getString(R.string.want_to_transfer)+ editAmount.getText().toString()+ " Birr to "+ transfer + " ?");
         builder.setPositiveButton("YES", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
@@ -321,6 +321,7 @@ public class FavoritesAdapter extends RecyclerView.Adapter<FavoritesViewHolder>{
 
         if (Common.favoritesRepository.isFavorite(Long.parseLong(String.valueOf(favoritesList.get(position).id))) == 1)
         {
+            String letter;
             if (favoritesList.get(position).name !=null )
             {
 

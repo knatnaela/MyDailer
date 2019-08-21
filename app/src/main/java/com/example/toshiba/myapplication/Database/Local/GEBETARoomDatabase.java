@@ -1,19 +1,17 @@
 package com.example.toshiba.myapplication.Database.Local;
 
 
-import android.arch.persistence.room.Database;
-import android.arch.persistence.room.Room;
-import android.arch.persistence.room.RoomDatabase;
+import androidx.room.Database;
+import androidx.room.Room;
+import androidx.room.RoomDatabase;
 import android.content.Context;
 
-import com.example.toshiba.myapplication.Database.ModelDB.Cart;
 import com.example.toshiba.myapplication.Database.ModelDB.Favorites;
 
 
-@Database(entities = {Cart.class, Favorites.class},version = 1)
+@Database(entities = {Favorites.class},version = 2,exportSchema = false)
 public abstract class GEBETARoomDatabase extends RoomDatabase {
 
-    public abstract CartDAO cartDAO();
 
     public abstract FavoritesDAO favoritesDAO();
 
